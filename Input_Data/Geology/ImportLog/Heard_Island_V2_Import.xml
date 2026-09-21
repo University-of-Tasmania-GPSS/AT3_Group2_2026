@@ -1,0 +1,274 @@
+<ImportMXDLog>	<Messages>
+		<FileName>C:\Users\jmfox\Documents\AAD_Heard_Island\AADC_Fox_Heard\Heard_Island_V2.mxd</FileName>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>SL_March2016.csv Events</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>contours_terrasar_100m_draft</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses symbol level drawing with a non-simple fill symbol</Description>
+			<Code>10019</Code>
+			<ComponentName>Geology</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>HI_Outline</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>Saddle_Point.jpg</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>Big_Ben.jpg</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>QB_HeardIsland_04Feb09_z43_Multi.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>wv_23mar2008_mosaic_orc_1m.bsq</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>tsx1_hshade</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>WATERBODYMASK.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>TSX1_DEM_SM_HeardIsland_slope.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>FILLINGMASK_ASTER.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>CM_DEM_SM_HeardIsland.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>TSX1_DEM_SM_HeardIsland.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer uses unsupported dynamic hillshade illumination</Description>
+			<Code>00023</Code>
+			<ComponentName>TSX1_DEM_SM_HeardIsland.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>QB_HeardIsland_04Feb09_z43_PAN.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>qb_laurens_30mar2006_ps_grc.img</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>qb_laurens_30mar2006_ps_grc.img</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Layer&apos;s data source is inaccessible</Description>
+			<Code>00003</Code>
+			<ComponentName>QB_HeardIsland_04Feb09_z43_Multi.tif</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Error</MessageType>
+			<Severity>High</Severity>
+			<Description>Standalone table&apos;s data source is inaccessible</Description>
+			<Code>00032</Code>
+			<ComponentName>SL_March2016.csv</ComponentName>
+			<ComponentType>esriDTAny</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Legends imported into ArcGIS Pro may appear differently due to improvements in the fitting strategy and changes made to legend patch shapes. Modifications to the default appearance may be required.</Description>
+			<Code>20038</Code>
+			<ComponentName>Heard_Island_V2</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Grids and graticules imported into ArcGIS Pro may appear differently. Modifications to the default appearance may be required.</Description>
+			<Code>20055</Code>
+			<ComponentName>Heard_Island_V2</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+</Messages>
+</ImportMXDLog>

@@ -1,0 +1,95 @@
+Title: Heard Island glacier fluctuations and climatic change
+
+Authors:
+  - IAN ALLISON (TECHNICAL CONTACT, INVESTIGATOR)
+  - DOUG THOST (TECHNICAL CONTACT, DIF AUTHOR)
+
+Owner: Commonwealth of Australia
+
+Citation: Allison, I. and Thost, D.E. (2002) Heard Island glacier fluctuations and climatic change, Ver. 1,  <em>Australian Antarctic Data Centre</em> - <a href="http://dx.doi.org/doi:10.4225/15/54E53773EEBF1">doi:10.4225/15/54E53773EEBF1</a>, Accessed: 2020-07-02
+
+Revision Date: 2018-02-13
+
+Metadata URL: https://data.aad.gov.au/metadata/records/ASAC_1158
+
+Dataset API URL: https://data.aad.gov.au/s3/api/bucket/datasets/science/ASAC_1158?export=json
+
+Abstract: This report describes and presents all the data gathered on Brown Glacier during the 2000 field season. The goal of the study (ASAC project 1158) was to characterize one of the Heard Island glaciers that has a relatively simple geometry and is easy to work on. A land terminating glacier was chosen because of the larger expected response to climate change. The plan was to collect data on the dynamic characteristics, mass balance, sub-glacial topography and recent fluctuations of a Heard Island glacier. The data will ultimately be used to construct and validate a numerical model of the glacier. The model will be used to simulate the possible cause of the glacier fluctuations, and help to derive a climate-proxy record for this remote and sensitive area.
+
+The study of the morphology, dynamics and mass balance of the Brown Glacier on the northeastern side of Heard Island was undertaken between mid-October and late November 2000. An ANARE field party, operating from a small field camp near the foot of the glacier, comprised three glaciologists (M.T., A.R. and D.T.) until early November, with two staying for the full period (M.T. and D.T.). This group was independent of two other ANARE field camps located at Atlas Cove and Spit Bay.
+
+The following field measurements were successfully completed:
+
+A differential GPS survey of the surface elevation along the centre-line of the glacier (from 1 100 m elevation to the snout below 200 m) and across five transverse sections,
+
+A differential GPS survey of the location of the present snout of the glacier, and the 1947 lateral moraines,
+
+Bathymetric measurements of the lagoon formed by retreat of the glacier since the 1950's,
+
+Detailed ice thickness measurements (with a portable radio echo-sounder) across a transverse profile of the glacier at 500 m elevation, and spot thickness measurements across three other profiles,
+
+Surface ice velocity measurements along the centre-line of the glacier (10 locations) and along two transverse sections at 500 m and 400 m elevation (five and four locations respectively). Most of these sites were measured over two epochs, and time varying velocity measurements were made for nearly four weeks at one site,
+
+Surface mass balance measurements during November at the location of all velocity measurements. Other members of the ANARE party made additional measurements in mid-January,
+
+Temperature and density measurements, and snow sampling from a pit and a crevasse,
+
+Detailed meteorological measurements from a temporary automatic weather station (AWS) on the glacier surface (at 500 m elevation) during November, and ongoing satellite-relayed meteorological measurements from a larger AWS on rock adjoining the Brown Glacier (~550 m elevation). The glacier surface measurements included half-hourly surface height measurements with an acoustic ranger to record short time scale changes in surface mass budget.
+
+Data Files available:
+
+DEM Folder contents
+dem.ascHeard DEM in ASCII format, obtained from the AAD
+allprof.datall kinematic GPS profiles
+brownarea.datHeard DEM cropped to the Brown Glacier area
+brownpoints.datPoints surveyed with static GPS methods
+dem.datHeard DEM without header
+newdem.datBrown Glacier area DEM corrected with GPS profiles
+oldglacier.dat1947 Glacier outline
+outline.datGlacier outline, digitized from newdem.dat
+*.mvarious Matlab programs to adjust the DEM
+createdem.mMatlab program used for final DEM adjustment
+dem.mMatlab program to display and crop the Heard DEM
+drawdem.mMatlab program to display a map (with various options)
+icelost.mMatlab program to calculate volume change
+dem.prjProjection parameters for Heard Island DEM
+*.profkinematic GPS profiles in ASCII format
+Glacier velocities folder contents
+daily.*ASCII and Excel file of daily velocities measured at BG35
+GPSpoints.*ASCII and Excel file of index points surveyed with static GPS
+index.mMatlab program to display velocities
+indexpoints.txtFile with velocity data used in index.m
+Isotope Analysis folder contents
+Del018.xlsExcel file containing Oxygen isotope data from BG35 and crevasse
+kinematic profiles folder contents
+*.txtall the kinematic GPS profiles in ASCII format
+Lagoon bathymetry folder contents
+lagoon.mMatlab program to reduce bathymetry data in bathy.txt
+lagoon.figMatlab figure showing the bathymetry data
+bathy.txtASCII data file for use in lagoon.m
+shore.txtASCII data file for the surveyed shore line
+bathymetry.xlsExcel file with bathymetry data
+Matlab folder contents
+areasize.mprogram to calculate the area enclosed in a polygon
+chkload.mprogram to load a file with additional options
+circle.mfunction to draw a circle (used in index.m)
+RES folder contents
+bg**.datRES raw data (format is specified in RES.m help)
+bg**bottom.datDigitized bed from RES returns
+bg**.resprocessed RES files (format specified in RES.m help)
+RES.mMatlab program to reduce RES data
+drwelip.m
+fitline.mMatlab programs used by RES.m
+Weather folder contents
+rock_aws.xlsoriginal weather data files from the rock AWS
+glacier_aws.xlsoriginal weather data files from the glacier AWS
+snow_surface.xlssnow surface height measurements from the bamboo poles at the
+index sites (longitudinal and transverse).
+
+Use Constraints: This data set conforms to the CCBY Attribution License (http://creativecommons.org/licenses/by/4.0/).
+
+Please follow instructions listed in the citation reference provided at http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_1158 when using these data.
+
+ID: 1289
+Metadata ID: ASAC_1158
+UUID: 6CFC891B-CE1E-446C-B5B5-82F288337503

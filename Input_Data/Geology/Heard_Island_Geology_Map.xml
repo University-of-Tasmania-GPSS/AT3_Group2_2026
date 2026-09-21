@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DIF xmlns="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:dif="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/ http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.9.3.xsd">
+  <Entry_ID>Heard_Island_Geology_Map</Entry_ID>
+  <Entry_Title>Heard Island Geology Map - compiled from data collected from 1929-2020</Entry_Title>
+  <Data_Set_Citation>
+    <Dataset_Creator>Fox, J., Carey, R.J., and McPhie, J.</Dataset_Creator>
+    <Dataset_Title>Heard Island Geology Map - compiled from data collected from 1929-2020</Dataset_Title>
+    <Dataset_Series_Name>CAASM Metadata</Dataset_Series_Name>
+    <Dataset_Release_Date>2023-06-05</Dataset_Release_Date>
+    <Dataset_Publisher>Australian Antarctic Data Centre</Dataset_Publisher>
+    <Version>1</Version>
+    <Dataset_DOI>doi:10.26179/nb02-vj63</Dataset_DOI>
+    <Online_Resource>https://data.aad.gov.au/metadata/records/Heard_Island_Geology_Map</Online_Resource>
+  </Data_Set_Citation>
+  <Personnel>
+    <Role>INVESTIGATOR</Role>
+    <Role>TECHNICAL CONTACT</Role>
+    <Role>DIF AUTHOR</Role>
+    <First_Name>JODI</First_Name>
+    <Last_Name>FOX</Last_Name>
+    <Email>Jodi.Fox@utas.edu.au</Email>
+    <Contact_Address>
+      <Address>Institute for Marine and Antarctic Studies</Address>
+      <Address>University of Tasmania</Address>
+      <Address>IMAS Waterfront Building</Address>
+      <Address>20 Castray Esplanade</Address>
+      <City>Battery Point</City>
+      <Province_or_State>Tasmania</Province_or_State>
+      <Postal_Code>7004</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Personnel>
+    <Role>INVESTIGATOR</Role>
+    <First_Name>REBECCA</First_Name>
+    <Middle_Name>JANE</Middle_Name>
+    <Last_Name>CAREY</Last_Name>
+    <Email>rebecca.carey@utas.edu.au</Email>
+    <Phone>6262262987</Phone>
+    <Contact_Address>
+      <Address>Building 12</Address>
+      <Address>Churchill Avenue</Address>
+      <City>SANDY BAY</City>
+      <Province_or_State>TAS</Province_or_State>
+      <Postal_Code>7006</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Personnel>
+    <Role>INVESTIGATOR</Role>
+    <First_Name>JOCELYN</First_Name>
+    <Last_Name>MCPHIE</Last_Name>
+    <Email>j.mcphie@utas.edu.au</Email>
+    <Contact_Address>
+      <Address>Building 12</Address>
+      <Address>Churchill Avenue</Address>
+      <City>SANDY BAY</City>
+      <Province_or_State>TAS</Province_or_State>
+      <Postal_Code>7006</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>HUMAN DIMENSIONS</Topic>
+    <Term>BOUNDARIES</Term>
+    <Variable_Level_1>BOUNDARY SURVEYS</Variable_Level_1>
+  </Parameters>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>SOLID EARTH</Topic>
+    <Term>ROCKS/MINERALS/CRYSTALS</Term>
+    <Variable_Level_1>IGNEOUS ROCKS</Variable_Level_1>
+  </Parameters>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>SOLID EARTH</Topic>
+    <Term>ROCKS/MINERALS/CRYSTALS</Term>
+    <Variable_Level_1>SEDIMENTARY ROCKS</Variable_Level_1>
+  </Parameters>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>SOLID EARTH</Topic>
+    <Term>ROCKS/MINERALS/CRYSTALS</Term>
+    <Variable_Level_1>METAMORPHIC ROCKS</Variable_Level_1>
+  </Parameters>
+  <ISO_Topic_Category>GEOSCIENTIFIC INFORMATION</ISO_Topic_Category>
+  <Keyword>GEOLOGY</Keyword>
+  <Keyword>GEOSCIENCE</Keyword>
+  <Keyword>MAP</Keyword>
+  <Sensor_Name>
+    <Short_Name>NOT APPLICABLE</Short_Name>
+  </Sensor_Name>
+  <Source_Name>
+    <Short_Name>NOT APPLICABLE</Short_Name>
+  </Source_Name>
+  <Temporal_Coverage>
+    <Start_Date>1929-01-01</Start_Date>
+    <Stop_Date>2020-10-31</Stop_Date>
+  </Temporal_Coverage>
+  <Data_Set_Progress>COMPLETE</Data_Set_Progress>
+  <Spatial_Coverage>
+    <Southernmost_Latitude>-53.23235</Southernmost_Latitude>
+    <Northernmost_Latitude>-52.95195</Northernmost_Latitude>
+    <Westernmost_Longitude>73.22388</Westernmost_Longitude>
+    <Easternmost_Longitude>73.86108</Easternmost_Longitude>
+  </Spatial_Coverage>
+  <Location>
+    <Location_Category>OCEAN</Location_Category>
+    <Location_Type>SOUTHERN OCEAN</Location_Type>
+    <Location_Subregion1>HEARD AND MCDONALD ISLANDS</Location_Subregion1>
+  </Location>
+  <Location>
+    <Location_Category>GEOGRAPHIC REGION</Location_Category>
+    <Location_Type>POLAR</Location_Type>
+  </Location>
+  <Location>
+    <Location_Category>OCEAN</Location_Category>
+    <Location_Type>SOUTHERN OCEAN</Location_Type>
+    <Detailed_Location>KERGUELEN PLATEAU</Detailed_Location>
+  </Location>
+  <Quality>Field data pre-2000 is not GPS located.</Quality>
+  <Access_Constraints>These data are publicly available for download from the provided URL.</Access_Constraints>
+  <Use_Constraints>This data set conforms to the CCBY Attribution License (http://creativecommons.org/licenses/by/4.0/).
+
+Please follow instructions listed in the citation reference provided at http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=Heard_Island_Geology_Map when using these data.
+
+Please also cite: Fox, Jodi M., et al. "Construction of an intraplate island volcano: The volcanic history of Heard Island." Bulletin of Volcanology 83.5 (2021): 37.</Use_Constraints>
+  <Data_Set_Language>English</Data_Set_Language>
+  <Originating_Center>Australian Antarctic Division</Originating_Center>
+  <Data_Center>
+    <Data_Center_Name>
+      <Short_Name>AU/AADC</Short_Name>
+      <Long_Name>Australian Antarctic Data Centre, Australia</Long_Name>
+    </Data_Center_Name>
+    <Data_Center_URL>https://data.aad.gov.au</Data_Center_URL>
+    <Personnel>
+      <Role>DATA CENTER CONTACT</Role>
+      <First_Name>DATA OFFICER</First_Name>
+      <Last_Name>AADC</Last_Name>
+      <Email>metadata@aad.gov.au</Email>
+      <Phone>+61 3 6232 3244</Phone>
+      <Fax>+61 3 6232 3351</Fax>
+      <Contact_Address>
+        <Address>Australian Antarctic Division</Address>
+        <Address>203 Channel Highway</Address>
+        <City>Kingston</City>
+        <Province_or_State>Tasmania</Province_or_State>
+        <Postal_Code>7050</Postal_Code>
+        <Country>Australia</Country>
+      </Contact_Address>
+    </Personnel>
+  </Data_Center>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>841 MB</Distribution_Size>
+    <Distribution_Format>Shapefiles</Distribution_Format>
+    <Fees>Free</Fees>
+  </Distribution>
+  <Reference>
+    <Author>Fox, Jodi M., et al.</Author>
+    <Publication_Date>2021</Publication_Date>
+    <Title>Construction of an intraplate island volcano: The volcanic history of Heard Island.</Title>
+    <Series>Bulletin of Volcanology</Series>
+    <Volume>83</Volume>
+    <Issue>5</Issue>
+    <Pages>37</Pages>
+  </Reference>
+  <Summary>
+    <Abstract>ArcGIS geological map of Heard Island created using legacy field and sample data together with satellite imagery and published in Fox, Jodi M., et al. "Construction of an intraplate island volcano: The volcanic history of Heard Island." Bulletin of Volcanology 83.5 (2021): 37. The geological map was created in ArcMap 10.0 using satellite imagery, aerial photography, and historical maps and data. An initial map was generated by outlining geological features observed in the remote sensing images and the aerial photographs. This map was then cross-referenced with all available published and unpublished data to verify rock type, stratigraphic unit, and contact relationships. Where uncertainty in rock type or composition existed, the feature has been assigned to the stratigraphic unit without using a rock type label. In addition to published data, we collated and reviewed legacy unpublished maps, rock collections and unpublished data including hand-drawn sketches and notebooks.
+
+Criteria for allocation of rocks to formations were not changed from previous work (Barling 1990; Barling 1994; Lambeth 1948; Lambeth 1952; Stephenson 1964). 
+
+Summary of the stratigraphy of Heard Island is as follows:
+
+1. Unconsolidated Deposits (Recent) - Moraines, beach pebble, gravel and sand deposits.	
+2. Coastal Volcanic Cones (less than 15 ka) - Basaltic ash and scoria cones and associated small lavas.
+3. Newer Lavas (~750 ka- Present) - Comprises the Laurens Peninsula Group and the Big Ben Group.
+3a. Laurens Peninsula Group - Trachyte, tephrite, trachyandesite and basanite porphyritic lavas. Phenocrysts include clinopyroxene, olivine, plagioclase, kaersutite, magnetite, ilmenite and apatite. High TiO2 and P2O5 content.
+3b. Big Ben Group - Basalt-trachybasalt and basanite porphyritic lavas. Basalt-trachybasalt phenocryts include olivine, clinopyroxene, plagioclase and Fe-Ti oxides. Basanite phenocrysts and megacrysts include olivine and clinopyroxene
+4. Drygalski Formation (3.63-2.5 Ma) - Subhorizontal. Volcaniclastic breccia, conglomerate, sandstone and mudstone. Conglomerates are clast and matrix supported. Clasts are mainly basalt with minor trachyte, limestone and chert. Pillow lavas. Tillite. Microfossils include foraminifera and palynomorphs. Macrofossil - Austrochlamys heardensis
+5. Laurens Peninsula Limestone (Middle Eocene-Middle Oligocene) - Thin, white, grey and blue styolitic carbonate interbedded with thin, soft tuffaceous shales. Lense of chert. Microfossils include foraminifera, coccoliths and palynomorphs. Intruded by trachybasalt and dolerite dykes (5 cm-2 m thick) and dolerite and gabbro sills. Folded and tilted.
+
+For creation of the Heard Island geological map limestone and carbonate rocks were allocated to the Laurens Peninsula Limestones. Fresh, unaltered basalts were allocated to the Newer Lavas (Barling 1990). The Drygalski Formation includes all noncarbonate sedimentary rocks, clastic facies, and basalts between the Laurens Peninsula Limestones and the Newer Lavas (Barling 1990). Defining the boundary between the Drygalski Formation and the Newer Lavas is problematic, here we used the absence of chlorite as a criterion for allocating basalts to the Newer Lavas and the presence of basaltic pillows to allocate rocks to the Drygalski Formation consistent with Barling (1990). Although not ideal, these criteria were retained in the absence of more robust alternatives. Ridges of sediment in front of or adjacent to glaciers (current or since retreated) were mapped as moraines. Glacial retreat has been significant since the 1940s (~20 vol.% reduction), and locations where glaciers have been observed but have since retreated are relatively well known (Ruddell 2006). Ridges of unconsolidated sediment that have unclear relationships with glaciers and that could have been produced by aeolian and/or alluvial processes were mapped as unconsolidated sediment.
+
+Remote Sensing Resources Utilised:
+1.	Mosaic of QuickBird satellite images of Heard Island (0.6m resolution) collected between 2006 and 2009 provided by the Australian Antarctic Division Data Centre (AADC). 
+2.	Satellite imagery from Google™ Earth. Images collected 1984-2016.
+3.	Landsat 8 imagery from NASA via the USGS EarthExplorer online platform. Images collected 2013-2020.
+4.	Analogue aerial photographs collected in 1987 and held at the AADC 
+
+Published Resources Utilised
+1.	Barling J (1990) The petrogenesis of the Newer Lavas on Heard Island unpublished thesis. Department of Earth Sciences, Monash University, Melbourne
+2.	Barling J (1994) Origin and evolution of a high-Ti ocean island basalt suite; the Laurens Peninsula Series. Heard Island, Indian Ocean Mineralogical Magazine 58A:49–50
+3.	Barling J, Goldstein SJ,Wheller GE, Nicholls IA (1988) Heard Island; an example of large isotopic variations on a small oceanic island. Chemical Geology 70:46–46
+4.	Barling J, Goldstein SL, Nicholls IA (1994) Geochemistry of Heard Island (southern Indian Ocean); characterization of an enriched mantle component and implications for enrichment of the sub-Indian Ocean mantle, Journal of Petrology. 35:1017–1053
+5.	Clarke I (1979) Petrogenesis of basic and ultrabasic lavas on Heard Island. J Geol Soc Aust 26:272–272
+6.	Clarke I, McDougall I, Whitford DJ (1983) Volcanic evolution of Heard and McDonald islands, southern Indian Ocean. In: Oliver RL, James PR, Jago JB (eds) Antarctic earth science. Cambridge University, Cambridge, United Kingdom (GBR), pp 631–635
+7.	Collerson KD, Regelous M, Frankland RA, Wendt JI, Wheller G, Anonymous (1998) 1997 eruption of McDonald Island (southern Indian Ocean); new trace element and Th-Sr-Pb-Nd isotopic constraints on Heard-McDonald island magmatism Abstracts. Geological Society of Australia 49:87
+8.	Duncan RA, Quilty PG, Barling J, Fox JM (2016b) Geological development of Heard Island. Central Kerguelen Plateau. Aust J Earth Sci 63:81–89
+9.	Fox JM (2014) Heard Island up-date LAVA news. Geological Society of Australia 25:6–7
+10.	JonkersHA (2003) Late Cenozoic - recent pectinidae (mollusca: bivalvia) of the Southern Ocean and neighbouring regions. Monographs of marine Mollusca no.5. Backhuys Publishers BV, Leiden
+11.	Kiernan K, McConnell A, Yates T (1998) Tube-fed pahoehoe lava-flow features of Azorella Peninsula, Heard Island, southern Indian Ocean. Polar Record 34:225–236
+12.	Lambeth AJ (1952) A geological account of Heard Island. Journal and Proceedings of the Royal Society of New South Wales 86 Part 1:14–19
+13.	Orth K, Carey RJ, Wright R (2013) Heard Island volcanic eruption. September-October, November 2012 LAVA News 24:3–4
+14.	Patrick M (2013) Heard (Australia): Satellite imagery reveals lava flows in December 2012 Bulletin of the Global Volcanism Network 38:1
+15.	Patrick MR, Smellie JL (2013) Synthesis: A spaceborne inventory of volcanic activity in Antarctica and southern oceans, 2000–10. Antarctic Science 25:475–500
+16.	Quilty PG, Wheller G (2000) Heard Island and the McDonald Islands; a window into the Kerguelen Plateau. Papers and Proceedings of the Royal Society of Tasmania 133 Part 2:1–12
+17.	Quilty PG, Shafik S, McMinn A, Brady H, Clarke I (1983) Microfossil evidence for the age and environment of deposition of sediments of Heard and McDonald Islands. In: Oliver RL, James PR, Jago JB (eds) Antarctic Earth Science. Cambridge University, Cambridge, pp 636–639
+18.	Quilty PG, Murray-Wallace CV, Whitehead JM (2004) Austrochlamys heardensis (Fleming, 1957) (bivalvia, pectinidae) from Central Kerguelen plateau, Indian Ocean; palaeontology and possible tectonic significance. Antarctic Science 16:329–338. https://doi.org/10.1017/S0954102004002160
+19.	Ruddell A (2006) An inventory of present glaciers on Heard Island and their historical variation. In: Green K, Woehler EJ (eds) Heard Island; Southern Ocean Sentinel. Surrey Beatty, Chipping Norton, New South Wales (AUS), pp 28–51
+20.	Stephenson PJ (1964) Some geological observations on Heard Island. In: Adie RJ (ed) Antarctic Geology - Proceedings of the first international symposium on Antarctic geology. North-Holland Publishing Company, Amsterdam, pp 14–24
+21.	Stephenson PJ (1972) Geochemistry of some Heard Island igneous rocks. In: Adie RJ (ed) Antarctic Geology and Geophysics. Scandinavian University Books, Oslo, pp 793–801
+22.	Stephenson PJ, Barling J, Wheller G, Clarke I (2006) The geology and volcanic geomorphology of Heard Island. In: Green K, Woehler EJ (eds) Heard Island; Southern Ocean Sentinel. Surrey Beatty, Chipping Norton, Australia, pp 10–27
+23.	Truswell EM, Quilty PG, McMinn A, MacPhail MK, Wheller GE (2005) Late Miocene vegetation and palaeoenvironments of the Drygalski Formation, Heard Island, Indian Ocean; evidence from palynology. Antarctic Science 17:427–442. https://doi.org/10.1017/S0954102005002865
+24.	Tyrrell GW (1937) The petrology of Heard Island BANZARE reports 2part 3:27-56
+
+Unpublished Resources Utilised:
+
+1.	H.O. Fletcher, 1929 Rock Collection Australian Museum, Sydney.
+2.	A.J. Lambeth, 1948-1949 Rock collection, hand drawn outcrop sketches and maps, field notebooks, Australian Museum, Sydney
+3.	P. Blaxland, 1948 Rock Collection Australian Museum, Sydney.
+4.	G.C Compton, 1951 Personal letter outlining geological observations with sketches made during survey of Heard Island, Australian Museum Sydney.
+5.	P.G. Law and T. Burstall, 1953 ANARE Interim Report 7 Heard Island, Australian Antarctic Museum Library.
+6.	I. Clarke, 1982 Technical Report - Expedition to the Australian Territory of Heard Island and McDonald Island, Australian Antarctic Museum Library.
+7.	R. Vining, 1983 A report of activities by the Heard Island Expedition 1983, Australian Antarctic Division Library, Kingston Tasmania
+8.	H.R. Burton and D.L. Williams, 1985 Heard Island ANARE Report, Australian Antarctic Division Library, Kingston Tasmania
+9.	J. Barling, 1986-1987 Thesis, geological sample list, personal field notes and records, Oxford University, United Kingdom
+10.	G. Wheller, 1986-1987 Geochemistry, rock collection, thin sections, hand drawn maps, field notes, University of Tasmania, Hobart.
+11.	K. Green, 1993 Heard Island ANARE 1992 Report of volcanic activity at Big Ben, Australian Antarctic Division Library, Kingston Tasmania
+12.	D. Thost, 2003 Rock collection, field photographs, field notes, University of Tasmania, Hobart
+13.	J. Gajewski, 2008 Stereo photography of coast of Heard Island, Australian Antarctic Division Data Centre
+14.	D. Taylor, 2008 Video of Heard Island, Australian Antarctic Division Data Centre
+15.	G. Miller, Photography of Heard Island coastal areas, Australian Antarctic Division Data Centre
+16.	F. Belton, G. Marshall and R.  Schmieder, Cordell Expedition, 2016, Rock collection, field photographs. University of Tasmania.</Abstract>
+    <Purpose>This map is the first detailed geological map of Heard Island. It was created to summarise existing geological knowledge and to act as a base map for future field based geological surveys of Heard Island.</Purpose>
+  </Summary>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+      <Subtype>DIRECT DOWNLOAD</Subtype>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/5660/download</URL>
+    <Description>Download the dataset.</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>PROJECT HOME PAGE</Type>
+    </URL_Content_Type>
+    <URL>https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=4590</URL>
+    <Description>Public information for AAS project 4590</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>VIEW RELATED INFORMATION</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=Heard_Island_Geology_Map</URL>
+    <Description>Citation reference for this metadata record and dataset.</Description>
+  </Related_URL>
+  <IDN_Node>
+    <Short_Name>AMD/AU</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>AMD</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>CEOS</Short_Name>
+  </IDN_Node>
+  <Originating_Metadata_Node>AADC</Originating_Metadata_Node>
+  <Metadata_Name>CEOS IDN DIF</Metadata_Name>
+  <Metadata_Version>VERSION 9.9.3</Metadata_Version>
+  <DIF_Creation_Date>2023-04-04</DIF_Creation_Date>
+  <Last_DIF_Revision_Date>2023-06-05</Last_DIF_Revision_Date>
+  <DIF_Revision_History>2023-04-04 - record created by Jodi Fox.
+2023-06-05 - record loaded by Dave Connell after sufficient extra information provided by Jodi Fox.</DIF_Revision_History>
+  <Extended_Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.uuid</Name>
+      <Value>435bcea9-731a-4307-b482-9c964f767401</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.extraction_date</Name>
+      <Value>2023-06-05 12:09:34</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.keyword_version</Name>
+      <Value>8.6</Value>
+    </Metadata>
+  </Extended_Metadata>
+</DIF>
