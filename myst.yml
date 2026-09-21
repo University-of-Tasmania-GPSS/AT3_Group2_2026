@@ -1,0 +1,26 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 60729e2c-7514-4425-a9aa-f189f8f98bc3
+  # title: KGG357 AT3 Heard Island Project
+  # description:
+  toc:
+    - file: index.md
+
+    - title: Project
+      children:
+        - file: methods.md
+        - file: results.md 
+        - file: discussion.md
+        - file: conclusion.md  
+
+
+  # keywords: []
+  # authors: []
+  github: https://github.com/University-of-Tasmania-GPSS/AT3_Group2_2026
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
