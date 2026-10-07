@@ -1,0 +1,327 @@
+feat_type,type,name,descriptio,source,certainty,status,display,date_captu,date_flag,db_date_cr,metadata_i,feature_so,attribute_,att_reliab,spatial_me,spat_relia,planimetri,elevation_,aadc_comme,st_area_sh,st_perimet,historical_id,year,historical_area_km2,record_class,pre_year,RGIId,name_1,overlap_area_km2,assignment_share,historical_overlap_fraction,match_status
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00033424471,0.08304282249,7,1947,2.4963597930834474,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00030263054,0.07947053138,13,1947,2.257815750011397,ice,False,RGI60-19.00017,Nares,1.6674190432777396,0.9939199019816007,0.7385097934892707,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00300888601,0.29791101429,18,1947,22.397791822119174,ice,True,RGI60-19.00008,Winston,13.438714630933246,0.9998328300081585,0.6000017652482019,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00020643949,0.07861867293,27,1988,1.5395520291486462,ice,False,RGI60-19.00019,AU1091,0.3299635888510274,0.9997018852279229,0.21432441554670503,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,2.383332e-05,0.02693039033,30,1988,0.17794395510787514,ice,False,RGI60-19.00021,Jacka,0.05962539750362299,1.0,0.33507964610248336,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00287625069,0.26273492055,37,1988,21.449782471534327,ice,False,RGI60-19.00014,Ealey,19.41446631912866,0.9999983465616454,0.9051125038164511,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00015671048,0.05000788243,47,1947,1.1706133526074989,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00179387204,0.27339539374,51,1988,13.370408720853765,ice,False,RGI60-19.00020,Compton,11.806858178931414,0.9999187976402782,0.8830588821504245,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00208959717,0.24952434743,53,1988,15.557893235383695,ice,False,RGI60-19.00006,Lied,15.190926471025376,0.9994997199550256,0.9764128241011631,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.0002127836,0.08433959897,54,1947,1.5829867729614744,ice,False,RGI60-19.00011,AU1191,0.9714469416180214,0.9996120839961908,0.6136797591811993,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.0030542784,0.3158013787,67,1988,22.752441095182697,ice,False,RGI60-19.00002,Abbotsmith,21.789962399221203,0.99928949245965,0.9576977831989519,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00249814283,0.29122771461,71,1947,18.622603468051825,ice,False,RGI60-19.00016,Vahsel-Allison,17.455405151464333,0.9999512518955204,0.9373235692533598,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00030301508,0.07947247106,72,1947,2.260684764143374,ice,True,RGI60-19.00017,Nares,1.6703855259848748,0.9939663082948285,0.7388847629173202,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00037370909,0.10227536722,78,1988,2.7798196152633436,ice,False,RGI60-19.00012,Deacock,2.0821716452746992,0.9999533925016254,0.7490312082992646,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00337248659,0.39695276011,80,1947,25.117887639326383,ice,False,RGI60-19.00005,Stephenson,9.227279803722856,0.9999992661713641,0.3673589091654331,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00040290621,0.10586401795,82,1947,3.0088033559091363,ice,False,RGI60-19.00021,Jacka,0.1538504312898104,1.0,0.051133428506604135,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00032642547,0.08850193928,86,1988,2.435257242568191,ice,False,RGI60-19.00015,Mary Powell,2.0702944308515243,0.9999980734204974,0.8501337742324989,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00214620612,0.26059357181,87,1947,15.979334632811742,ice,False,RGI60-19.00006,Lied,15.21200556551146,0.9999992036417168,0.9519799112458249,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00211416853,0.2468610565,90,1988,15.768045965575336,ice,False,RGI60-19.00022,Baudissin-Schmidt,15.080644176263744,0.9999362893265585,0.9564053915867368,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.0004427137,0.09784306914,92,1947,3.303109042539225,ice,False,RGI60-19.00015,Mary Powell,2.066018454281752,0.998061407684635,0.6254769151349376,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00066731445,0.18101762415,99,1947,4.972478860018225,ice,False,RGI60-19.00004,AU1121,2.2857697548382925,0.9999949261681169,0.45968415737616924,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00044272895,0.09822230801,100,1947,3.303223740226168,ice,True,RGI60-19.00015,Mary Powell,2.070294583676407,0.999998775628256,0.6267497288980661,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00215595921,0.2603420151,105,1947,16.05194064319146,ice,True,RGI60-19.00006,Lied,15.212006862108833,0.9999994095905285,0.947674004050165,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00338243902,0.2649431989,109,1947,25.166045609098838,ice,False,RGI60-19.00010,Fifty-one,21.953644713206643,0.9999840118294389,0.8723517812138613,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00033850552,0.11030987069,110,1988,2.527859537059825,ice,False,RGI60-19.00021,Jacka,0.1535395606722154,1.0,0.06073896054003008,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,9.553816e-05,0.0437291765,112,1988,0.713645670900242,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00213759565,0.26928597036,114,1988,15.913745270110017,ice,False,RGI60-19.00008,Winston,13.164126656997299,0.999829410649441,0.8272173792880053,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.0029298156,0.26443772256,120,1947,21.849430550876004,ice,False,RGI60-19.00014,Ealey,19.476995858420278,0.9994635755641171,0.8914189233933784,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00371700684,0.34523159583,122,1947,27.671393881871744,ice,True,RGI60-19.00003,Gotley,26.653595481403805,0.9999996907716048,0.9632183906306677,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00218867711,0.25519993003,123,1947,16.323952452002807,ice,True,RGI60-19.00022,Baudissin-Schmidt,15.196943216023644,0.9999996187867899,0.930959781995635,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00224649676,0.23035900247,126,1988,16.75649687745577,ice,False,RGI60-19.00013,Downes,15.488676080019012,0.9999995658884461,0.9243385531767987,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00017657777,0.0773233996,127,1988,1.3136793430669214,ice,False,RGI60-19.00011,AU1191,0.9684681920923411,0.9995803019681014,0.7372181021217485,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00015120099,0.06801775705,128,1947,1.1293265441495708,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,6.870629e-05,0.04709998874,130,1988,0.5131412790155963,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00297163502,0.26384244918,132,1947,22.15401825968874,ice,False,RGI60-19.00020,Compton,12.538039732423503,0.9727528455779162,0.5659487856989633,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00111863908,0.25361464129,133,1947,8.329120763639315,ice,False,RGI60-19.00009,AU1141,4.600578427864464,0.9993172741097641,0.5523486281947356,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00315056451,0.32934916713,135,1947,23.469928937120343,ice,False,RGI60-19.00002,Abbotsmith,21.815350336889164,0.999999523001277,0.9295021896033833,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00297163278,0.26384367059,137,1947,22.154001585909082,ice,True,RGI60-19.00020,Compton,12.538036499064882,0.9727537539437474,0.5659490657001498,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00227926097,0.23324176469,146,1947,17.001019405683834,ice,False,RGI60-19.00013,Downes,15.487821682358625,0.9986123409509882,0.9109937064821353,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00101120525,0.26079392946,147,1988,7.526844837204521,ice,False,RGI60-19.00007,AU1211,7.443375039335358,0.9999985532028836,0.9889103867989174,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00370299592,0.34138981069,151,1947,27.567192601117835,ice,False,RGI60-19.00003,Gotley,26.653491483958422,0.9999962857810187,0.9668554890452514,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00319363332,0.2499906344,152,1988,23.76212969695124,ice,False,RGI60-19.00010,Fifty-one,21.53535470539777,0.9999998956737843,0.906288913495865,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00293200566,0.26402142248,154,1947,21.86576931019098,ice,True,RGI60-19.00014,Ealey,19.496330585427735,0.9999984551289359,0.8916370747742719,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,9.484024e-05,0.06759317059,158,1988,0.7080490432800017,ice,False,RGI60-19.00021,Jacka,0.2812792475833942,1.0,0.39725955462121965,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,6.285061e-05,0.03669287768,160,1947,0.46927208151820404,ice,False,RGI60-19.00021,Jacka,0.08290190810795647,1.0,0.1766606439482817,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00247775613,0.29048056516,169,1988,18.470609571349748,ice,False,RGI60-19.00016,Vahsel-Allison,17.453946586834252,0.9999375964980818,0.9449578000883919,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00218154151,0.25233746096,171,1947,16.270717933462848,ice,False,RGI60-19.00022,Baudissin-Schmidt,15.197020299180469,0.9999889367176857,0.9340104328110698,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00071644276,0.18659236314,181,1947,5.3396140866548,ice,False,RGI60-19.00023,Brown,3.403610497322638,0.9999753012028461,0.6374263087344121,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00369915264,0.341460176,183,1988,27.53860265376633,ice,False,RGI60-19.00003,Gotley,26.653684116026184,0.9999996158888,0.9678662512813039,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00040729541,0.15090868513,185,1988,3.0348324845847454,ice,False,RGI60-19.00004,AU1121,2.2857698104636617,0.9999949228548385,0.7531782469293103,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00112525763,0.26479329716,188,1947,8.375405854443521,ice,False,RGI60-19.00007,AU1211,7.464823321661955,0.9999985146382511,0.891278996074147,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00045926525,0.09161796097,189,1947,3.4160419968728615,ice,True,RGI60-19.00012,Deacock,2.085974682953596,0.9999998611592957,0.6106408190716491,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00121009467,0.25158070691,193,1947,9.009873915547335,ice,True,RGI60-19.00009,AU1141,4.600629824803884,0.9987841255557139,0.5106208885859203,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00346984067,0.39761312313,195,1947,25.84284026809291,ice,True,RGI60-19.00005,Stephenson,9.22724674945526,0.9999991830278087,0.35705234617139825,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,3.472785e-05,0.03427473744,196,1988,0.25926620337766176,ice,False,RGI60-19.00021,Jacka,0.07255188619905913,1.0,0.2798354943832612,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00092398544,0.27354166025,197,1988,6.880087363992995,ice,False,RGI60-19.00009,AU1141,4.590955058565708,0.9999986863944335,0.6672815061321047,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00227828796,0.23317110719,200,1947,16.993764018545942,ice,True,RGI60-19.00013,Downes,15.502296684446234,0.99999973251767,0.9122344330266083,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00024271766,0.07240367987,204,1988,1.8107460972994067,ice,False,RGI60-19.00017,Nares,1.6676520447803072,0.9995323337157571,0.9209750871574355,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00010353328,0.07301858446,207,1988,0.7732752466560886,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00257593951,0.25793039866,208,1947,19.17608156239107,ice,False,RGI60-19.00008,Winston,13.428497536837165,0.999833884023229,0.7002732801874234,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00044554405,0.09153134789,210,1947,3.3140095884897653,ice,False,RGI60-19.00012,Deacock,2.085229695539877,0.9997461214304927,0.6292165547083228,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00342124734,0.27041649248,211,1947,25.454628255482653,ice,True,RGI60-19.00010,Fifty-one,22.03179830307824,0.999999898800516,0.865532117851017,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00099481509,0.16919736296,214,1988,7.419819571884695,ice,False,RGI60-19.00018,Challenger,7.337518680008992,0.9999890215717755,0.9889079658772892,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00057384847,0.16460220884,218,1988,4.27669676838624,ice,False,RGI60-19.00023,Brown,3.4036103952728145,0.9999752932273319,0.7958502974614975,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00112528861,0.26483276268,232,1947,8.375636234063812,ice,True,RGI60-19.00007,AU1211,7.464827965963985,0.9999874868571301,0.8912550351225189,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,5.5148e-05,0.03038945695,233,1947,0.4117232624045733,ice,False,RGI60-19.00021,Jacka,0.07901720608310897,1.0,0.1919182453321376,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00024813109,0.09045526381,234,1947,1.8459042617778756,ice,True,RGI60-19.00011,AU1191,0.9721758518101911,0.9999997358236282,0.5266664539112357,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00100155003,0.16861318661,248,1947,7.470081414568725,ice,True,RGI60-19.00018,Challenger,7.38297989064769,0.9999850741213895,0.9883399498496546,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00071711392,0.18757947784,250,1947,5.344617390889756,ice,True,RGI60-19.00023,Brown,3.4036002763856756,0.9999994107202534,0.6368276767926048,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00250350726,0.29261957555,251,1947,18.662605831458933,ice,True,RGI60-19.00016,Vahsel-Allison,17.45605574786327,0.999789581983941,0.9353493239640832,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,5.960758e-05,0.04041145604,255,1947,0.44468107565961107,ice,False,RGI60-19.00001,AU1041,0.30410510646002165,0.9999240365404808,0.6838723820412907,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00317518895,0.32321640955,261,1947,23.65342372254526,ice,True,RGI60-19.00002,Abbotsmith,21.815158566899246,0.9999996145371848,0.9222833371942739,accepted
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00011636731,0.0588511107,270,1988,0.8689975958304123,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,0.00275505725,0.41147951548,273,1988,20.52004767075462,ice,False,RGI60-19.00005,Stephenson,9.227279469637331,0.9999992844037279,0.44967144412574356,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,5.430711e-05,0.03808945155,276,1947,0.4051329897817367,ice,True,RGI60-19.00001,AU1041,0.3041046516897345,0.9999983535023229,0.7506291992009076,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00099933739,0.1677969583,289,1947,7.453569742546181,ice,False,RGI60-19.00018,Challenger,7.368602863187801,0.9998526664653726,0.9886005119300924,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Definite year,2024-05-14,heard_glacier_gis,Dec 1947 oblique aerial photos (Mary Powell to Fiftyone Glacier); Feb 1949 photos taken from ship by  A. Campbell - Drury (Mt Dixon to Fiftyone Gl),"1988 SPOT image
+",1988-01-09,"Eyed in by Andrew Ruddell using 1947 and 1949 aerial photos; 1988 SPOT image and 1997 contours as background.
+",1988-01-09,"10m
+","30m
+",,0.00017230307,0.06759298053,290,1947,1.2866566515225806,ice,False,,,,,,unmatched
+Glacier,,,,,,Unknown,,1988-01-01,Definite year,2024-05-14,heard_glacier_gis,1988 SPOT image and 1987 vertical aerial photos,1988 SPOT image and 1987 vertical aerial photos,1988-01-09,"Heads up digitised from 1988 SPOT image with contours used as additional background; aerial photos used  to help define boundaries.
+",1988-01-09,10m (near coast) to 100m (inland),Not Applicable,,5.298109e-05,0.03700308589,292,1988,0.3952393966516649,ice,False,RGI60-19.00001,AU1041,0.30410526674256644,0.9999960665115384,0.7694204305513161,accepted
+Glacier,,,,,,Unknown,,1947-01-01,Pre year,2024-05-14,heard_glacier_gis,"Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+","Dec 1947 oblique aerial photos (Mary Powell to Fifty One Glacier)
+",1947-12-13,"Eyed in by Andrew Ruddell using hard copy photos as primary source and 1988 SPOT image and contours as background.
+",1947-12-13,"30m (near coast) to 200m (inland)
+","30m (for snowline elevation)
+",,0.00066867397,0.18463422012,293,1947,4.982609408312792,ice,True,RGI60-19.00004,AU1121,2.285847035477869,0.9999981796179237,0.4587650462153928,accepted
