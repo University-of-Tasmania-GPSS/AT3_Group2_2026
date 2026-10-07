@@ -1,0 +1,36 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.9-Prizren">
+  <identifier></identifier>
+  <parentidentifier></parentidentifier>
+  <language></language>
+  <type>dataset</type>
+  <title></title>
+  <abstract>contours at Heard Island
+
+A summary of the intentions with which the data set was developed. REQUIRED.</abstract>
+  <keywords vocabulary="gmd:topicCategory">
+    <keyword>Common-use word or phrase used to describe the subject of the data set.  REQUIRED.</keyword>
+  </keywords>
+  <links>
+    <link type="Local Area Network" size="" url="file://" mimeType="" name="" description="" format=""/>
+  </links>
+  <dates/>
+  <fees></fees>
+  <constraints type="Access">Restrictions and legal prerequisites for accessing the data set. REQUIRED.</constraints>
+  <rights>Restrictions and legal prerequisites for using the data set after access is granted. REQUIRED.</rights>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt></wkt>
+      <proj4></proj4>
+      <srsid>0</srsid>
+      <srid>0</srid>
+      <authid></authid>
+      <description></description>
+      <projectionacronym></projectionacronym>
+      <ellipsoidacronym></ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent/>
+</qgis>
