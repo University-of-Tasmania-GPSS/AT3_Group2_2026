@@ -1,0 +1,31 @@
+{
+  "dem": "Output_Data\\processed\\geomorphology\\Heard_DEM_2002_land.tif",
+  "dem_product": "Heard Island RADARSAT (2002) DEM",
+  "thickness_doi": "10.6096/1007",
+  "thickness_tiles": [
+    "Input_Data\\RGI-19_Ice_Thickness\\THICKNESS_RGI-19.3_2021July09.tif"
+  ],
+  "working_crs": "EPSG:32743",
+  "resolution_m": 50,
+  "dem_resampling": "average",
+  "thickness_resampling": "nearest",
+  "lagoon_mask": "Input_Data\\heard_island_shp\\UpdatedHI_Lagoons2014.shp",
+  "bed_scope": "Pixels with valid DEM and positive modelled thickness, excluding lagoons",
+  "spike_policy": "Flag only; values retained in candidate bed",
+  "flag_definitions": {
+    "1": "Missing thickness within the 2019 ice mask",
+    "2": "Modelled thickness in an excluded 2014 lagoon",
+    "4": "Modelled thickness outside the 2019 ice mask",
+    "8": "Missing DEM elevation where thickness exists",
+    "16": "Missing thickness error where thickness exists",
+    "32": "Local thickness jump of at least 200 m; review only"
+  },
+  "outputs": {
+    "surface": "Heard_surface_DEM_2002_50m.tif",
+    "thickness": "Heard_Millan_thickness_land_50m.tif",
+    "thickness_error": "Heard_Millan_thickness_error_land_50m.tif",
+    "candidate_bed": "Heard_bed_estimate_candidate_50m.tif",
+    "thickness_mask_2019": "Heard_Millan_thickness_mask_2019_50m.tif",
+    "thickness_mask_2026": "Heard_Millan_thickness_mask_2026_50m.tif"
+  }
+}

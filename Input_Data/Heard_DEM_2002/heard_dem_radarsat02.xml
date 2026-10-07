@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DIF xmlns="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:dif="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/ http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.9.3.xsd">
+  <Entry_ID>heard_dem_radarsat02</Entry_ID>
+  <Entry_Title>Heard Island RADARSAT (2002) Digital Elevation Model (DEM)</Entry_Title>
+  <Data_Set_Citation>
+    <Dataset_Creator>Brolsma, H. and Smith, D.T.</Dataset_Creator>
+    <Dataset_Title>Heard Island RADARSAT (2002) Digital Elevation Model (DEM)</Dataset_Title>
+    <Dataset_Series_Name>CAASM Metadata</Dataset_Series_Name>
+    <Dataset_Release_Date>2008-11-07</Dataset_Release_Date>
+    <Dataset_Publisher>Australian Antarctic Data Centre</Dataset_Publisher>
+    <Version>1</Version>
+    <Online_Resource>https://data.aad.gov.au/metadata/records/heard_dem_radarsat02</Online_Resource>
+  </Data_Set_Citation>
+  <Personnel>
+    <Role>INVESTIGATOR</Role>
+    <First_Name>HENK</First_Name>
+    <Last_Name>BROLSMA</Last_Name>
+    <Contact_Address>
+      <Address>Australian Antarctic Division</Address>
+      <Address>203 Channel Highway</Address>
+      <City>Kingston</City>
+      <Province_or_State>Tasmania</Province_or_State>
+      <Postal_Code>7050</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Personnel>
+    <Role>TECHNICAL CONTACT</Role>
+    <Role>DIF AUTHOR</Role>
+    <First_Name>DAVID</First_Name>
+    <Middle_Name>T.</Middle_Name>
+    <Last_Name>SMITH</Last_Name>
+    <Email>gis@aad.gov.au</Email>
+    <Phone>+61 3 6232 3577</Phone>
+    <Fax>+61 3 6232 3351</Fax>
+    <Contact_Address>
+      <Address>Australian Antarctic Division</Address>
+      <Address>203 Channel Highway</Address>
+      <City>Kingston</City>
+      <Province_or_State>Tasmania</Province_or_State>
+      <Postal_Code>7050</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>LAND SURFACE</Topic>
+    <Term>TOPOGRAPHY</Term>
+    <Variable_Level_1>TERRAIN ELEVATION</Variable_Level_1>
+  </Parameters>
+  <ISO_Topic_Category>ELEVATION</ISO_Topic_Category>
+  <Keyword>heard</Keyword>
+  <Keyword>InSAR</Keyword>
+  <Keyword>DEM</Keyword>
+  <Keyword>elevation</Keyword>
+  <Keyword>RADARSAT</Keyword>
+  <Sensor_Name>
+    <Short_Name>SAR</Short_Name>
+    <Long_Name>Synthetic Aperture Radar</Long_Name>
+  </Sensor_Name>
+  <Source_Name>
+    <Short_Name>RADARSAT-1</Short_Name>
+  </Source_Name>
+  <Temporal_Coverage>
+    <Start_Date>2002-01-24</Start_Date>
+    <Stop_Date>2002-01-24</Stop_Date>
+  </Temporal_Coverage>
+  <Temporal_Coverage>
+    <Start_Date>2002-02-17</Start_Date>
+    <Stop_Date>2002-02-17</Stop_Date>
+  </Temporal_Coverage>
+  <Temporal_Coverage>
+    <Start_Date>2002-03-13</Start_Date>
+    <Stop_Date>2002-03-13</Stop_Date>
+  </Temporal_Coverage>
+  <Data_Set_Progress>COMPLETE</Data_Set_Progress>
+  <Spatial_Coverage>
+    <Southernmost_Latitude>-53.27694</Southernmost_Latitude>
+    <Northernmost_Latitude>-52.80806</Northernmost_Latitude>
+    <Westernmost_Longitude>73.18306</Westernmost_Longitude>
+    <Easternmost_Longitude>73.97306</Easternmost_Longitude>
+    <Minimum_Altitude>0 Metres</Minimum_Altitude>
+    <Maximum_Altitude>2795 Metres</Maximum_Altitude>
+  </Spatial_Coverage>
+  <Location>
+    <Location_Category>OCEAN</Location_Category>
+    <Location_Type>SOUTHERN OCEAN</Location_Type>
+    <Location_Subregion1>HEARD AND MCDONALD ISLANDS</Location_Subregion1>
+  </Location>
+  <Location>
+    <Location_Category>GEOGRAPHIC REGION</Location_Category>
+    <Location_Type>POLAR</Location_Type>
+  </Location>
+  <Quality>See the report for further details.</Quality>
+  <Access_Constraints>The data are publicly available for download for non-commercial use from the provided URLs.</Access_Constraints>
+  <Use_Constraints>This data set conforms to the CCBY Attribution License
+(http://creativecommons.org/licenses/by/4.0/).
+
+Please follow instructions listed in the citation reference provided at http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=heard_dem_radarsat02 when using these data.</Use_Constraints>
+  <Data_Set_Language>English</Data_Set_Language>
+  <Originating_Center>Australian Antarctic Division</Originating_Center>
+  <Data_Center>
+    <Data_Center_Name>
+      <Short_Name>AU/AADC</Short_Name>
+      <Long_Name>Australian Antarctic Data Centre, Australia</Long_Name>
+    </Data_Center_Name>
+    <Data_Center_URL>http://data.aad.gov.au</Data_Center_URL>
+    <Personnel>
+      <Role>DATA CENTER CONTACT</Role>
+      <First_Name>DATA OFFICER</First_Name>
+      <Last_Name>AADC</Last_Name>
+      <Email>metadata@aad.gov.au</Email>
+      <Phone>+61 3 6232 3244</Phone>
+      <Fax>+61 3 6232 3351</Fax>
+      <Contact_Address>
+        <Address>Australian Antarctic Division</Address>
+        <Address>203 Channel Highway</Address>
+        <City>Kingston</City>
+        <Province_or_State>Tasmania</Province_or_State>
+        <Postal_Code>7050</Postal_Code>
+        <Country>Australia</Country>
+      </Contact_Address>
+    </Personnel>
+  </Data_Center>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>8.2 Mb</Distribution_Size>
+    <Distribution_Format>ArcInfo interchange file</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>3.0 Mb</Distribution_Size>
+    <Distribution_Format>ArcInfo ascii file</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>45.4 Mb</Distribution_Size>
+    <Distribution_Format>GeoTIFF</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>16.6 Mb</Distribution_Size>
+    <Distribution_Format>shapefile</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>4.3 Mb</Distribution_Size>
+    <Distribution_Format>Word documents</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Summary>
+    <Abstract>This dataset is a Digital Elevation Model (DEM) of Heard Island derived by interferometric processing from RADARSAT images acquired on 17 February 2002 and 13 March 2002. The DEM was created by a contractor for the Australian Antarctic Data Centre. The cell size is 10 metres.
+
+Processing stages included:
+
+1 Detection of a coastline from a RADARSAT image of Heard Island acquired 24 January 2002 and rectified using ground control points provided by a second contractor.
+
+2 Generation of the interferometric SAR (InSAR) DEM using the RADARSAT images acquired on 17 February 2002 and 13 March 2002.
+
+3 Co-registration of the InSAR DEM with a DEM derived from stereoscopic RADARSAT images acquired in March and April of 1997 and described by the metadata record 'Heard Island RADARSAT (1997) DEM'.
+
+4 Merging of the InSAR DEM with the 1997 stereoscopic DEM and the coastline detected in stage 1.
+
+
+The following are available for download from the Related URLs below:
+
+1 The final DEM in ArcInfo interchange or ArcInfo ascii formats.
+
+2 The rectified RADARSAT image of Heard Island acquired 24 January 2002. Rectified using ground control points and subsequently used in processing of the DEM.
+
+3 Contours generated from the DEM and the island polygon (coastline) extracted from the rectified RADARSAT image acquired 24 January 2002.
+
+4 A detailed deport describing the generation of the DEM.
+
+5 A report by
+
+Dr Arko Lucieer
+Centre for Spatial Information Science
+School of Geography and Environmental Studies
+University of Tasmania
+Private Bag 76
+Hobart 7001
+Tasmania, Australia
+
+outlining some errors and artefacts in the DEM.
+Dr Lucieer produced this report while working for the Australian Antarctic Division.
+
+
+On 3 July 2003 Henk Brolsma (Mapping Officer, Australian Antarctic Division)  wrote the following email to the contractor who created the DEM. &quot;What I'm really interested in are the 20 metre contours for the areas with high coherency. These are the areas where most of the field work takes place and where we have a need for contours with an accuracy better than 50 metres and my reason for using INSAR in the first instance. So can you send me: 1. The 20 metre contours for the areas with high coherency? 2. The zone or line where the INSAR and Stereo Imagery were integrated? This would be very useful for the metadata.&quot; He did not receive a reply to that email and that was the reason why he was reluctant to make the DEM public. Since he won't now get a reply and the DEM is probably better than the 1997 DEM, he considers the 2002 DEM should now be published.</Abstract>
+  </Summary>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/2023/download</URL>
+    <Description>Download DEM as an ArcInfo interchange file</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/2025/download</URL>
+    <Description>Download DEM as an ArcInfo ascii file</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/2040/download</URL>
+    <Description>Download rectified RADARSAT image of Heard Island acquired 24 January 2002, rectified using ground control points and subsequently used in processing of the DEM</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/2038/download</URL>
+    <Description>Download contours generated from the DEM and the island polygon (coastline) extracted from the rectified RADARSAT image acquired 24 January 2002</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>EXTENDED METADATA</Type>
+    </URL_Content_Type>
+    <URL>https://data.aad.gov.au/eds/2041/download</URL>
+    <Description>Download a detailed deport describing the generation of the DEM and a report outlining some errors and artefacts in the DEM</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>VIEW RELATED INFORMATION</Type>
+    </URL_Content_Type>
+    <URL>http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=heard_dem_radarsat02</URL>
+    <Description>Citation reference for this metadata record and dataset</Description>
+  </Related_URL>
+  <IDN_Node>
+    <Short_Name>AMD/AU</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>CEOS</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>AMD</Short_Name>
+  </IDN_Node>
+  <Originating_Metadata_Node>AADC</Originating_Metadata_Node>
+  <Metadata_Name>CEOS IDN DIF</Metadata_Name>
+  <Metadata_Version>VERSION 9.9.3</Metadata_Version>
+  <DIF_Creation_Date>2008-11-06</DIF_Creation_Date>
+  <Last_DIF_Revision_Date>2019-04-05</Last_DIF_Revision_Date>
+  <DIF_Revision_History>2008-11-06 - record created by David Smith.
+2008-02-11 - note added in Summary about Arko Lucieer producing his report while working for the Australian Antarctic Division.
+2009-02-10 - record updated by David Smith.
+2018-08-13 - record updated by Dave Connell - basic updates. 
+2019-04-05 - record updated by Dave Connell for ISO compliance.</DIF_Revision_History>
+  <Extended_Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.uuid</Name>
+      <Value>2460e110-a281-4ed3-a052-687617486d32</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.extraction_date</Name>
+      <Value>2019-04-05 16:25:17</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.keyword_version</Name>
+      <Value>8.6</Value>
+    </Metadata>
+  </Extended_Metadata>
+</DIF>

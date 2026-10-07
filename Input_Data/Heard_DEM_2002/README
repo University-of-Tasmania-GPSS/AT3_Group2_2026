@@ -1,0 +1,63 @@
+Title: Heard Island RADARSAT (2002) Digital Elevation Model (DEM)
+
+Authors:
+  - HENK BROLSMA (INVESTIGATOR)
+  - DAVID SMITH (TECHNICAL CONTACT, DIF AUTHOR)
+
+Owner: Commonwealth of Australia
+
+Citation: Brolsma, H. and Smith, D.T. (2008) Heard Island RADARSAT (2002) Digital Elevation Model (DEM), Ver. 1,  <em>Australian Antarctic Data Centre</em> - <a href="https://data.aad.gov.au/metadata/records/heard_dem_radarsat02">https://data.aad.gov.au/metadata/records/heard_dem_radarsat02</a>, Accessed: 2020-07-02
+
+Revision Date: 2019-04-05
+
+Metadata URL: https://data.aad.gov.au/metadata/records/heard_dem_radarsat02
+
+Dataset API URL: https://data.aad.gov.au/s3/api/bucket/datasets/gis/heard/heard_dem_radarsat2002_asc?export=json
+
+Abstract: This dataset is a Digital Elevation Model (DEM) of Heard Island derived by interferometric processing from RADARSAT images acquired on 17 February 2002 and 13 March 2002. The DEM was created by a contractor for the Australian Antarctic Data Centre. The cell size is 10 metres.
+
+Processing stages included:
+
+1 Detection of a coastline from a RADARSAT image of Heard Island acquired 24 January 2002 and rectified using ground control points provided by a second contractor.
+
+2 Generation of the interferometric SAR (InSAR) DEM using the RADARSAT images acquired on 17 February 2002 and 13 March 2002.
+
+3 Co-registration of the InSAR DEM with a DEM derived from stereoscopic RADARSAT images acquired in March and April of 1997 and described by the metadata record 'Heard Island RADARSAT (1997) DEM'.
+
+4 Merging of the InSAR DEM with the 1997 stereoscopic DEM and the coastline detected in stage 1.
+
+
+The following are available for download from the Related URLs below:
+
+1 The final DEM in ArcInfo interchange or ArcInfo ascii formats.
+
+2 The rectified RADARSAT image of Heard Island acquired 24 January 2002. Rectified using ground control points and subsequently used in processing of the DEM.
+
+3 Contours generated from the DEM and the island polygon (coastline) extracted from the rectified RADARSAT image acquired 24 January 2002.
+
+4 A detailed deport describing the generation of the DEM.
+
+5 A report by
+
+Dr Arko Lucieer
+Centre for Spatial Information Science
+School of Geography and Environmental Studies
+University of Tasmania
+Private Bag 76
+Hobart 7001
+Tasmania, Australia
+
+outlining some errors and artefacts in the DEM.
+Dr Lucieer produced this report while working for the Australian Antarctic Division.
+
+
+On 3 July 2003 Henk Brolsma (Mapping Officer, Australian Antarctic Division)  wrote the following email to the contractor who created the DEM. "What I'm really interested in are the 20 metre contours for the areas with high coherency. These are the areas where most of the field work takes place and where we have a need for contours with an accuracy better than 50 metres and my reason for using INSAR in the first instance. So can you send me: 1. The 20 metre contours for the areas with high coherency? 2. The zone or line where the INSAR and Stereo Imagery were integrated? This would be very useful for the metadata." He did not receive a reply to that email and that was the reason why he was reluctant to make the DEM public. Since he won't now get a reply and the DEM is probably better than the 1997 DEM, he considers the 2002 DEM should now be published.
+
+Use Constraints: This data set conforms to the CCBY Attribution License
+(http://creativecommons.org/licenses/by/4.0/).
+
+Please follow instructions listed in the citation reference provided at http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=heard_dem_radarsat02 when using these data.
+
+ID: 2025
+Metadata ID: heard_dem_radarsat02
+UUID: C8912E96-5BBE-45B3-AD1E-BB82E8082ADD
