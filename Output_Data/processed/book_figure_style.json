@@ -1,0 +1,21 @@
+{
+  "figure.facecolor": "#0B1420",
+  "axes.facecolor": "#111E2C",
+  "axes.edgecolor": "#587083",
+  "axes.labelcolor": "#E8EFF5",
+  "text.color": "#E8EFF5",
+  "xtick.color": "#BCCBD7",
+  "ytick.color": "#BCCBD7",
+  "grid.color": "#A8BDCD",
+  "grid.alpha": 0.15,
+  "grid.linewidth": 0.7,
+  "font.family": "DejaVu Sans",
+  "font.size": 12,
+  "axes.titlesize": 14,
+  "axes.titleweight": "semibold",
+  "axes.labelsize": 12,
+  "legend.fontsize": 11,
+  "legend.frameon": false,
+  "savefig.facecolor": "#0B1420",
+  "svg.fonttype": "none"
+}

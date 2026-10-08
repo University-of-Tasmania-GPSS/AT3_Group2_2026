@@ -1,0 +1,20 @@
+The ASCII file consists of header information containing a set of keywords, followed by cell values in row-major order. The file format is
+
+NCOLS xxx
+NROWS xxx
+XLLCORNER xxx
+YLLCORNER xxx
+CELLSIZE xxx
+NODATA_VALUE xxx
+row 1
+row 2
+.
+.
+.
+row n
+
+where xxx is a number, and the keyword NODATA_VALUE defaults to -9999.
+
+
+xllcorner is the x coordinate of the lower left corner of the grid
+yllcorner is the y coordinate of the lower left corner of the grid

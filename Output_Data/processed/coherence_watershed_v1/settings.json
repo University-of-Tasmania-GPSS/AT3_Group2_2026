@@ -1,0 +1,21 @@
+{
+  "method": "Gaussian smoothing, Sobel gradient, marker watershed",
+  "status": "candidate; imagery review required",
+  "smooth_sigma_m": 30.0,
+  "ice_seed_max": 0.22,
+  "rock_seed_min": 0.45,
+  "seed_inset_m": 200.0,
+  "minimum_seed_area_m2": 1000.0,
+  "minimum_polygon_area_m2": 1000.0,
+  "crs": "EPSG:32743",
+  "radar_paths": {
+    "2019": "data\\processed\\S1A_IW_HH_2019-04-13_RTC_10m.tif",
+    "2026": "data\\processed\\S1A_IW_HH_2026-04-12_RTC_10m.tif"
+  },
+  "coherence_paths": {
+    "2019": "data\\raw\\coherence\\Heard_coherence_2019.tif",
+    "2026": "data\\raw\\coherence\\Heard_coherence_2026.tif"
+  },
+  "outline_path": "Input_Data\\heard_island_shp\\Glacier_2014.shp",
+  "coastline_path": "Input_Data\\HIMI_Features\\himi_coastline_py.gpkg"
+}

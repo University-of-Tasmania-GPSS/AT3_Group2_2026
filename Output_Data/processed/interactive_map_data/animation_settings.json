@@ -1,0 +1,1731 @@
+{
+  "inventory_years": [
+    1947,
+    1988,
+    2014,
+    2019,
+    2026
+  ],
+  "inventory_colours": {
+    "1947": "#FFD166",
+    "1988": "#B39DDB",
+    "2014": "#9AD9FF",
+    "2019": "cyan",
+    "2026": "#9DFF50"
+  },
+  "display_grid_metres": 25,
+  "timing": "Equal duration per inventory interval; visual pacing only.",
+  "historical_date_note": "1947 is a nominal inventory year and includes Pre year records.",
+  "files": {
+    "glaciers": "glacier_inventories.geojson",
+    "island": "island_inventories.geojson",
+    "areas": "glacier_area_history.csv",
+    "animation": "focus_glacier_animation.geojson",
+    "retreat_intervals": "glacier_retreat_intervals.csv",
+    "retreat_totals": "glacier_retreat_1947_2026.csv"
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "mapped_year": 1947,
+      "from_year": 1947,
+      "to_year": 1947,
+      "blend": 0.0,
+      "is_interpolated": false,
+      "duration_ms": 1000.0,
+      "label": "1947 inventory"
+    },
+    {
+      "frame_index": 1,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.00175563326127015,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 2,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.006906458118715631,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 3,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.015278362182788994,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 4,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.026697233063942775,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 5,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.04098895837262952,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 6,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.05797942571930182,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 7,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.07749452271441218,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 8,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.09936013696841312,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 9,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.12340215609175724,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 10,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.14944646769489706,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 11,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.17731895938828515,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 12,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.2068455187823741,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 13,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.23785203348761624,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 14,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.27016439111446444,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 15,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.303608479273371,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 16,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.33801018557478857,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 17,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.37319539762916976,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 18,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.40899000304696687,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 19,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.44521988943863267,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 20,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.4817109444146196,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 21,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.5182890555853804,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 22,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.5547801105613674,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 23,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.5910099969530332,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 24,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.6268046023708305,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 25,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.6619898144252115,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 26,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.696391520726629,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 27,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.7298356088855357,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 28,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.7621479665123838,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 29,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.793154481217626,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 30,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.8226810406117149,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 31,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.850553532305103,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 32,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.8765978439082428,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 33,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9006398630315868,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 34,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.922505477285588,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 35,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9420205742806982,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 36,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9590110416273705,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 37,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9733027669360572,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 38,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.984721637817211,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 39,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9930935418812843,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 40,
+      "mapped_year": null,
+      "from_year": 1947,
+      "to_year": 1988,
+      "blend": 0.9982443667387298,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1947 → 1988: interpolated"
+    },
+    {
+      "frame_index": 41,
+      "mapped_year": 1988,
+      "from_year": 1988,
+      "to_year": 1988,
+      "blend": 0.0,
+      "is_interpolated": false,
+      "duration_ms": 1000.0,
+      "label": "1988 inventory"
+    },
+    {
+      "frame_index": 42,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.00175563326127015,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 43,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.006906458118715631,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 44,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.015278362182788994,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 45,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.026697233063942775,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 46,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.04098895837262952,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 47,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.05797942571930182,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 48,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.07749452271441218,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 49,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.09936013696841312,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 50,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.12340215609175724,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 51,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.14944646769489706,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 52,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.17731895938828515,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 53,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.2068455187823741,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 54,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.23785203348761624,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 55,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.27016439111446444,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 56,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.303608479273371,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 57,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.33801018557478857,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 58,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.37319539762916976,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 59,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.40899000304696687,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 60,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.44521988943863267,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 61,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.4817109444146196,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 62,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.5182890555853804,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 63,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.5547801105613674,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 64,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.5910099969530332,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 65,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.6268046023708305,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 66,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.6619898144252115,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 67,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.696391520726629,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 68,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.7298356088855357,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 69,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.7621479665123838,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 70,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.793154481217626,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 71,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.8226810406117149,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 72,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.850553532305103,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 73,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.8765978439082428,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 74,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9006398630315868,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 75,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.922505477285588,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 76,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9420205742806982,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 77,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9590110416273705,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 78,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9733027669360572,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 79,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.984721637817211,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 80,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9930935418812843,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 81,
+      "mapped_year": null,
+      "from_year": 1988,
+      "to_year": 2014,
+      "blend": 0.9982443667387298,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "1988 → 2014: interpolated"
+    },
+    {
+      "frame_index": 82,
+      "mapped_year": 2014,
+      "from_year": 2014,
+      "to_year": 2014,
+      "blend": 0.0,
+      "is_interpolated": false,
+      "duration_ms": 1000.0,
+      "label": "2014 inventory"
+    },
+    {
+      "frame_index": 83,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.00175563326127015,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 84,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.006906458118715631,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 85,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.015278362182788994,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 86,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.026697233063942775,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 87,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.04098895837262952,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 88,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.05797942571930182,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 89,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.07749452271441218,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 90,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.09936013696841312,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 91,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.12340215609175724,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 92,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.14944646769489706,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 93,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.17731895938828515,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 94,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.2068455187823741,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 95,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.23785203348761624,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 96,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.27016439111446444,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 97,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.303608479273371,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 98,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.33801018557478857,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 99,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.37319539762916976,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 100,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.40899000304696687,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 101,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.44521988943863267,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 102,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.4817109444146196,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 103,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.5182890555853804,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 104,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.5547801105613674,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 105,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.5910099969530332,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 106,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.6268046023708305,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 107,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.6619898144252115,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 108,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.696391520726629,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 109,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.7298356088855357,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 110,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.7621479665123838,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 111,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.793154481217626,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 112,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.8226810406117149,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 113,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.850553532305103,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 114,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.8765978439082428,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 115,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9006398630315868,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 116,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.922505477285588,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 117,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9420205742806982,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 118,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9590110416273705,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 119,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9733027669360572,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 120,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.984721637817211,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 121,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9930935418812843,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 122,
+      "mapped_year": null,
+      "from_year": 2014,
+      "to_year": 2019,
+      "blend": 0.9982443667387298,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2014 → 2019: interpolated"
+    },
+    {
+      "frame_index": 123,
+      "mapped_year": 2019,
+      "from_year": 2019,
+      "to_year": 2019,
+      "blend": 0.0,
+      "is_interpolated": false,
+      "duration_ms": 1000.0,
+      "label": "2019 inventory"
+    },
+    {
+      "frame_index": 124,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.00175563326127015,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 125,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.006906458118715631,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 126,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.015278362182788994,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 127,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.026697233063942775,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 128,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.04098895837262952,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 129,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.05797942571930182,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 130,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.07749452271441218,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 131,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.09936013696841312,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 132,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.12340215609175724,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 133,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.14944646769489706,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 134,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.17731895938828515,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 135,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.2068455187823741,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 136,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.23785203348761624,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 137,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.27016439111446444,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 138,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.303608479273371,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 139,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.33801018557478857,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 140,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.37319539762916976,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 141,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.40899000304696687,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 142,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.44521988943863267,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 143,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.4817109444146196,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 144,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.5182890555853804,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 145,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.5547801105613674,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 146,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.5910099969530332,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 147,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.6268046023708305,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 148,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.6619898144252115,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 149,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.696391520726629,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 150,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.7298356088855357,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 151,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.7621479665123838,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 152,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.793154481217626,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 153,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.8226810406117149,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 154,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.850553532305103,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 155,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.8765978439082428,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 156,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9006398630315868,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 157,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.922505477285588,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 158,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9420205742806982,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 159,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9590110416273705,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 160,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9733027669360572,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 161,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.984721637817211,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 162,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9930935418812843,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 163,
+      "mapped_year": null,
+      "from_year": 2019,
+      "to_year": 2026,
+      "blend": 0.9982443667387298,
+      "is_interpolated": true,
+      "duration_ms": 50.0,
+      "label": "2019 → 2026: interpolated"
+    },
+    {
+      "frame_index": 164,
+      "mapped_year": 2026,
+      "from_year": 2026,
+      "to_year": 2026,
+      "blend": 0.0,
+      "is_interpolated": false,
+      "duration_ms": 1000.0,
+      "label": "2026 inventory"
+    }
+  ],
+  "outline_metadata": {
+    "saved_utc": "2026-10-07T05:03:29.549808+00:00",
+    "comparison_years": [
+      1947,
+      1988,
+      2014,
+      2019,
+      2026
+    ],
+    "accepted_study_glaciers": [
+      "Brown",
+      "Stephenson"
+    ],
+    "source_files": {
+      "2019": "data\\processed\\coherence_watershed_v6_1000m_lock\\Heard_ice_2019_reference.gpkg",
+      "2026": "data\\processed\\coherence_watershed_v6_1000m_lock\\Heard_ice_2026_within_2019.gpkg"
+    },
+    "method": "HH coherence gradient with marker-controlled watershed",
+    "extent_constraints": {
+      "2019": "Within the 2014 ice footprint",
+      "2026": "Within the accepted 2019 ice footprint"
+    },
+    "high_elevation_rule": "Above 1000 m, retain the 2014 ice footprint in both years, subject to coastline and lagoon exclusions.",
+    "lagoon_exclusion": "UpdatedHI_Lagoons2014.shp",
+    "interpretation": "No advance and no change above 1000 m are imposed assumptions. Acceptance concerns Brown and Stephenson; other glaciers retain known mapping issues and have not been accepted for analysis.",
+    "segmentation_settings": {
+      "method": "Gaussian smoothing, Sobel gradient, marker watershed",
+      "status": "candidate; imagery review required",
+      "smooth_sigma_m": 30.0,
+      "ice_seed_max": 0.22,
+      "rock_seed_min": 0.45,
+      "seed_inset_m": 200.0,
+      "minimum_seed_area_m2": 1000.0,
+      "minimum_polygon_area_m2": 1000.0,
+      "crs": "EPSG:32743",
+      "extent_constraint": "within_2014_footprint",
+      "high_elevation_lock_m": 1000,
+      "high_elevation_reference": "2014 ice footprint",
+      "dem_path": "Input_Data\\HI_dem2019.tif",
+      "radar_paths": {
+        "2019": "data\\processed\\S1A_IW_HH_2019-04-13_RTC_10m.tif",
+        "2026": "data\\processed\\S1A_IW_HH_2026-04-12_RTC_10m.tif"
+      },
+      "coherence_paths": {
+        "2019": "data\\raw\\coherence\\Heard_coherence_2019.tif",
+        "2026": "data\\raw\\coherence\\Heard_coherence_2026.tif"
+      },
+      "outline_path": "Input_Data\\heard_island_shp\\Glacier_2014.shp",
+      "coastline_path": "Input_Data\\HIMI_Features\\himi_coastline_py.gpkg",
+      "lagoon_path": "Input_Data\\heard_island_shp\\UpdatedHI_Lagoons2014.shp"
+    }
+  }
+}
