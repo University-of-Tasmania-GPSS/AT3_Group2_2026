@@ -1,0 +1,22 @@
+{
+  "mask_year": 2019,
+  "mask_year_meaning": "Reporting footprint; not the thickness measurement year.",
+  "glacier_catalogue": "Input_Data\\heard_island_shp\\Glacier_2014.shp",
+  "glacier_outlines": "Output_Data\\processed\\glacier_outlines_by_glacier\\Heard_glaciers_2019.gpkg",
+  "thickness": "Heard_Millan_thickness_land_50m.tif",
+  "thickness_error": "Heard_Millan_thickness_error_land_50m.tif",
+  "candidate_bed": "Heard_bed_estimate_candidate_50m.tif",
+  "qa": "Heard_Millan_thickness_QA_50m.tif",
+  "crs": "EPSG:32743",
+  "resolution_m": 50,
+  "sampling": "Rasterio all_touched=False on the existing working grid.",
+  "coverage_denominator": "Glacier-labelled land pixels outside the lagoon mask.",
+  "error_coverage_denominator": "Pixels with valid thickness.",
+  "missing_data": "Excluded from statistics; absent outlines explicitly labelled.",
+  "spike_policy": "Retained in statistics and reported as flagged pixel counts.",
+  "error_interpretation": "Mean source error; not uncertainty of the glacier mean.",
+  "outputs": [
+    "Heard_glacier_thickness_summary_2019_mask.csv",
+    "Heard_glacier_thickness_summary_2019_mask.gpkg"
+  ]
+}
