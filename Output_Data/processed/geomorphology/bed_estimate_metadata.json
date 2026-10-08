@@ -1,15 +1,15 @@
 {
-  "dem": "Output_Data/processed/geomorphology/Heard_DEM_2002_land.tif",
+  "dem": "Output_Data\\processed\\geomorphology\\Heard_DEM_2002_land.tif",
   "dem_product": "Heard Island RADARSAT (2002) DEM",
   "thickness_doi": "10.6096/1007",
   "thickness_tiles": [
-    "Input_Data/RGI-19_Ice_Thickness/THICKNESS_RGI-19.3_2021July09.tif"
+    "Input_Data\\RGI-19_Ice_Thickness\\THICKNESS_RGI-19.3_2021July09.tif"
   ],
   "working_crs": "EPSG:32743",
   "resolution_m": 50,
   "dem_resampling": "average",
   "thickness_resampling": "nearest",
-  "lagoon_mask": "Input_Data/heard_island_shp/UpdatedHI_Lagoons2014.shp",
+  "lagoon_mask": "Input_Data\\heard_island_shp\\UpdatedHI_Lagoons2014.shp",
   "bed_scope": "Pixels with valid DEM and positive modelled thickness, excluding lagoons",
   "spike_policy": "Flag only; values retained in candidate bed",
   "flag_definitions": {
