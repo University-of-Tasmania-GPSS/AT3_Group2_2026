@@ -1,0 +1,39 @@
+{
+  "purpose": "Smoothed visualisation; not a new thickness measurement.",
+  "source_thickness": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_Millan_thickness_land_50m.tif",
+  "source_surface": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_surface_DEM_2002_50m.tif",
+  "bed_calculation": "Surface DEM minus processed thickness.",
+  "spike_flags": "Existing local-jump candidate flags.",
+  "spike_replacement": "Median of valid, unflagged 3 \u00d7 3 neighbours.",
+  "minimum_neighbours": 4,
+  "replaced_spike_rows_columns": [
+    [
+      624,
+      537
+    ],
+    [
+      625,
+      550
+    ],
+    [
+      626,
+      543
+    ],
+    [
+      627,
+      532
+    ]
+  ],
+  "omitted_spike_rows_columns": [],
+  "smoothing": "Gaussian values divided by Gaussian valid-data weights.",
+  "smoothing_sigma_m": 50,
+  "kernel_truncation_sigma": 3,
+  "missing_thickness": "Retained as NoData.",
+  "negative_bed_elevations": "Retained.",
+  "uncertainty": "Source errors have not been propagated through these edits.",
+  "outputs": {
+    "thickness": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_Millan_thickness_visualisation_50m.tif",
+    "bed": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_bed_estimate_visualisation_50m.tif",
+    "thickness_change": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_Millan_thickness_visualisation_change_50m.tif"
+  }
+}
