@@ -11,7 +11,7 @@
   "extent_constraint": "within_2014_footprint",
   "high_elevation_lock_m": 1000,
   "high_elevation_reference": "2014 ice footprint",
-  "dem_path": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Input_Data\\HI_dem2019.tif",
+  "dem_path": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\geomorphology\\Heard_DEM_2002_land.tif",
   "radar_paths": {
     "2019": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\S1A_IW_HH_2019-04-13_RTC_10m.tif",
     "2026": "c:\\Users\\harry\\OneDrive\\Desktop\\UNI\\UTAS\\2026\\KGG375_Geospatial_Data_Analytics\\AT3\\AT3_Group2_2026\\Output_Data\\processed\\S1A_IW_HH_2026-04-12_RTC_10m.tif"
