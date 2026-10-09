@@ -1,0 +1,10 @@
+{
+  "description": "acquisition date and time of image 1",
+  "standard_name": "image1_acquition_date",
+  "coordinates": "mapping spatial_ref",
+  "units": "nanoseconds since 1970-01-01",
+  "calendar": "proleptic_gregorian",
+  "_ARRAY_DIMENSIONS": [
+    "mid_date"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "selection": {
+    "start_inclusive": "2016-07-01",
+    "end_exclusive": "2022-12-30",
+    "satellite": "1A",
+    "minimum_pair_days": 10,
+    "maximum_pair_days": 180,
+    "sampling_inventory": 2014,
+    "all_touched": false,
+    "excluded_names": [
+      "Jacka"
+    ],
+    "catalogue_url": "https://its-live-data.s3.amazonaws.com/datacubes/catalog_v02.json",
+    "crs": "EPSG:32743",
+    "geometry_hash": "eb765b4f0db79ace70c7e269c007f5f2fb0a6563cd935af44c550599594f374e"
+  },
+  "sources": {
+    "western": "https://its-live-data.s3.amazonaws.com/datacubes/v2-updated-october2024/S50E070/ITS_LIVE_vel_EPSG32743_G0120_X350000_Y4150000.zarr",
+    "eastern": "https://its-live-data.s3.amazonaws.com/datacubes/v2-updated-october2024/S50E070/ITS_LIVE_vel_EPSG32743_G0120_X450000_Y4150000.zarr"
+  }
+}

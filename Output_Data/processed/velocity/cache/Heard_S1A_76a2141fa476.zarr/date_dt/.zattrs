@@ -1,0 +1,10 @@
+{
+  "description": "time separation between acquisition of image 1 and image 2",
+  "standard_name": "image_pair_time_separation",
+  "coordinates": "mapping spatial_ref",
+  "dtype": "timedelta64[ns]",
+  "units": "nanoseconds",
+  "_ARRAY_DIMENSIONS": [
+    "mid_date"
+  ]
+}

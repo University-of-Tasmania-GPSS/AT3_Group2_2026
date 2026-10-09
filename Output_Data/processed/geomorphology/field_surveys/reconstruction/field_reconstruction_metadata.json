@@ -1,0 +1,205 @@
+{
+  "workflow": "06_Field_Reconstruction",
+  "schema_version": 1,
+  "settings": {
+    "crs": "EPSG:32743",
+    "bed_vertical_offset_m": 0.0,
+    "registration_residual_limit_m": 2.0,
+    "registration_scale_tolerance": 0.02,
+    "bed_sampling_interval_m": 25.0,
+    "bathy_cell_size_m": 10.0,
+    "bathy_max_triangle_edge_m": 150.0,
+    "bathy_max_nearest_sounding_m": 100.0,
+    "bathy_edge_trials_m": [
+      100.0,
+      150.0,
+      200.0
+    ],
+    "bathy_validation_block_m": 100.0,
+    "shore_track_max_step_m": 25.0,
+    "bathy_water_level_asl_m": null
+  },
+  "crs": "EPSG:32743",
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "geopandas": "1.1.4",
+    "rasterio": "1.4.4",
+    "scipy": "1.18.0",
+    "shapely": "2.1.2",
+    "matplotlib": "3.10.9"
+  },
+  "source_sha256": {
+    "Input_Data/ASAC2363_Brown_Stephenson_Field_Data/ASAC_2363.xml": "87f751cca409ffda3808cb37e98fee7f33cf1cc0218b0f5a8fc6e4b0042bfa05",
+    "Input_Data/ASAC2363_Brown_Stephenson_Field_Data/README": "6444882f779c9575683f7ef5321959605a8c7da576c9bca2234bbed8f0a7289a",
+    "Input_Data/ASAC2363_Brown_Stephenson_Field_Data/Lagoon_bathymetry/Copy of brown_lagoon.csv": "e5a0c75d204e6342e51bfdf366c93f71b393bfc8863d9daf74f6e65b2af9f096",
+    "Input_Data/ASAC2363_Brown_Stephenson_Field_Data/Surveys/kinematic_surveys.xlsx": "6710b3d24328cfad3dc3d1550865b6cb3b527fe9ad53ae85a4424dc1c7a7edb4",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/DEM/brownpoints.dat": "bb190cb22fb9856e9458b00b4b0392d6915175c96d086a011f281ed0f18e2625",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/Lagoon bathymetry/bathy.txt": "9da10198773d8c3dc7072d6a3d4fc0a4d15f3dadaffcf5e390dbe8128b6dec46",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/RES.m": "c2903e266b057c53c92cafba7effa1311042ab24d224e632f447764b2d82e01c",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/fitline.m": "033a16f04244d3358524b669d010be2e2ed7c4c3440e78fa1a362eb2e69ea441",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg30.dat": "d59e4b2c8029f7f171620a79d977afd09ef12396d67df1e257029ccf433d8b05",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg30.res": "aa64195748fbdff588dac2bbd569dd0747d750f7c40fbd3709b5c79e8e03206f",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg30bottom.dat": "132f3efd7f733e537a3a7a4fe13e9f8b4b79bfe19a6dd830b910b443db6ec029",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg35.dat": "c88884084f94d780988e7bf3b1c441fa39046deb585f7e4fd7b79f23f9c64078",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg35.res": "15bb3e2f13c3d8c58279e49df12092fd345cf431b3850f83df6ed1e96fb7fdb0",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg35bottom.dat": "ed3e7fbf7879d2823242bbe533725817247032e5d0417b3295f60d981babf7c3",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg45.dat": "624ece903f351f1c488f7eaeeb32fa1346bb8d4ec0da1e70c3e07deec90e70a5",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg45.res": "da5b902afcc35fcd6453dff88d8bd1c5097b90c864a3099922d301e6817ea21e",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg45bottom.dat": "9eefed13a40b97547f2f0c92775fa37ba50582dfa5a7c29686ac503bcb6c4d22",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg50.dat": "c94d52414b99c5c85a2aa1db3cd801d950af8fa660ec72474ac909dbf1cd7c9b",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg50.res": "f77a9e680bd320d993481fa10fd3533eb1d11ac2cd5223f2c229585889e903dc",
+    "Input_Data/2003-04_CampaignData/Brown/Final Results/RES/bg50bottom.dat": "8601d0d24efb890151dd9af31c9e33fbfd58ddeaccc9e0a9a7b30a6e5420e087"
+  },
+  "model_sources": {
+    "surface": "Output_Data/processed/geomorphology/Heard_surface_DEM_2002_50m.tif",
+    "thickness": "Output_Data/processed/geomorphology/Heard_Millan_thickness_land_50m.tif",
+    "bed": "Output_Data/processed/geomorphology/Heard_bed_estimate_candidate_50m.tif"
+  },
+  "radar_registration": [
+    {
+      "profile": "BG30",
+      "bed_vertices": 4,
+      "radar_controls": 2,
+      "map_archive_scale": 1.0,
+      "registration_rmse_m": 7e-10,
+      "registration_max_residual_m": 9e-10,
+      "saved_chainage_reproduction_error_m": 4.981e-07,
+      "placeholder_antennas": 0,
+      "section_length_m": 55.9068870019,
+      "geometry_status": "registered_archive_section",
+      "use_primary_metrics": true
+    },
+    {
+      "profile": "BG35",
+      "bed_vertices": 45,
+      "radar_controls": 35,
+      "map_archive_scale": 1.1379379252,
+      "registration_rmse_m": 0.0538080737,
+      "registration_max_residual_m": 0.0986097921,
+      "saved_chainage_reproduction_error_m": 4.903e-06,
+      "placeholder_antennas": 2,
+      "section_length_m": 1012.8124023353,
+      "geometry_status": "provisional_archive_geometry",
+      "use_primary_metrics": false
+    },
+    {
+      "profile": "BG45",
+      "bed_vertices": 5,
+      "radar_controls": 3,
+      "map_archive_scale": 0.9999999896,
+      "registration_rmse_m": 0.0002358011,
+      "registration_max_residual_m": 0.0003334708,
+      "saved_chainage_reproduction_error_m": 1.0739e-06,
+      "placeholder_antennas": 0,
+      "section_length_m": 98.9400729718,
+      "geometry_status": "registered_archive_section",
+      "use_primary_metrics": true
+    },
+    {
+      "profile": "BG50",
+      "bed_vertices": 8,
+      "radar_controls": 4,
+      "map_archive_scale": 0.9999999823,
+      "registration_rmse_m": 0.0087820525,
+      "registration_max_residual_m": 0.0128269853,
+      "saved_chainage_reproduction_error_m": 3.9101e-06,
+      "placeholder_antennas": 0,
+      "section_length_m": 115.5278569585,
+      "geometry_status": "registered_archive_section",
+      "use_primary_metrics": true
+    }
+  ],
+  "radar_datum_check": [
+    {
+      "profile": "BG30",
+      "nearby_antennas": 1,
+      "median_ellipsoid_minus_radar_m": 39.9879
+    },
+    {
+      "profile": "BG35",
+      "nearby_antennas": 5,
+      "median_ellipsoid_minus_radar_m": 40.4967
+    },
+    {
+      "profile": "BG45",
+      "nearby_antennas": 1,
+      "median_ellipsoid_minus_radar_m": 40.5242
+    },
+    {
+      "profile": "BG50",
+      "nearby_antennas": 1,
+      "median_ellipsoid_minus_radar_m": 41.4167
+    }
+  ],
+  "lagoon_validation": [
+    {
+      "maximum_triangle_edge_m": 100.0,
+      "supported_area_km2": 0.2,
+      "validation_total": 211,
+      "validation_supported": 14,
+      "validation_supported_percent": 6.63507109,
+      "validation_bias_m": -0.1417255812,
+      "validation_MAE_m": 0.8636855597,
+      "validation_RMSE_m": 1.4054555367,
+      "shared_support_max_change_m": 0.0
+    },
+    {
+      "maximum_triangle_edge_m": 150.0,
+      "supported_area_km2": 0.3301,
+      "validation_total": 211,
+      "validation_supported": 119,
+      "validation_supported_percent": 56.3981042654,
+      "validation_bias_m": -1.9483901459,
+      "validation_MAE_m": 2.9526409058,
+      "validation_RMSE_m": 4.4704287627,
+      "shared_support_max_change_m": 0.0
+    },
+    {
+      "maximum_triangle_edge_m": 200.0,
+      "supported_area_km2": 0.3374,
+      "validation_total": 211,
+      "validation_supported": 162,
+      "validation_supported_percent": 76.7772511848,
+      "validation_bias_m": -1.8147115701,
+      "validation_MAE_m": 3.1282700713,
+      "validation_RMSE_m": 4.8167435446,
+      "shared_support_max_change_m": 0.0
+    }
+  ],
+  "limitations": [
+    "Archived envelopes are interpreted radar profiles, not independent point soundings",
+    "BG35 archive geometry is flagged and excluded from primary numerical metrics",
+    "Registration residuals measure coordinate consistency, not radar-bed accuracy",
+    "No continuous whole-glacier bed or measured bed derivatives reconstructed",
+    "2004 lagoon depths are relative to the survey water surface, not absolute elevation",
+    "10 m raster spacing does not imply 10 m observational resolution",
+    "Support boundary is not a complete shoreline; unsurveyed regions remain NoData",
+    "Block validation scores only supported held-out predictions",
+    "2000 and 2004 soundings are kept separate; no bathymetric change inferred"
+  ],
+  "glaciers": {
+    "RGI60-19.00023": {
+      "name": "Brown",
+      "radar_survey_year": 2000,
+      "lagoon_survey_year": 2004,
+      "bed_sections_geojson": "Output_Data/processed/interactive_map_data/Brown_interpreted_bed_2000.geojson",
+      "bed_gpkg": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_interpreted_bed_2000.gpkg",
+      "bed_vertical_reference": "approximate field m a.s.l.",
+      "lagoon_rasters": {
+        "depth": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_depth.tif",
+        "relative_bed": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_relative_bed.tif",
+        "nearest_sounding": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_nearest_sounding.tif",
+        "triangle_max_edge": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_triangle_max_edge.tif",
+        "support": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_support.tif"
+      },
+      "lagoon_gpkg": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_reconstruction.gpkg",
+      "lagoon_mesh": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_mesh.npz",
+      "lagoon_mesh_vertical_reference": "2004 water surface = 0",
+      "lagoon_contours_geojson": "Output_Data/processed/interactive_map_data/Brown_lagoon_2004_contours.geojson",
+      "shore_track_geojson": "Output_Data/processed/interactive_map_data/Brown_lagoon_2003_shore_track.geojson",
+      "lagoon_2000_points_geojson": "Output_Data/processed/interactive_map_data/Brown_lagoon_2000_soundings.geojson",
+      "interactive_3d_preview": "Figures/06_Brown_lagoon_3D.html"
+    }
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "settings": {
+    "start_inclusive": "2016-07-01",
+    "end_exclusive": "2022-12-30",
+    "satellite": "1A",
+    "minimum_pair_days": 10,
+    "maximum_pair_days": 180,
+    "magnitude_factor": 3,
+    "direction_degrees": 45,
+    "minimum_median_vector_speed_m_yr": 10,
+    "minimum_vvc": 0.8,
+    "minimum_observations": 5,
+    "sampling_inventory": 2014,
+    "all_touched": false,
+    "excluded_names": [
+      "Jacka"
+    ]
+  },
+  "sources": {
+    "western": "https://its-live-data.s3.amazonaws.com/datacubes/v2-updated-october2024/S50E070/ITS_LIVE_vel_EPSG32743_G0120_X350000_Y4150000.zarr",
+    "eastern": "https://its-live-data.s3.amazonaws.com/datacubes/v2-updated-october2024/S50E070/ITS_LIVE_vel_EPSG32743_G0120_X450000_Y4150000.zarr"
+  },
+  "dem": "Output_Data/processed/geomorphology/Heard_DEM_2002_land.tif",
+  "crs": "EPSG:32743",
+  "resolution_m": [
+    120.0,
+    -120.0
+  ],
+  "selected_image_pairs": 199,
+  "primary_statistic": "Spatial median of pixelwise temporal-median accepted speeds",
+  "coverage_definition": "100 * retained grid cells / cells with at least one finite positive raw vector inside the sampling mask",
+  "elevation_bands": "Equal thirds of each glacier's DEM-derived elevation range",
+  "monthly_statistic": "Median of per-pair spatial medians, grouped by image-pair midpoint month",
+  "vvc_definition": "Length of the mean unit velocity vector after magnitude and direction filtering",
+  "year_balanced_window": "2017-2022; median of available annual pixel medians",
+  "limitations": [
+    "Fixed 2014 sampling footprints include areas that subsequently deglaciated",
+    "Image-pair speeds average motion over 10-180 days; pairs can overlap",
+    "The >10 m/yr median-vector filter removes slow or stationary flow",
+    "Elevation bands use a 2002 DEM, rather than a contemporaneous 2016-2022 surface",
+    "Historical retreat and modern flow cover different periods"
+  ],
+  "glaciers": {
+    "RGI60-19.00001": {
+      "name": "AU1041",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00001/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00002": {
+      "name": "Abbotsmith",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00002/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00003": {
+      "name": "Gotley",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00003/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00004": {
+      "name": "AU1121",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00004/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00005": {
+      "name": "Stephenson",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00005/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00006": {
+      "name": "Lied",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00006/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00007": {
+      "name": "AU1211",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00007/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00008": {
+      "name": "Winston",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00008/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00009": {
+      "name": "AU1141",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00009/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00010": {
+      "name": "Fifty-one",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00010/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00011": {
+      "name": "AU1191",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00011/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00012": {
+      "name": "Deacock",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00012/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00013": {
+      "name": "Downes",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00013/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00014": {
+      "name": "Ealey",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00014/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00015": {
+      "name": "Mary Powell",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00015/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00016": {
+      "name": "Vahsel-Allison",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00016/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00017": {
+      "name": "Nares",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00017/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00018": {
+      "name": "Challenger",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00018/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00019": {
+      "name": "AU1091",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00019/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00020": {
+      "name": "Compton",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00020/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00021": {
+      "name": "Jacka",
+      "status": "excluded_from_original_sampling",
+      "layers": {}
+    },
+    "RGI60-19.00022": {
+      "name": "Baudissin-Schmidt",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00022/median_pair_speed_error_ratio.tif"
+      }
+    },
+    "RGI60-19.00023": {
+      "name": "Brown",
+      "status": "analysed",
+      "layers": {
+        "median_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/median_speed.tif",
+        "median_vx": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/median_vx.tif",
+        "median_vy": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/median_vy.tif",
+        "lower_third_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/lower_third_speed.tif",
+        "raw_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/raw_observation_count.tif",
+        "filtered_observation_count": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/filtered_observation_count.tif",
+        "vector_coherence": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/vector_coherence.tif",
+        "quality_mask": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/quality_mask.tif",
+        "dem_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/dem_120m.tif",
+        "elevation_band": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/elevation_band.tif",
+        "year_balanced_speed": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/year_balanced_speed.tif",
+        "years_represented": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/years_represented.tif",
+        "surface_slope_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/surface_slope_120m.tif",
+        "surface_aspect_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/surface_aspect_120m.tif",
+        "surface_aspect_strength_120m": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/surface_aspect_strength_120m.tif",
+        "median_pair_error": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/median_pair_error.tif",
+        "median_pair_speed_error_ratio": "Output_Data/processed/velocity/by_glacier/RGI60-19.00023/median_pair_speed_error_ratio.tif"
+      }
+    }
+  },
+  "surface_terrain": {
+    "slope_source": "Output_Data/processed/geomorphology/terrain/slope.tif",
+    "aspect_source": "Output_Data/processed/geomorphology/terrain/aspect.tif",
+    "aggregation": "Mean native-grid slopes; aspects aggregated through mean sine and cosine",
+    "summary_supports": [
+      "2014 footprint",
+      "retained velocity"
+    ],
+    "aspect_resultant_R": "Length of the mean aspect vector; near 1 consistent, near 0 mixed"
+  },
+  "velocity_error": {
+    "source_variable": "ITS_LIVE v_error",
+    "summary_csv": "Output_Data/processed/velocity/Heard_velocity_error_summary.csv",
+    "statistic": "Spatial median of pixelwise temporal medians for accepted observations",
+    "interpretation": "Errors describe individual image pairs, not uncertainty or a confidence interval for the pooled glacier median",
+    "threshold_test": {
+      "speed_floors_m_yr": [
+        0,
+        5,
+        10
+      ],
+      "minimum_pairs": [
+        3,
+        5
+      ],
+      "selected_speed_floor_m_yr": 10,
+      "selected_minimum_pairs": 5
+    }
+  }
+}

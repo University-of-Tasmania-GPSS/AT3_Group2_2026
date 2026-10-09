@@ -10,24 +10,27 @@ C:.
 |   04_Geomorphology.ipynb
 |   05_Subice_Analysis.ipynb
 |   06_Lagoons&RADAR_Field_Data.ipynb
+|   07_Velocity.ipynb
 |   conclusion.md
 |   discussion.md
 |   Heard_island_geology_overview_JSdocx.docx
 |   index.md
 |   methods.md
 |   myst.yml
-|   ProjectTree.rxt
 |   ProjectTree.txt
 |   README.md
 |   results.md
 |   symbology-style.db
-|   tree.txt
 |   
 +---.github
 |   \---workflows
 |           deploy.yml
 |           
 +---Figures
+|       07_velocity_focus_maps.png
+|       07_velocity_focus_maps.svg
+|       07_velocity_profiles_and_time.png
+|       07_velocity_profiles_and_time.svg
 |       Brown_radar_model_profiles.png
 |       Brown_radar_model_profiles.svg
 |       Brown_Stephenson_extents_1947_2026.png
@@ -472,6 +475,9 @@ C:.
 |   |       
 |   +---raw
 |   |   \---coherence
+|   |           Heard_coherence_2019.tif
+|   |           Heard_coherence_2026.tif
+|   |           
 |   \---RGI-19_Ice_Thickness
 |           ERRTHICKNESS_RGI-19.1_2021July09.tif
 |           ERRTHICKNESS_RGI-19.2_2021July09.tif
@@ -498,6 +504,7 @@ C:.
 |   |   geology_clipped.prj
 |   |   geology_clipped.shp
 |   |   geology_clipped.shx
+|   |   geology_map.html
 |   |   geology_map.png
 |   |   
 |   +---processed
@@ -510,10 +517,45 @@ C:.
 |   |   |   S1A_IW_HH_2026-04-12_RTC_10m.tif
 |   |   |   
 |   |   +---archive
-|   |   |   \---Before_DEM_2002_20261008_033836
+|   |   |   +---Before_DEM_2002_20261008_033836
+|   |   |   |   +---coherence_watershed_v5_1000m_lock
+|   |   |   |   +---coherence_watershed_v6_1000m_lock
+|   |   |   |   \---glacier_outlines_final
+|   |   |   \---Before_DEM_source_fix_20261009_063213_019975
 |   |   |       +---coherence_watershed_v5_1000m_lock
+|   |   |       |       Heard_ice_candidate_2019.cpg
+|   |   |       |       Heard_ice_candidate_2019.dbf
+|   |   |       |       Heard_ice_candidate_2019.prj
+|   |   |       |       Heard_ice_candidate_2019.shp
+|   |   |       |       Heard_ice_candidate_2019.shx
+|   |   |       |       Heard_ice_candidate_2026.cpg
+|   |   |       |       Heard_ice_candidate_2026.dbf
+|   |   |       |       Heard_ice_candidate_2026.prj
+|   |   |       |       Heard_ice_candidate_2026.shp
+|   |   |       |       Heard_ice_candidate_2026.shx
+|   |   |       |       Heard_watershed_2019.tif
+|   |   |       |       Heard_watershed_2026.tif
+|   |   |       |       settings.json
+|   |   |       |       
 |   |   |       +---coherence_watershed_v6_1000m_lock
+|   |   |       |       Heard_ice_2019_reference.gpkg
+|   |   |       |       Heard_ice_2026_within_2019.gpkg
+|   |   |       |       
 |   |   |       \---glacier_outlines_final
+|   |   |               Heard_ice_2019_final.cpg
+|   |   |               Heard_ice_2019_final.dbf
+|   |   |               Heard_ice_2019_final.gpkg
+|   |   |               Heard_ice_2019_final.prj
+|   |   |               Heard_ice_2019_final.shp
+|   |   |               Heard_ice_2019_final.shx
+|   |   |               Heard_ice_2026_final.cpg
+|   |   |               Heard_ice_2026_final.dbf
+|   |   |               Heard_ice_2026_final.gpkg
+|   |   |               Heard_ice_2026_final.prj
+|   |   |               Heard_ice_2026_final.shp
+|   |   |               Heard_ice_2026_final.shx
+|   |   |               outline_metadata.json
+|   |   |               
 |   |   +---coherence_watershed_v1
 |   |   |       Heard_ice_candidate_2019.cpg
 |   |   |       Heard_ice_candidate_2019.dbf
@@ -661,8 +703,10 @@ C:.
 |   |   |       glacier_inventories.geojson
 |   |   |       glacier_retreat_1947_2026.csv
 |   |   |       glacier_retreat_intervals.csv
+|   |   |       Heard_velocity_summary.geojson
 |   |   |       island_inventories.geojson
 |   |   |       lagoon_soundings_2004.geojson
+|   |   |       velocity_layers.json
 |   |   |       
 |   |   +---sar_2019_iw_tiles
 |   |   |       S1A_IW_HH_2019-04-13_RTC_10m_r0_c0.tif
@@ -686,10 +730,553 @@ C:.
 |   |   |       S1A_IW_HH_2026-04-12_RTC_10m_r2400_c2400.tif
 |   |   |       S1A_IW_HH_2026-04-12_RTC_10m_r2400_c4800.tif
 |   |   |       
-|   |   \---sar_margin_drafts
-|   |           Stephenson_SAR_DRAFT_2019.gpkg
-|   |           Stephenson_SAR_DRAFT_2026.gpkg
-|   |           
+|   |   +---sar_margin_drafts
+|   |   |       Stephenson_SAR_DRAFT_2019.gpkg
+|   |   |       Stephenson_SAR_DRAFT_2026.gpkg
+|   |   |       
+|   |   \---velocity
+|   |       |   Heard_dem_120m.tif
+|   |       |   Heard_elevation_band.tif
+|   |       |   Heard_filtered_observation_count.tif
+|   |       |   Heard_focus_lower_third_filter_audit.csv
+|   |       |   Heard_focus_velocity_image_pairs.csv
+|   |       |   Heard_focus_velocity_monthly.csv
+|   |       |   Heard_glacier_velocity_summary.csv
+|   |       |   Heard_lower_third_speed.tif
+|   |       |   Heard_median_pair_error.tif
+|   |       |   Heard_median_pair_speed_error_ratio.tif
+|   |       |   Heard_median_speed.tif
+|   |       |   Heard_median_vx.tif
+|   |       |   Heard_median_vy.tif
+|   |       |   Heard_quality_mask.tif
+|   |       |   Heard_raw_observation_count.tif
+|   |       |   Heard_surface_aspect_120m.tif
+|   |       |   Heard_surface_aspect_strength_120m.tif
+|   |       |   Heard_surface_slope_120m.tif
+|   |       |   Heard_vector_coherence.tif
+|   |       |   Heard_velocity_elevation_bands.csv
+|   |       |   Heard_velocity_error_summary.csv
+|   |       |   Heard_velocity_selected_pairs.csv
+|   |       |   Heard_velocity_summary.gpkg
+|   |       |   Heard_velocity_terrain_summary.csv
+|   |       |   Heard_velocity_threshold_sensitivity.csv
+|   |       |   Heard_years_represented.tif
+|   |       |   Heard_year_balanced_speed.tif
+|   |       |   velocity_metadata.json
+|   |       |   
+|   |       +---by_glacier
+|   |       |   +---RGI60-19.00001
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00002
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00003
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00004
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00005
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00006
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00007
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00008
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00009
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00010
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00011
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00012
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00013
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00014
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00015
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00016
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00017
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00018
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00019
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00020
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   +---RGI60-19.00022
+|   |       |   |       dem_120m.tif
+|   |       |   |       elevation_band.tif
+|   |       |   |       filtered_observation_count.tif
+|   |       |   |       lower_third_speed.tif
+|   |       |   |       median_pair_error.tif
+|   |       |   |       median_pair_speed_error_ratio.tif
+|   |       |   |       median_speed.tif
+|   |       |   |       median_vx.tif
+|   |       |   |       median_vy.tif
+|   |       |   |       quality_mask.tif
+|   |       |   |       raw_observation_count.tif
+|   |       |   |       surface_aspect_120m.tif
+|   |       |   |       surface_aspect_strength_120m.tif
+|   |       |   |       surface_slope_120m.tif
+|   |       |   |       vector_coherence.tif
+|   |       |   |       years_represented.tif
+|   |       |   |       year_balanced_speed.tif
+|   |       |   |       
+|   |       |   \---RGI60-19.00023
+|   |       |           dem_120m.tif
+|   |       |           elevation_band.tif
+|   |       |           filtered_observation_count.tif
+|   |       |           lower_third_speed.tif
+|   |       |           median_pair_error.tif
+|   |       |           median_pair_speed_error_ratio.tif
+|   |       |           median_speed.tif
+|   |       |           median_vx.tif
+|   |       |           median_vy.tif
+|   |       |           quality_mask.tif
+|   |       |           raw_observation_count.tif
+|   |       |           surface_aspect_120m.tif
+|   |       |           surface_aspect_strength_120m.tif
+|   |       |           surface_slope_120m.tif
+|   |       |           vector_coherence.tif
+|   |       |           years_represented.tif
+|   |       |           year_balanced_speed.tif
+|   |       |           
+|   |       \---cache
+|   |           +---Heard_S1A_76a2141fa476.zarr
+|   |           |   |   .zattrs
+|   |           |   |   .zgroup
+|   |           |   |   .zmetadata
+|   |           |   |   selection.json
+|   |           |   |   
+|   |           |   +---acquisition_date_img1
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0
+|   |           |   |       
+|   |           |   +---acquisition_date_img2
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0
+|   |           |   |       
+|   |           |   +---date_dt
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0
+|   |           |   |       
+|   |           |   +---mapping
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       
+|   |           |   +---mid_date
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0
+|   |           |   |       
+|   |           |   +---spatial_ref
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       
+|   |           |   +---vx
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0.0.0
+|   |           |   |       0.0.1
+|   |           |   |       0.1.0
+|   |           |   |       
+|   |           |   +---vy
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0.0.0
+|   |           |   |       0.0.1
+|   |           |   |       0.1.0
+|   |           |   |       
+|   |           |   +---x
+|   |           |   |       .zarray
+|   |           |   |       .zattrs
+|   |           |   |       0
+|   |           |   |       
+|   |           |   \---y
+|   |           |           .zarray
+|   |           |           .zattrs
+|   |           |           0
+|   |           |           
+|   |           \---Heard_S1A_76a2141fa476_v_error.zarr
+|   |               |   .zattrs
+|   |               |   .zgroup
+|   |               |   .zmetadata
+|   |               |   
+|   |               +---mapping
+|   |               |       .zarray
+|   |               |       .zattrs
+|   |               |       
+|   |               +---mid_date
+|   |               |       .zarray
+|   |               |       .zattrs
+|   |               |       0
+|   |               |       
+|   |               +---spatial_ref
+|   |               |       .zarray
+|   |               |       .zattrs
+|   |               |       
+|   |               +---v_error
+|   |               |       .zarray
+|   |               |       .zattrs
+|   |               |       0.0.0
+|   |               |       0.0.1
+|   |               |       0.1.0
+|   |               |       
+|   |               +---x
+|   |               |       .zarray
+|   |               |       .zattrs
+|   |               |       0
+|   |               |       
+|   |               \---y
+|   |                       .zarray
+|   |                       .zattrs
+|   |                       0
+|   |                       
 |   \---temp
 \---_build
     +---site

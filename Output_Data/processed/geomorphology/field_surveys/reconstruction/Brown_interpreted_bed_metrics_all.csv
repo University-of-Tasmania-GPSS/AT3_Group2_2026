@@ -1,0 +1,5 @@
+profile,model_cells,bed_bias_m,bed_MAE_m,bed_RMSE_m,geometry_status,use_primary_metrics
+BG30,2,-61.77680055310225,61.77680055310225,62.072853249585755,registered_archive_section,True
+BG35,24,-26.700100981247044,53.05988624748114,66.74584566055171,provisional_archive_geometry,False
+BG45,2,-24.888873093208048,24.888873093208048,25.53996768342298,registered_archive_section,True
+BG50,3,6.287615932638137,7.819139253362304,10.461407614857006,registered_archive_section,True

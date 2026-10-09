@@ -1,0 +1,11 @@
+{
+  "description": "velocity component in x direction",
+  "standard_name": "land_ice_surface_x_velocity",
+  "units": "meter/year",
+  "coordinates": "mapping spatial_ref",
+  "_ARRAY_DIMENSIONS": [
+    "mid_date",
+    "y",
+    "x"
+  ]
+}

@@ -1,0 +1,90 @@
+Windows fatal exception: access violation
+
+Thread 0x00007814 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\zmq\utils\garbage.py", line 56 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000095d4 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\parentpoller.py", line 115 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003584 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\history.py", line 1168 in _writeout_input_cache
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\history.py", line 1191 in writeout_cache
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\history.py", line 163 in wrapper
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\history.py", line 1280 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\history.py", line 163 in wrapper
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000875c (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 314 in _select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 323 in select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 1961 in _run_once
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 645 in run_forever
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\shellchannel.py", line 52 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00009a78 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 314 in _select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 323 in select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 1961 in _run_once
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 645 in run_forever
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006bbc (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\zmq\sugar\__init__.py", line 21 in device
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\heartbeat.py", line 124 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001254 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 314 in _select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\selectors.py", line 323 in select
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 1961 in _run_once
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 645 in run_forever
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\iostream.py", line 167 in _thread_main
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1012 in run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\threading.py", line 1032 in _bootstrap
+
+Current thread 0x00002c10 (most recent call first):
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\openpyxl\reader\excel.py", line 135 in read_manifest
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\openpyxl\reader\excel.py", line 289 in read
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\openpyxl\reader\excel.py", line 348 in load_workbook
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 579 in load_workbook
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\pandas\io\excel\_base.py", line 554 in __init__
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 560 in __init__
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\pandas\io\excel\_base.py", line 1621 in __init__
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\pandas\io\excel\_base.py", line 481 in read_excel
+  File "C:\Users\harry\AppData\Local\Temp\ipykernel_36516\274089325.py", line 11 in <module>
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\interactiveshell.py", line 3823 in run_code
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\interactiveshell.py", line 3762 in run_ast_nodes
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\interactiveshell.py", line 3518 in run_cell_async
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\async_helpers.py", line 140 in _pseudo_sync_runner
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\interactiveshell.py", line 3305 in _run_cell
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\IPython\core\interactiveshell.py", line 3248 in run_cell
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\zmqshell.py", line 665 in run_cell
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\ipkernel.py", line 460 in do_execute
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\kernelbase.py", line 834 in execute_request
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\ipkernel.py", line 372 in execute_request
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\kernelbase.py", line 478 in dispatch_shell
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\kernelbase.py", line 621 in shell_main
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\events.py", line 88 in _run
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 1999 in _run_once
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\asyncio\base_events.py", line 645 in run_forever
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel\kernelapp.py", line 807 in start
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\traitlets\config\application.py", line 1080 in launch_instance
+  File "c:\Users\harry\anaconda3\envs\KGG375_AT3\Lib\site-packages\ipykernel_launcher.py", line 18 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main

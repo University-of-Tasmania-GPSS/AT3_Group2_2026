@@ -1,0 +1,15 @@
+RGIId,name_1,stage,pixels_remaining,percent_of_lower_band
+RGI60-19.00005,Stephenson,2014 lower-third cells,370,100.0
+RGI60-19.00005,Stephenson,Raw velocity observed,370,100.0
+RGI60-19.00005,Stephenson,Magnitude filter,370,100.0
+RGI60-19.00005,Stephenson,Median vector above 10 m/yr,345,93.24324324324324
+RGI60-19.00005,Stephenson,Direction filter,345,93.24324324324324
+RGI60-19.00005,Stephenson,At least five observations,316,85.4054054054054
+RGI60-19.00005,Stephenson,Vector coherence,316,85.4054054054054
+RGI60-19.00023,Brown,2014 lower-third cells,65,100.0
+RGI60-19.00023,Brown,Raw velocity observed,65,100.0
+RGI60-19.00023,Brown,Magnitude filter,65,100.0
+RGI60-19.00023,Brown,Median vector above 10 m/yr,37,56.92307692307692
+RGI60-19.00023,Brown,Direction filter,37,56.92307692307692
+RGI60-19.00023,Brown,At least five observations,25,38.46153846153846
+RGI60-19.00023,Brown,Vector coherence,25,38.46153846153846
