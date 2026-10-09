@@ -1,0 +1,86 @@
+[
+  {
+    "path": "ASAC_2363.xml",
+    "bytes": 13852,
+    "sha256": "87f751cca409ffda3808cb37e98fee7f33cf1cc0218b0f5a8fc6e4b0042bfa05",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=ASAC_2363.xml"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 250,
+    "sha256": "4cbec375de7ad3a9d1bfa561b6de4c43fbd38280916f9a2453b0859dc8ad6969",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=LICENSE"
+  },
+  {
+    "path": "Lagoon_bathymetry/Copy of brown_lagoon.csv",
+    "bytes": 4273,
+    "sha256": "e5a0c75d204e6342e51bfdf366c93f71b393bfc8863d9daf74f6e65b2af9f096",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Lagoon_bathymetry/Copy%20of%20brown_lagoon.csv"
+  },
+  {
+    "path": "Lagoon_bathymetry/Copy of stephenson_lagoon.csv",
+    "bytes": 385,
+    "sha256": "00ca1a4f4610ff9653c924100c45c2dbf59c822229321f70c21bd23007f5059b",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Lagoon_bathymetry/Copy%20of%20stephenson_lagoon.csv"
+  },
+  {
+    "path": "Lagoon_bathymetry/brown_lagoon.jpg",
+    "bytes": 3648542,
+    "sha256": "2bb9c746f2dcdf7b7e4ad49f618f2f8d19696e3ea2236cfed12fffb40d9b4789",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Lagoon_bathymetry/brown_lagoon.jpg"
+  },
+  {
+    "path": "Lagoon_bathymetry/stephenson_lagoon.jpg",
+    "bytes": 3713311,
+    "sha256": "800828af4269e54a6e364b2d3374adf44b941bf3894f853bfd9849584fe65efd",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Lagoon_bathymetry/stephenson_lagoon.jpg"
+  },
+  {
+    "path": "README",
+    "bytes": 6098,
+    "sha256": "6444882f779c9575683f7ef5321959605a8c7da576c9bca2234bbed8f0a7289a",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=README"
+  },
+  {
+    "path": "RES/BG35_2000.xlsx",
+    "bytes": 26527,
+    "sha256": "e5becb2e88466e799e4dfe23a1bccd236b2d9786ebf20701e3191d9eb6c54cb0",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=RES/BG35_2000.xlsx"
+  },
+  {
+    "path": "RES/RES.xlsx",
+    "bytes": 24237,
+    "sha256": "e8be4629a79591d628f88b2e2a59c9405aba185031324bdb1a8a1a00173e7e3c",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=RES/RES.xlsx"
+  },
+  {
+    "path": "Report/HI_data_report_screen.pdf",
+    "bytes": 4069320,
+    "sha256": "bec40bd75d0e598a0525886424b3f26868111de8df037b4e6e2ba7c632998524",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Report/HI_data_report_screen.pdf"
+  },
+  {
+    "path": "Surveys/all_survey_points_2003.csv",
+    "bytes": 1245,
+    "sha256": "c3c5b279c843d95d2e261ee9742b865789aca17afcc1101bf14e1f30580bd9e4",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Surveys/all_survey_points_2003.csv"
+  },
+  {
+    "path": "Surveys/kinematic_2000.xlsx",
+    "bytes": 1063770,
+    "sha256": "3ac083bd17f15724ffa7506315840e9168c19ffd01bc66076e016c60b4527727",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Surveys/kinematic_2000.xlsx"
+  },
+  {
+    "path": "Surveys/kinematic_surveys.xlsx",
+    "bytes": 1008750,
+    "sha256": "6710b3d24328cfad3dc3d1550865b6cb3b527fe9ad53ae85a4424dc1c7a7edb4",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=Surveys/kinematic_surveys.xlsx"
+  },
+  {
+    "path": "read_me.txt",
+    "bytes": 4743,
+    "sha256": "78d64999351e79cd8d7dc108c1d56ce6b51772dd7c885d458cb6b3d2447362c8",
+    "download_url": "https://data.aad.gov.au/eds/api/dataset/7319C791-3989-4AB7-8BE4-35813D84E6B1/object/download?prefix=read_me.txt"
+  }
+]

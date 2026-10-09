@@ -1,0 +1,188 @@
+Folder PATH listing for volume OS
+Volume serial number is D6C9-2001
+C:.
+|   03-04CampaignData_Tree
+|   ASAC_1158.xml
+|   LICENSE
+|   README
+|   
++---Brown
+|   |   AADATA
+|   |   aadata2
+|   |   Aadata3
+|   |   Aadata4
+|   |   andrews balance.xlsx
+|   |   aws.xlsx
+|   |   bg30prof.eps
+|   |   bg35.JNB
+|   |   bg35prof.eps
+|   |   bg45prof.eps
+|   |   bg50prof.eps
+|   |   Brown Glacier 2000.docx
+|   |   Brown Glacier Data Report Backup.docx
+|   |   Brown Glacier Data Report.docx
+|   |   Brown Glacier Data Report2.docx
+|   |   Brown Glacier Data Report3.docx
+|   |   Brown Glacier paper (Martin).docx
+|   |   Brown Morphology.docx
+|   |   Brown Seminar.pptx
+|   |   brown.dat
+|   |   brown.m
+|   |   Brown47_1b.jpg
+|   |   browndyn.m
+|   |   Brownfor.dat
+|   |   brownfuture.mat
+|   |   brownmap.eps
+|   |   brownmod.dat
+|   |   brownmodfuture.mat
+|   |   brthick.m
+|   |   d317.txt
+|   |   daily.xlsx
+|   |   data.dat
+|   |   DISCUSSION.docx
+|   |   elevation.fig
+|   |   emergence.txt
+|   |   field report.txt
+|   |   flowline.dat
+|   |   fluxdiv.fig
+|   |   fluxdivergence.bmp
+|   |   GLACIER DYNAMICS.docx
+|   |   heard.pptx
+|   |   heard_island.gif
+|   |   heard_island.pdf
+|   |   index.dat
+|   |   lagoon.eps
+|   |   lagoon.txt
+|   |   logger.dat
+|   |   long.bmp
+|   |   long.eps
+|   |   longitudinal.eps
+|   |   map.bmp
+|   |   map.m
+|   |   model.txt
+|   |   pinger000.dat
+|   |   pinger001.dat
+|   |   poles.txt
+|   |   poles.xlsx
+|   |   profile.bmp
+|   |   profile.fig
+|   |   radar.aux
+|   |   radar.dvi
+|   |   radar.log
+|   |   radar.tex
+|   |   res.xlsx
+|   |   term.txt
+|   |   termdec.txt
+|   |   thick.m
+|   |   transverse.eps
+|   |   velo.m
+|   |   velo.txt
+|   |   velocities.eps
+|   |   width.dat
+|   |   winddir.fig
+|   |   winddir.txt
+|   |   
+|   \---Final Results
+|       +---DEM
+|       |       adjustDEM.m
+|       |       allprof.dat
+|       |       bg1015.prof
+|       |       bg35.prof
+|       |       bg50.prof
+|       |       bob.prof
+|       |       brownarea.dat
+|       |       browndem.m
+|       |       brownpoints.dat
+|       |       createDEM.m
+|       |       dem.asc
+|       |       dem.dat
+|       |       dem.m
+|       |       dem.prj
+|       |       drawdem.m
+|       |       Emor1.prof
+|       |       Emor2.prof
+|       |       icelost.m
+|       |       lagoon1.prof
+|       |       lagoon2.prof
+|       |       map.fig
+|       |       newdem.dat
+|       |       newDEM.m
+|       |       oldglacier.dat
+|       |       outline.dat
+|       |       readme.txt
+|       |       shiftDEM.m
+|       |       term.prof
+|       |       wmor.prof
+|       |       
+|       +---Glacier velocities
+|       |       daily.txt
+|       |       daily.xlsx
+|       |       GPSpoints.txt
+|       |       GPSpoints.xlsx
+|       |       index.m
+|       |       indexpoints.txt
+|       |       readme.txt
+|       |       
+|       +---Isotope Analysis
+|       |       DelO18.xlsx
+|       |       readme.txt
+|       |       
+|       +---kinematic profiles
+|       |       Eastmor1.txt
+|       |       Eastmor2.txt
+|       |       lagoon1.txt
+|       |       lagoon2.txt
+|       |       longitudinal.txt
+|       |       lowerglacier.txt
+|       |       middleglacier.txt
+|       |       readme.txt
+|       |       terminus.txt
+|       |       upperglacier.txt
+|       |       Westmor.txt
+|       |       
+|       +---Lagoon bathymetry
+|       |       bathy.txt
+|       |       Copy of bathymetry.csv
+|       |       lagoon.fig
+|       |       lagoon.m
+|       |       readme.txt
+|       |       shore.txt
+|       |       
+|       +---Matlab
+|       |       areasize.m
+|       |       chkload.m
+|       |       circle.m
+|       |       readme.txt
+|       |       
+|       \---RES
+|               bg30.dat
+|               bg30.res
+|               bg30bottom.dat
+|               bg35.dat
+|               bg35.res
+|               bg35bottom.dat
+|               bg45.dat
+|               bg45.res
+|               bg45bottom.dat
+|               bg50.dat
+|               bg50.res
+|               bg50bottom.dat
+|               drwelip.m
+|               fitline.m
+|               readme.txt
+|               RES.m
+|               
+\---scotty digital pics
+        51 Glacier 02.jpg
+        Brown Lagoon from Heli 00.jpg
+        Cape Gazert.jpg
+        Deacock Glacier from the air 01.jpg
+        Deacock Glacier from the air.jpg
+        Dougie Snow Shoeing.jpg
+        Glacio Man 00.jpg
+        Mawsons Peak 00.jpg
+        Mawsons Peak 01.jpg
+        Spit from Heli 00.jpg
+        Stephensons from Heli 05.jpg
+        Stephesnons from Heli 04.jpg
+        

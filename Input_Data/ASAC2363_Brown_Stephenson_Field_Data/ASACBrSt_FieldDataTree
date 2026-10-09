@@ -1,0 +1,29 @@
+Folder PATH listing for volume OS
+Volume serial number is D6C9-2001
+C:.
+|   ASACBrSt_FieldDataTree
+|   ASAC_2363.xml
+|   DOWNLOAD_MANIFEST.json
+|   LICENSE
+|   README
+|   read_me.txt
+|   SOURCE_NOTES.md
+|   
++---Lagoon_bathymetry
+|       brown_lagoon.jpg
+|       Copy of brown_lagoon.csv
+|       Copy of stephenson_lagoon.csv
+|       stephenson_lagoon.jpg
+|       
++---Report
+|       HI_data_report_screen.pdf
+|       
++---RES
+|       BG35_2000.xlsx
+|       RES.xlsx
+|       
+\---Surveys
+        all_survey_points_2003.csv
+        kinematic_2000.xlsx
+        kinematic_surveys.xlsx
+        
