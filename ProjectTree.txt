@@ -9,10 +9,14 @@ C:.
 |   03_Geology_Analysis_working.ipynb
 |   04_Geomorphology.ipynb
 |   05_Subice_Analysis.ipynb
-|   06_Lagoons&RADAR_Field_Data.ipynb
+|   06_Field_Reconstruction.ipynb
 |   07_Velocity.ipynb
+|   08_Integration&Synthesis.ipynb
 |   conclusion.md
 |   discussion.md
+|   field_crash_20261009_231947.log
+|   field_crash_20261009_232044.log
+|   field_crash_20261009_232811.log
 |   Heard_island_geology_overview_JSdocx.docx
 |   index.md
 |   methods.md
@@ -27,29 +31,53 @@ C:.
 |           deploy.yml
 |           
 +---Figures
-|       07_velocity_focus_maps.png
-|       07_velocity_focus_maps.svg
-|       07_velocity_profiles_and_time.png
-|       07_velocity_profiles_and_time.svg
-|       Brown_radar_model_profiles.png
-|       Brown_radar_model_profiles.svg
-|       Brown_Stephenson_extents_1947_2026.png
-|       Brown_Stephenson_lagoon_soundings.png
-|       Brown_Stephenson_lagoon_soundings.svg
-|       Brown_Stephenson_thickness_and_bed.png
-|       Brown_Stephenson_thickness_and_bed.svg
-|       BurstoOtput.png
-|       CandidateOutlines.png
-|       Heard_glacier_retreat_1947_2026.png
-|       Heard_glacier_retreat_1947_2026.svg
-|       Inventory_methods_final_extents.png
-|       Inventory_methods_final_extents.svg
-|       Inventory_methods_SAR_evidence.png
-|       Inventory_methods_SAR_evidence.svg
-|       output.png
-|       stoutput.png
-|       Testoutput.png
-|       
+|   |   06_Brown_field_coverage.png
+|   |   06_Brown_field_coverage.svg
+|   |   06_Brown_interpreted_bed_sections.png
+|   |   06_Brown_interpreted_bed_sections.svg
+|   |   06_Brown_lagoon_3D.html
+|   |   06_Brown_lagoon_3D.png
+|   |   06_Brown_lagoon_3D.svg
+|   |   06_Brown_lagoon_3D_interactive.html
+|   |   06_Brown_lagoon_bathymetry_QA.png
+|   |   06_Brown_lagoon_bathymetry_QA.svg
+|   |   07_velocity_focus_maps.png
+|   |   07_velocity_focus_maps.svg
+|   |   07_velocity_profiles_and_time.png
+|   |   07_velocity_profiles_and_time.svg
+|   |   Brown_radar_model_profiles.png
+|   |   Brown_radar_model_profiles.svg
+|   |   Brown_Stephenson_extents_1947_2026.png
+|   |   Brown_Stephenson_lagoon_soundings.png
+|   |   Brown_Stephenson_lagoon_soundings.svg
+|   |   Brown_Stephenson_thickness_and_bed.png
+|   |   Brown_Stephenson_thickness_and_bed.svg
+|   |   BurstoOtput.png
+|   |   CandidateOutlines.png
+|   |   Heard_glacier_retreat_1947_2026.png
+|   |   Heard_glacier_retreat_1947_2026.svg
+|   |   Inventory_methods_final_extents.png
+|   |   Inventory_methods_final_extents.svg
+|   |   Inventory_methods_SAR_evidence.png
+|   |   Inventory_methods_SAR_evidence.svg
+|   |   output.png
+|   |   stoutput.png
+|   |   Testoutput.png
+|   |   
+|   \---09_Synthesis
+|           01_retreat_timing.png
+|           02_geology_by_retreat_zone.png
+|           03_low_elevation_area.png
+|           04a_transect_locations.png
+|           04b_geometry_flow_profiles.png
+|           04c_candidate_bed_highs.png
+|           04d_glacier_cross_sections.png
+|           04e_surface_exposure.png
+|           04_flow_context.png
+|           05a_Brown_basin_geometry.png
+|           05b_Brown_basin_to_glacier.png
+|           05_retreat_and_field_support.png
+|           
 +---heard_island_geology
 +---Input_Data
 |   |   HI_dem2019.tif.aux.xml
@@ -644,11 +672,30 @@ C:.
 |   |   |   |   Heard_surface_DEM_2002_50m.tif
 |   |   |   |   
 |   |   |   +---field_surveys
-|   |   |   |       Brown_radar_model_comparison.gpkg
-|   |   |   |       Brown_radar_model_metrics.csv
-|   |   |   |       Brown_radar_model_return_comparisons.csv
-|   |   |   |       Heard_lagoon_soundings_2004.gpkg
-|   |   |   |       
+|   |   |   |   |   Brown_radar_model_comparison.gpkg
+|   |   |   |   |   Brown_radar_model_metrics.csv
+|   |   |   |   |   Brown_radar_model_return_comparisons.csv
+|   |   |   |   |   Heard_lagoon_soundings_2004.gpkg
+|   |   |   |   |   
+|   |   |   |   \---reconstruction
+|   |   |   |           Brown_interpreted_bed_2000.gpkg
+|   |   |   |           Brown_interpreted_bed_metrics_all.csv
+|   |   |   |           Brown_interpreted_bed_metrics_primary.csv
+|   |   |   |           Brown_interpreted_bed_model_cells.csv
+|   |   |   |           Brown_interpreted_bed_samples.csv
+|   |   |   |           Brown_lagoon_2004_block_predictions.csv
+|   |   |   |           Brown_lagoon_2004_depth.tif
+|   |   |   |           Brown_lagoon_2004_mesh.npz
+|   |   |   |           Brown_lagoon_2004_nearest_sounding.tif
+|   |   |   |           Brown_lagoon_2004_relative_bed.tif
+|   |   |   |           Brown_lagoon_2004_support.tif
+|   |   |   |           Brown_lagoon_2004_support_sensitivity.csv
+|   |   |   |           Brown_lagoon_2004_triangle_max_edge.tif
+|   |   |   |           Brown_lagoon_reconstruction.gpkg
+|   |   |   |           Brown_radar_registration_audit.csv
+|   |   |   |           Brown_radar_vertical_reference_check.csv
+|   |   |   |           field_reconstruction_metadata.json
+|   |   |   |           
 |   |   |   \---terrain
 |   |   |           aspect.tif
 |   |   |           Heard_bed_aspect_50m.tif
@@ -698,6 +745,11 @@ C:.
 |   |   |       
 |   |   +---interactive_map_data
 |   |   |       animation_settings.json
+|   |   |       Brown_interpreted_bed_2000.geojson
+|   |   |       Brown_lagoon_2000_soundings.geojson
+|   |   |       Brown_lagoon_2003_shore_track.geojson
+|   |   |       Brown_lagoon_2004_contours.geojson
+|   |   |       field_reconstruction_layers.json
 |   |   |       focus_glacier_animation.geojson
 |   |   |       glacier_area_history.csv
 |   |   |       glacier_inventories.geojson
@@ -733,6 +785,33 @@ C:.
 |   |   +---sar_margin_drafts
 |   |   |       Stephenson_SAR_DRAFT_2019.gpkg
 |   |   |       Stephenson_SAR_DRAFT_2026.gpkg
+|   |   |       
+|   |   +---synthesis
+|   |   |       Brown_basin_historical_overlap.csv
+|   |   |       Brown_lagoon_cross_sections.csv
+|   |   |       Brown_lagoon_long_profile.csv
+|   |   |       Brown_radar_transect_context.csv
+|   |   |       Brown_summer_incidence_index.tif
+|   |   |       Brown_supported_basin_depth_areas.csv
+|   |   |       candidate_bed_highs.csv
+|   |   |       fixed_surface_low_elevation_area.csv
+|   |   |       focus_evidence_summary.csv
+|   |   |       geology_by_retreat_zone.csv
+|   |   |       geomorphology_analysis_metadata.json
+|   |   |       geomorphology_profiles.csv
+|   |   |       geomorphology_transects.gpkg
+|   |   |       glacier_comparison.csv
+|   |   |       glacier_cross_sections.csv
+|   |   |       retreat_comparison.csv
+|   |   |       retreat_zones.gpkg
+|   |   |       shoreline_gps_height_context.csv
+|   |   |       spatial_area_changes.csv
+|   |   |       Stephenson_summer_incidence_index.tif
+|   |   |       surface_exposure.csv
+|   |   |       synthesis_metadata.json
+|   |   |       terrain_flow_comparison.csv
+|   |   |       transect_retreat_rates.csv
+|   |   |       transect_termini.csv
 |   |   |       
 |   |   \---velocity
 |   |       |   Heard_dem_120m.tif

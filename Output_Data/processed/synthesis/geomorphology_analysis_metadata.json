@@ -1,0 +1,113 @@
+{
+  "settings": {
+    "step_m": 50,
+    "offsets_m": [
+      -100,
+      -50,
+      0,
+      50,
+      100
+    ],
+    "crest_prominence_m": 10,
+    "crest_spacing_m": 300,
+    "crest_match_m": 150,
+    "perturbation_wavelength_m": 1000,
+    "assumed_water_level_m": 0.0
+  },
+  "transect_vertices_utm43s": {
+    "Brown": [
+      [
+        411180,
+        4119230
+      ],
+      [
+        410650,
+        4118680
+      ],
+      [
+        410080,
+        4118270
+      ],
+      [
+        409550,
+        4117980
+      ],
+      [
+        409000,
+        4117600
+      ],
+      [
+        408000,
+        4117480
+      ],
+      [
+        407000,
+        4117050
+      ],
+      [
+        406000,
+        4116400
+      ]
+    ],
+    "Stephenson": [
+      [
+        414600,
+        4111650
+      ],
+      [
+        413850,
+        4112450
+      ],
+      [
+        413200,
+        4113300
+      ],
+      [
+        412500,
+        4114200
+      ],
+      [
+        411500,
+        4114900
+      ],
+      [
+        410650,
+        4115300
+      ],
+      [
+        410300,
+        4115800
+      ],
+      [
+        409700,
+        4115900
+      ],
+      [
+        408500,
+        4115650
+      ],
+      [
+        407500,
+        4115400
+      ],
+      [
+        406000,
+        4115350
+      ],
+      [
+        404000,
+        4115350
+      ]
+    ]
+  },
+  "transect_scope": "Brown lower trunk; Stephenson northern surviving tongue and former southern tongue",
+  "transect_front": "Seaward end of the line segment connected to the inland endpoint; detached segments excluded",
+  "bed_scope": "Candidate bed restricted to 2019 footprint; centreline NoData retained",
+  "width_scope": "Connected mapped ice-polygon width, not surveyed bedrock valley width",
+  "candidate_scope": "Descriptive screening; persistence counts are not probabilities",
+  "solar_scope": "Four representative November\u2013February days; no atmosphere, horizon shading, albedo or melt model",
+  "water_level_scope": "Assumed reference; 0, 2 and 5 m examples are scenarios, not confidence bounds",
+  "chronology": "2002 surface, newer model thickness, 2000 radar, 2004 bathymetry and 2016\u20132022 velocity",
+  "dependence": "Millan thickness uses velocity; model-bed/flow agreement is not independent validation",
+  "bathy_scope": "Supported 2004 reconstruction; historical-outline overlap does not reconstruct historical depth"
+}

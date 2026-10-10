@@ -1,0 +1,5 @@
+name_1,candidate,distance_m,E,N,candidate_bed_m,reported_thickness_error_m,speed_m_yr,wider_smoothing,offset_minus_100m,offset_plus_100m,error_phase_0.00,error_phase_1.57,error_phase_3.14,error_phase_4.71,supported_trials,trials_with_nearby_high
+Brown,B1,2500.0,409196.3067007473,4117735.630084153,342.603759765625,40.0,,True,True,False,False,True,True,False,7,4
+Brown,B2,4100.0,407674.5873519099,4117340.0725613213,590.1342163085938,40.0,229.58609008789062,True,True,False,True,False,True,True,7,5
+Stephenson,S1,6600.0,409784.3189942636,4115885.9468342895,314.962646484375,40.0,43.046485900878906,False,True,,True,True,True,False,6,4
+Stephenson,S2,9100.0,407342.11123506253,4115394.737041169,742.9171142578125,47.0,286.50376892089844,True,False,False,False,False,True,True,7,3

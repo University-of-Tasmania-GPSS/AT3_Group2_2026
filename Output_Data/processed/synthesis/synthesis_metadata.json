@@ -1,0 +1,31 @@
+{
+  "study_glaciers": [
+    "Brown",
+    "Stephenson"
+  ],
+  "outline_years": [
+    1947,
+    1988,
+    2014,
+    2019,
+    2026
+  ],
+  "primary_comparison": "Descriptive comparison of Brown and Stephenson; no glacier-population inference",
+  "low_elevation_thresholds_m": [
+    300,
+    600,
+    900
+  ],
+  "low_elevation_cell_run": true,
+  "limitations": [
+    "Unequal intervals; annual percentage uses interval-start area",
+    "1947 historical outlines include pre-year source records",
+    "No advance and unchanged ice above 1000 m are imposed for recent outlines",
+    "2002 elevations are fixed; threshold areas are not historical hypsometry or AAR",
+    "2014 velocity footprint differs from 2019 model reporting footprint",
+    "Pair-level velocity errors are not confidence intervals of the final median",
+    "Mapped Snow/Ice does not identify underlying lithology",
+    "Radar checks are local; BG35 excluded from primary metrics",
+    "2004 lagoon depths use the water surface, not a shared bed-elevation datum"
+  ]
+}
