@@ -102,12 +102,28 @@
   },
   "transect_scope": "Brown lower trunk; Stephenson northern surviving tongue and former southern tongue",
   "transect_front": "Seaward end of the line segment connected to the inland endpoint; detached segments excluded",
-  "bed_scope": "Candidate bed restricted to 2019 footprint; centreline NoData retained",
+  "bed_scope": "Modelled bed within the 2019 outline; missing profile values retained",
   "width_scope": "Connected mapped ice-polygon width, not surveyed bedrock valley width",
-  "candidate_scope": "Descriptive screening; persistence counts are not probabilities",
+  "candidate_scope": "Potential bed highs screened descriptively; persistence counts are not probabilities",
+  "solar_inputs": "2002 DEM surface slope and aspect, aligned to the 120 m grid; aspect averaged using sine and cosine",
   "solar_scope": "Four representative November\u2013February days; no atmosphere, horizon shading, albedo or melt model",
   "water_level_scope": "Assumed reference; 0, 2 and 5 m examples are scenarios, not confidence bounds",
-  "chronology": "2002 surface, newer model thickness, 2000 radar, 2004 bathymetry and 2016\u20132022 velocity",
+  "chronology": "2002 surface, Millan modelled thickness, 2000 radar, 2004 bathymetry and 2016\u20132022 velocity",
   "dependence": "Millan thickness uses velocity; model-bed/flow agreement is not independent validation",
-  "bathy_scope": "Supported 2004 reconstruction; historical-outline overlap does not reconstruct historical depth"
+  "bathy_scope": "Survey-covered 2004 reconstruction; historical-outline overlap does not reconstruct historical depth",
+  "technical_references": {
+    "surface_slope_aspect": "https://gdal.org/en/stable/programs/gdaldem.html",
+    "circular_aspect_averaging": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.circmean.html",
+    "sentinel_1_velocity_processing": "https://doi.org/10.5194/essd-14-5111-2022",
+    "ice_thickness_model": "https://doi.org/10.1038/s41561-021-00885-z",
+    "terminus_measurement_methods": "https://doi.org/10.3189/2014JoG13J061",
+    "bed_high_screening": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html",
+    "lagoon_interpolation": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.LinearNDInterpolator.html",
+    "spatial_block_validation": "https://doi.org/10.1111/ecog.02881",
+    "solar_declination": "https://doi.org/10.1016/0038-092X(69)90047-4",
+    "solar_incidence_geometry": "https://doi.org/10.1016/B978-0-12-373750-2.X5001-0",
+    "solar_vector_projection": "https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.irradiance.aoi_projection.html",
+    "height_reference_conversion": "https://www.ngs.noaa.gov/PUBS_LIB/gislis96.html",
+    "glacier_water_contact_processes": "https://doi.org/10.1002/2015RG000494"
+  }
 }
