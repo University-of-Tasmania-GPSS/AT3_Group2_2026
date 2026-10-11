@@ -34,7 +34,7 @@ Supported interpolation, local radar comparisons and sensitivity tests make the 
 
 - **Map the connection between the lagoon and glacier bed.** Survey the lagoon depths and outlet, then use radar across the glacier to map the bed beneath the ice. Putting these surveys on the same height reference would show whether raised parts of the bed form continuous barriers that could restrict retreat.
 - **Measure what happens where ice meets water.** Track changes in the glacier front alongside water level, temperature and salinity. These observations would help assess the conditions for calving and melting below the water surface.
--**Find out what lies beneath the ice.** Combine geological sampling with geophysical surveys such as gravity and magnetic surveys to understand lithology. This would help to conceretely understand how the surrounding materials and the ground beneath the glacier could influence retreat.
+- **Find out what lies beneath the ice.** Combine geological sampling with geophysical surveys such as gravity and magnetic surveys to understand lithology. This would help to conceretely understand how the surrounding materials and the ground beneath the glacier could influence retreat.
 
 Recent 2025/26 Heard Island campaigns conducted GNSS control work, radar corner reflectors and drone lidar and bathymetric lidar at Atlas Cove (Williams and Fedrigo, 2026). These activities provide opportunities to assess improved spatial control and survey methods.
 

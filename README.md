@@ -1,12 +1,13 @@
 # AT3_Group2_2026
-AT3_Group2_2026
-The shape of retreat. Brown and Stephenson glaciers, Heard Island. Two neighbouring glaciers. Two different retreat histories. 
-
-KGG375 AT3. 
+AT3 Group2 2026
+The shape of retreat. 
+Brown and Stephenson glaciers, Heard Island. 
+Two neighbouring glaciers. 
+Two different retreat histories. 
 
 Griffin and Sampson, University of Tasmania 2026
 
-Research question
+# Research question
 
 How do the mapped retreat histories of Brown and Stephenson glaciers differ, and what can glacier geometry, mapped geology, flow and archived field evidence tell us about that contrast?
 
@@ -16,6 +17,6 @@ Jupyter Book:
 
 A github repository was used in the formation of this project, with analysis broken up into smaller blocks of ipynb files, with python code and markdown text within. These notebooks were merged together in the final project creation. 
 
-Ai was used in the creation of this project. Both Open Ai's Chat GPT and Claudes Sonnet was used for eveloping and debugging code, and pulling together work. All Ai was modified by the authors prior to use, specific requests were made to the models and finally all work was understood by the authors. 
+Ai was used in the creation of this project. Both Open Ai's Chat GPT and Claudes Sonnet was used for developing and debugging code, and pulling together work. All Ai was modified by the authors prior to use, specific requests were made to the models and finally all work was understood by the authors. 
 
 Reproducable code blocks were taken and modified from past projects at UTAS. 
