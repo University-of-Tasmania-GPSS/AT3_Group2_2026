@@ -168,7 +168,6 @@
 
 [Write: Explain the archived ellipsoidal shoreline heights, approximate height conversion and absence of a resolved continuous bed or sill. State what cannot be inferred about hydraulic connectivity or water contact at the glacier.]
 
-
 (results-summary)=
 ## Evidence to carry into the discussion
 

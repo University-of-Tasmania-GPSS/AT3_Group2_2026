@@ -24,9 +24,6 @@ Heard Island lagoon outlines Donoghue, S., & Harris, U. (2021). Fluctuations of 
 Griffin. (2026). Updated Heard Island lagoon outlines [Unpublished digitised data set].
 European Space Agency. (n.d.). Copernicus Sentinel-1 synthetic aperture radar imagery [Data set]. https://sentiwiki.copernicus.eu/web/s1-mission
 
-### Archived field observations
-[Write: Reuse the verified Allison and Thost field-data citation from the map source register. Consolidate the Brown campaign archive under that entry, retaining relevant archive links without presenting duplicate references as independent observations.]
-
 ### Geological mapping
 Fox, J., Carey, R. J., & McPhie, J. (2023). Heard Island geology map—Compiled from data collected from 1929–2020 (Version 1) [Data set]. Australian Antarctic Data Centre. https://doi.org/10.26179/nb02-vj63
 
@@ -52,16 +49,7 @@ Map interface: Leaflet 1.9.4 (BSD-2-Clause). 3D interface: Plotly.js 3.1.0 (MIT)
 Brown lagoon 3D reuses the accepted mesh from notebook 06. Horizontal offsets and relative heights are in metres. The 2004 survey water surface is 0 m; its elevation above sea level is unresolved. Water-plane coverage follows interpolation support. Vertical exaggeration changes aspect ratio only.
 
 ## Photographs, maps and figure credits
-
-| Item | Creator or original source | Date/version | Where used | Reuse basis or attribution |
-| --- | --- | --- | --- | --- |
-| Opening photograph | [Write] | [Write] | Introduction | [Write] |
-| Study-area basemap | [Write] | [Write] | Introduction | [Write] |
-| Geology methods figure | James's preparation; original dataset [Write] | [Write] | Methods | [Write] |
-| Surface terrain derivatives | James's GDAL workflow; DEM source [Write] | [Write] | Methods | [Write] |
-| Other project figures | [Write: credit both contributors accurately and list original input sources in captions] | [Write] | Methods/Results/Discussion | [Write] |
-
-% AUTHORING: Preserve authorship in the figure register and README without turning captions into contribution statements. Captions still need original data credits. Avoid separate duplicate entries for the same source.
+All photographs from the 2003-2004 Heard Island Expedition from Allison and Thost.
 
 ## Expedition and future-observation sources
 
