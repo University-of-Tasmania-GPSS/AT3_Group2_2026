@@ -17,7 +17,7 @@ The workflow combines three strands: **mapped change**, **spatial setting** and 
 Analytical workflow for the Brown–Stephenson comparison. Historical outlines and satellite radar establish mapped change; geological, terrain and velocity layers describe spatial setting; archived radar sections and lagoon soundings provide local field evidence. Date, coverage and sensitivity checks guide their integration. The resulting interpretation distinguishes observations, model-derived estimates and proposed mechanisms.
 :::
 
-GeoPandas and Shapely handle vector geometry; GDAL, rasterio and rioxarray prepare rasters; xarray organises the velocity time series; and NumPy, SciPy and scikit-image support numerical analysis and segmentation. Prepared layers and summaries are exported for the book and interactive explorer. Complete code remains in the notebooks, with short excerpts below showing consequential decisions.
+GeoPandas and Shapely handle vector geometry; GDAL, rasterio and rioxarray prepare rasters; xarray organises the velocity time series; and NumPy, SciPy and scikit-image support numerical analysis and segmentation. Prepared layers and summaries are exported for the book and interactive explorer. Complete code remains in the notebooks used to produce this report, with short excerpts below showing consequential decisions.
 
 (data-overview)=
 ### Data, dates and spatial support
@@ -60,7 +60,7 @@ A normalised Gaussian filter with 30 m standard deviation reduces local coherenc
 
 ### Mapping constraints are part of the result
 
-The accepted outlines exclude mapped lagoons and use valid radar observations outside the high-elevation override. The 2019 candidates are restricted to the 2014 footprint, and 2026 is restricted to the accepted 2019 footprint. **Advance beyond an earlier footprint is therefore excluded by construction.** Ice strictly above 1,000 m inherits the 2014 extent because initial segmentation produced implausible internal gaps. That upper-glacier stability is imposed, rather than independently observed.
+The accepted outlines exclude mapped lagoons and use valid radar observations outside the high-elevation override. The 2019 candidates are restricted to the 2014 footprint, and 2026 is restricted to the accepted 2019 footprint. **Advance beyond an earlier footprint is therefore excluded** Ice strictly above 1,000 m inherits the 2014 extent because initial segmentation produced implausible internal gaps. That upper-glacier stability is imposed, rather than independently observed.
 
 Final vector outlines were reviewed for Brown and Stephenson and saved separately from intermediate classifications. Recent outlines elsewhere on the island remain provisional. Below the elevation cutoff, gaps caused by missing observations, radar shadow or unresolved classification must not automatically be interpreted as retreat. The 10 m grid is a processing choice, and no independent outline-accuracy estimate has been established.
 
@@ -75,6 +75,15 @@ Front change is measured along fixed routes running from seaward origins towards
 (methods-terrain)=
 ## Estimating the bed and examining glacier geometry
 
+:::{figure} Figures/Book/crevasse.jpg
+:label: fig-field-crevasse
+:alt: Archived field photograph titled Crevasse.
+:width: 70%
+:align: center
+
+*Crevasse.* Field photograph from the 2003–2004 Heard Island campaign archive (Allison & Thost, 2010).
+:::
+
 ### Aligned subtraction, with missing values preserved
 
 The surface DEM combines 2002 radar-derived elevations with a 1997 stereoscopic DEM (Brolsma & Smith, 2008). Modelled ice thickness and its error layer come from Millan et al. (2021). Surface elevation is averaged onto a common 50 m grid; thickness and error use nearest-neighbour resampling. Estimated bed elevation is then:
@@ -83,7 +92,7 @@ $$
 z_{\mathrm{bed}} = z_{\mathrm{surface}} - H.
 $$
 
-The following excerpt from notebook 04 preserves the land and lagoon masks before subtraction:
+The following excerpt from the geomorphology workflow preserves the land and lagoon masks before subtraction:
 
 ```python
 # Exclude mapped lagoons; missing thickness remains NaN.
@@ -136,9 +145,18 @@ The radar elevations already follow the archive's approximate sea-level conventi
 
 ### Interpolation where observations support it
 
+:::{figure} Figures/Book/elevated_science.jpg
+:label: fig-field-elevated-science
+:alt: Archived field photograph titled Elevated Science.
+:width: 70%
+:align: center
+
+*Elevated Science.* Field photograph from the 2003–2004 Heard Island campaign archive (Allison & Thost, 2010).
+:::
+
 Brown has 211 retained 2004 lagoon soundings; Stephenson has 16. The detailed basin reconstruction is restricted to Brown. Delaunay triangulation connects observations, and linear interpolation estimates depth inside those triangles (SciPy community, n.d.). Triangles are rejected if their longest edge exceeds 150 m or they intersect the retained surveyed-margin barrier. Predictions must also lie within 100 m of a sounding. No extrapolation is made outside the triangulation.
 
-This excerpt from notebook 06 shows the support rules:
+This excerpt from the field data reconstruction workflow shows the support rules:
 
 ```python
 # Reject long triangles and triangles crossing the surveyed margin.
@@ -170,7 +188,7 @@ Validation withholds all observations in each 100 m spatial block and rebuilds t
 
 James's geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island.
 
-The following excerpt from notebook 03 shows the clipping and area calculation:
+The following excerpt from the geological analysis shows the clipping and area calculation:
 
 ```python
 geo = geo.to_crs(TARGET_CRS)
