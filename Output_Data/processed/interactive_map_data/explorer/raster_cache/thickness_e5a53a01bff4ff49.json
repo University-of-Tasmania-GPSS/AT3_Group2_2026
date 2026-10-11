@@ -1,0 +1,63 @@
+{
+  "bounds": [
+    [
+      -53.19949826709183,
+      73.1764816185438
+    ],
+    [
+      -52.897524981671864,
+      73.89229484946539
+    ]
+  ],
+  "display_shape": [
+    673,
+    959
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      653,
+      947
+    ],
+    "pixel_size": [
+      50.0,
+      50.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/Heard_Millan_thickness_land_50m.tif",
+    "stamps": [
+      [
+        "Heard_Millan_thickness_land_50m.tif",
+        351818,
+        1791528189880396600
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "thickness",
+      "title": "Modelled ice thickness",
+      "group": "Elevation",
+      "limits": [
+        0,
+        600
+      ],
+      "colours": [
+        "#36196B",
+        "#315EAD",
+        "#27B7B5",
+        "#F6DF72",
+        "#F27945"
+      ],
+      "note": "Modelled thickness, representative of 2010\u20132020; 50 m working grid.",
+      "ticks": [
+        "0 m",
+        "300 m",
+        "\u2265 600 m"
+      ]
+    }
+  }
+}

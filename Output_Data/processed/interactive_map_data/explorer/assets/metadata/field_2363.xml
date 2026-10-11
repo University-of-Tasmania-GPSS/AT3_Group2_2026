@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DIF xmlns="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:dif="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/ https://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.9.3.xsd">
+  <Entry_ID>ASAC_2363</Entry_ID>
+  <Entry_Title>Heard Island glacier fluctuations and climatic change - 2003/04 Fieldwork</Entry_Title>
+  <Data_Set_Citation>
+    <Dataset_Creator>Allison, I. and Thost, D.E.</Dataset_Creator>
+    <Dataset_Title>Heard Island glacier fluctuations and climatic change - 2003/04 Fieldwork</Dataset_Title>
+    <Dataset_Series_Name>CAASM Metadata</Dataset_Series_Name>
+    <Dataset_Release_Date>2010-08-10</Dataset_Release_Date>
+    <Dataset_Publisher>Australian Antarctic Data Centre</Dataset_Publisher>
+    <Version>1</Version>
+    <Dataset_DOI>doi:10.4225/15/574BBEA0D74B7</Dataset_DOI>
+    <Online_Resource>https://data.aad.gov.au/metadata/records/ASAC_2363</Online_Resource>
+  </Data_Set_Citation>
+  <Personnel>
+    <Role>INVESTIGATOR</Role>
+    <Role>TECHNICAL CONTACT</Role>
+    <First_Name>IAN</First_Name>
+    <Last_Name>ALLISON</Last_Name>
+    <Email>ian.allison@aad.gov.au</Email>
+    <Phone>+61 3 6226 7648</Phone>
+    <Fax>+61 3 6226 7650</Fax>
+    <Contact_Address>
+      <Address>Australian Antarctic Division</Address>
+      <Address>203 Channel Highway</Address>
+      <City>Kingston</City>
+      <Province_or_State>Tasmania</Province_or_State>
+      <Postal_Code>7050</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Personnel>
+    <Role>TECHNICAL CONTACT</Role>
+    <Role>DIF AUTHOR</Role>
+    <First_Name>DOUG</First_Name>
+    <Middle_Name>E</Middle_Name>
+    <Last_Name>THOST</Last_Name>
+    <Email>doug.thost@aad.gov.au</Email>
+    <Phone>+61 3 6226 7541</Phone>
+    <Contact_Address>
+      <Address>University of Tasmania</Address>
+      <Address>Antarctic CRC</Address>
+      <City>Sandy Bay</City>
+      <Province_or_State>Tasmania</Province_or_State>
+      <Postal_Code>7005</Postal_Code>
+      <Country>Australia</Country>
+    </Contact_Address>
+  </Personnel>
+  <Discipline>
+    <Discipline_Name>EARTH SCIENCE</Discipline_Name>
+  </Discipline>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>ATMOSPHERE</Topic>
+    <Term>ATMOSPHERIC WINDS</Term>
+    <Variable_Level_1>SURFACE WINDS</Variable_Level_1>
+  </Parameters>
+  <Parameters>
+    <Category>EARTH SCIENCE</Category>
+    <Topic>CRYOSPHERE</Topic>
+    <Term>GLACIERS/ICE SHEETS</Term>
+    <Variable_Level_1>GLACIERS</Variable_Level_1>
+  </Parameters>
+  <ISO_Topic_Category>CLIMATOLOGY/METEOROLOGY/ATMOSPHERE</ISO_Topic_Category>
+  <ISO_Topic_Category>GEOSCIENTIFIC INFORMATION</ISO_Topic_Category>
+  <ISO_Topic_Category>INLAND WATERS</ISO_Topic_Category>
+  <Keyword>ABLATION</Keyword>
+  <Keyword>BROWN GLACIER</Keyword>
+  <Keyword>CHEMISTRY</Keyword>
+  <Keyword>CLIMATE</Keyword>
+  <Keyword>DEM</Keyword>
+  <Keyword>DIGITAL ELEVATION MODEL</Keyword>
+  <Keyword>DYNAMICS</Keyword>
+  <Keyword>FOEHN WIND</Keyword>
+  <Keyword>GPS SURVEYING</Keyword>
+  <Keyword>HEARD ISLAND</Keyword>
+  <Keyword>LAGOON BATHYMETRY</Keyword>
+  <Keyword>MASS BALANCE</Keyword>
+  <Keyword>MELTWATER</Keyword>
+  <Keyword>MORPHOLOGY</Keyword>
+  <Keyword>PHOTOS</Keyword>
+  <Keyword>REPORT</Keyword>
+  <Keyword>RES</Keyword>
+  <Keyword>SURVEYS</Keyword>
+  <Keyword>WEATHER OBSERVATIONS</Keyword>
+  <Source_Name>
+    <Short_Name>FIELD SURVEYS</Short_Name>
+  </Source_Name>
+  <Source_Name>
+    <Short_Name>FIELD INVESTIGATION</Short_Name>
+  </Source_Name>
+  <Temporal_Coverage>
+    <Start_Date>2003-12-16</Start_Date>
+    <Stop_Date>2004-02-26</Stop_Date>
+  </Temporal_Coverage>
+  <Data_Set_Progress>COMPLETE</Data_Set_Progress>
+  <Spatial_Coverage>
+    <Southernmost_Latitude>-53.3</Southernmost_Latitude>
+    <Northernmost_Latitude>-53.1</Northernmost_Latitude>
+    <Westernmost_Longitude>73.45</Westernmost_Longitude>
+    <Easternmost_Longitude>73.6</Easternmost_Longitude>
+  </Spatial_Coverage>
+  <Location>
+    <Location_Category>OCEAN</Location_Category>
+    <Location_Type>SOUTHERN OCEAN</Location_Type>
+  </Location>
+  <Location>
+    <Location_Category>GEOGRAPHIC REGION</Location_Category>
+    <Location_Type>POLAR</Location_Type>
+  </Location>
+  <Location>
+    <Location_Category>OCEAN</Location_Category>
+    <Location_Type>SOUTHERN OCEAN</Location_Type>
+    <Location_Subregion1>HEARD AND MCDONALD ISLANDS</Location_Subregion1>
+  </Location>
+  <Access_Constraints>These data are publicly available for download from the provided URL.</Access_Constraints>
+  <Use_Constraints>This data set conforms to the CCBY Attribution License (http://creativecommons.org/licenses/by/4.0/).
+
+Please follow instructions listed in the citation reference provided at http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_2363 when using these data.</Use_Constraints>
+  <Data_Set_Language>English</Data_Set_Language>
+  <Originating_Center>Australian Antarctic Division</Originating_Center>
+  <Data_Center>
+    <Data_Center_Name>
+      <Short_Name>AU/AADC</Short_Name>
+      <Long_Name>Australian Antarctic Data Centre, Australia</Long_Name>
+    </Data_Center_Name>
+    <Data_Center_URL>http://data.aad.gov.au</Data_Center_URL>
+    <Personnel>
+      <Role>DATA CENTER CONTACT</Role>
+      <First_Name>DATA OFFICER</First_Name>
+      <Last_Name>AADC</Last_Name>
+      <Email>metadata@aad.gov.au</Email>
+      <Phone>+61 3 6232 3244</Phone>
+      <Fax>+61 3 6232 3351</Fax>
+      <Contact_Address>
+        <Address>Australian Antarctic Division</Address>
+        <Address>203 Channel Highway</Address>
+        <City>Kingston</City>
+        <Province_or_State>Tasmania</Province_or_State>
+        <Postal_Code>7050</Postal_Code>
+        <Country>Australia</Country>
+      </Contact_Address>
+    </Personnel>
+  </Data_Center>
+  <Distribution>
+    <Distribution_Media>HTTP</Distribution_Media>
+    <Distribution_Size>187154 kb</Distribution_Size>
+    <Distribution_Format>Excel, PDF, images</Distribution_Format>
+    <Fees>free</Fees>
+  </Distribution>
+  <Summary>
+    <Abstract>This report describes the data collected for ASAC project 2363 (a continuation of ASAC 1158).  A full report of the data collected and the work completed is available for download with the dataset.
+
+The download file contains data in the following areas:
+
+Ablation
+Chemistry
+DEM - Digital Elevation Model
+Lagoon Bathymetry
+Meltwater
+Photos
+Report
+RES - Radio Echo Sounder
+Surveys
+Weather Observations
+
+This CD contains data collected by the Heard Island glaciology team during the 2003-04 Australian Antarctic Division expedition, as well as some data from the previous expedition in November 2000. The data report associated with these files is provided as a PDF in the Report folder.
+
+Description of data files available on CD
+
+Ablation folder
+survey_canes_ablation.xls
+Excel file with the measured height of each survey wand above snow/ice surface for the field season.
+BG35_pinger.xls
+Excel file with sonic ranger data for BG35.
+BG50_pinger.xls
+Excel file with sonic ranger data for BG50.
+
+Chemistry folder
+Ion_Chemistry.xls
+Excel file with analyses of chloride, sulphate, nitrate, Mg, Ca, Na of samples collected from crevasses and cores.
+Oxygen_isotopes.xls
+Excel file with  dO18 analyses of samples collected from crevasses and cores.
+
+DEM folder
+dem_2003.grd
+ASCII file with the 2003 DEM grid, generated using Golden Software Surfer v7.0. Header file format is:
+
+id The identification string DSAA that identifies the file as an ASCII grid file.
+
+nx   nynx is the integer number of grid lines along the X axis (columns)
+ny is the integer number of grid lines along the Y axis (rows)
+
+xlo  xhi   xlo is the minimum X value of the grid
+xhi is the maximum X value of the grid
+
+ylo  yhi   ylo is the minimum Y value of the grid
+yhi is the maximum Y value of the grid
+
+zlo  zhi   zlo is the minimum Z value of the grid
+zhi is the maximum Z value of the grid
+
+grid row 1
+grid row 2
+grid row 3 -these are the rows of Z values of the grid, organized in row order.  Each row has a constant Y coordinate.  Grid row 1 corresponds to ylo and the last grid row corresponds to yhi.  Within each row, the Z values are arranged from xlo to xhi. Blanked grid nodes are given a Z value of 1.070141E+038. Rows are 39.855 m apart, Columns are 40 m apart.
+
+dem_11.xls
+Excel file with all points used to calculate the dem_2003.xls grid (refer to A2).
+The folder also contains high resolution jpeg images of Fig. 16 and the data distribution figure (A2).
+
+Lagoon bathymetry folder
+Folder containing Excel files with Easting, Northing (acquired using Garmin GPS V; WGS84, UTM zone 43)  and depth (acquired using Garmin 'Fishfinder' depth sounder) for each lagoon surveyed. Also high resolution jpeg images of bathymetric maps reproduced in appendix A3.
+
+Meltwater folder
+Contains an excel file with stream profiles and flux calculations, and repeat measurements of Brown Lagoon outflow stream. Also contains jpeg photos of three of the inflow streams, and an image showing their location using the Quickbird satellite image for reference.
+
+Photos folder
+Contains jpeg digital photos used in this report.
+
+Report folder
+HI_data_report_screen.pdf
+HI_data_report_print.pdf
+This data report is reproduced as both a low and high resolution Adobe Acrobat PDF file, for on-screen viewing and printing respectively.
+
+RES folder
+BG_35_2000.xls
+Excel file with  RES data for the BG35 profile, 2000 field season.
+RES.xls
+Excel file with RES data for the BG25 and BG20 profiles, 2003-04 field season.
+
+Surveys folder
+all_survey_points.xls
+Excel file with the position of the survey markers and additional points.
+daily_position_BG50.xls
+Excel file with daily (occasionally more frequent) DGPS position near BG50
+kinematic_2000.xls
+Excel file with  all DGPS kinematic surveys conducted during the 2000 field season.
+kinematic_surveys.xls
+Excel file with  all DGPS kinematic surveys conducted during the 2003-04 field season.
+surface_site_surveys.xls
+Excel file with the DGPS repeat survey positions of each survey site, for the 2000 and 2003-04 field seasons, and velocity calculations for each epoch.
+terminus_surveys.xls
+Excel file with the DGPS surveys of the position of the glacier terminus.
+
+Weather observations folder
+AANDERAA_data.xls
+Excel file with data recorded by the automatic weather station at 550 m a.s.l.
+all_data_comparison.xls
+Excel file with compilation and graphs of all data from each of the Brown Glacier AWS.
+MAWS1_data.xls
+Excel file with data recorded by the automatic weather station at 115 m a.s.l.
+MAWS2_data.xls
+Excel file with data recorded by the automatic weather station at 920 m a.s.l.
+precipitation_record.xls
+Excel file with rain gauge records from Jacka Valley, Brown Hut, Spit Bay and Capsize Beach.
+ttec_T_RH_data.xls
+Excel file containing temperature and relative humidity data from the three T-TEC loggers, deployed at Jacka Valley, Capsize Beach, and Doppler Hill.
+wx station photos folder
+Folder containing jpeg photos of each of the weather stations, as well as the field camp observing sites. Missing is Spit Bay.</Abstract>
+  </Summary>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>GET DATA</Type>
+    </URL_Content_Type>
+    <URL>http://data.aad.gov.au/aadc/portal/download_file.cfm?file_id=1789</URL>
+    <Description>Download point for the data</Description>
+  </Related_URL>
+  <Related_URL>
+    <!--Modified by Change List Tool on Tue Jul 10 13:40:10 EDT 2018. Old value is "VIEW PROJECT HOME PAGE"-->
+<URL_Content_Type>
+      <Type>PROJECT HOME PAGE</Type>
+    </URL_Content_Type>
+    <URL>https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=1158</URL>
+    <Description>Public information for ASAC project 1158</Description>
+  </Related_URL>
+  <Related_URL>
+    <!--Modified by Change List Tool on Tue Jul 10 13:40:10 EDT 2018. Old value is "VIEW PROJECT HOME PAGE"-->
+<URL_Content_Type>
+      <Type>PROJECT HOME PAGE</Type>
+    </URL_Content_Type>
+    <URL>https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=2363</URL>
+    <Description>Public information for ASAC project 2363</Description>
+  </Related_URL>
+  <Related_URL>
+    <URL_Content_Type>
+      <Type>VIEW RELATED INFORMATION</Type>
+    </URL_Content_Type>
+    <URL>http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_2363</URL>
+    <Description>Citation reference for this metadata record and dataset</Description>
+  </Related_URL>
+  <IDN_Node>
+    <Short_Name>AMD/AU</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>CEOS</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>AMD</Short_Name>
+  </IDN_Node>
+  <IDN_Node>
+    <Short_Name>ACE/CRC</Short_Name>
+  </IDN_Node>
+  <Originating_Metadata_Node>AADC</Originating_Metadata_Node>
+  <Metadata_Name>CEOS IDN DIF</Metadata_Name>
+  <Metadata_Version>VERSION 9.7.1</Metadata_Version>
+  <DIF_Creation_Date>2000-08-10</DIF_Creation_Date>
+  <Last_DIF_Revision_Date>2017-04-26</Last_DIF_Revision_Date>
+  <DIF_Revision_History>2001-08-03 entries revised and updated by D. Thost
+2008-04-18 - record updated by Dave Connell.
+2010-08-10 - record updated by Dave Connell to publicly release the data.
+2016-04-14 - record updated by Dave Connell - basic updates.</DIF_Revision_History>
+  <Extended_Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.uuid</Name>
+      <Value>a8d859cd-3d0e-4bcf-bf71-168574c089f6</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.extraction_date</Name>
+      <Value>2015-11-29 18:25:36</Value>
+    </Metadata>
+    <Metadata>
+      <Group>gov.nasa.gsfc.gcmd</Group>
+      <Name>metadata.keyword_version</Name>
+      <Value>8.6</Value>
+    </Metadata>
+  </Extended_Metadata>
+</DIF>

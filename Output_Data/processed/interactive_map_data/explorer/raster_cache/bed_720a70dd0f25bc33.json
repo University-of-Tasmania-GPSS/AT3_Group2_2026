@@ -1,0 +1,63 @@
+{
+  "bounds": [
+    [
+      -53.19949826709183,
+      73.1764816185438
+    ],
+    [
+      -52.897524981671864,
+      73.89229484946539
+    ]
+  ],
+  "display_shape": [
+    673,
+    959
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      653,
+      947
+    ],
+    "pixel_size": [
+      50.0,
+      50.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/Heard_bed_estimate_candidate_50m.tif",
+    "stamps": [
+      [
+        "Heard_bed_estimate_candidate_50m.tif",
+        363512,
+        1791528189921264500
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "bed",
+      "title": "Modelled subglacial elevation",
+      "group": "Elevation",
+      "limits": [
+        -200,
+        3000
+      ],
+      "colours": [
+        "#293F86",
+        "#268C87",
+        "#A0AC73",
+        "#C5A37A",
+        "#F6F1DC"
+      ],
+      "note": "2002 surface minus modelled thickness. Mixed observation periods; not a surveyed bed.",
+      "ticks": [
+        "\u2264 \u2212200 m",
+        "1,400 m",
+        "\u2265 3,000 m"
+      ]
+    }
+  }
+}

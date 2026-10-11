@@ -1,0 +1,61 @@
+{
+  "bounds": [
+    [
+      -53.191195546764085,
+      73.37332624867969
+    ],
+    [
+      -53.014512188529174,
+      73.66761246918446
+    ]
+  ],
+  "display_shape": [
+    164,
+    164
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      161,
+      161
+    ],
+    "pixel_size": [
+      120.0,
+      120.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/velocity/Heard_vector_coherence.tif",
+    "stamps": [
+      [
+        "Heard_vector_coherence.tif",
+        51844,
+        1791534528325749100
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "island_vector_coherence",
+      "title": "Flow-direction consistency",
+      "group": "Velocity",
+      "limits": [
+        0,
+        1
+      ],
+      "colours": [
+        "#5E294A",
+        "#E6C572",
+        "#44C5BA"
+      ],
+      "note": "Vector coherence: nearer 1 means more consistent observed flow direction; not a confidence probability.",
+      "ticks": [
+        "0 \u00b7 mixed",
+        "0.5",
+        "1 \u00b7 consistent"
+      ]
+    }
+  }
+}

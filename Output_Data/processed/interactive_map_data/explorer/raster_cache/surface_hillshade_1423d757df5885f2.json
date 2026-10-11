@@ -1,0 +1,60 @@
+{
+  "bounds": [
+    [
+      -53.19922840093027,
+      73.17649687090999
+    ],
+    [
+      -52.897524981671864,
+      73.8924555996522
+    ]
+  ],
+  "display_shape": [
+    842,
+    1200
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      3261,
+      4734
+    ],
+    "pixel_size": [
+      10.000000000274,
+      10.000000000274
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/terrain/hillshade.tif",
+    "stamps": [
+      [
+        "hillshade.tif",
+        3471033,
+        1791528192887247100
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "surface_hillshade",
+      "title": "Surface hillshade",
+      "group": "Terrain",
+      "limits": [
+        0,
+        255
+      ],
+      "colours": [
+        "#142338",
+        "#F0F4F7"
+      ],
+      "note": "Artificial illumination for terrain shape; not measured solar exposure.",
+      "ticks": [
+        "Dark",
+        "",
+        "Light"
+      ]
+    }
+  }
+}

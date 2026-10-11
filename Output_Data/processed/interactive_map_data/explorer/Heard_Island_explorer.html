@@ -1,0 +1,74 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heard Island · Ice, terrain & change</title>
+<link rel="stylesheet" href="assets/vendor/leaflet-1.9.4.css"><link rel="stylesheet" href="assets/explorer.css?v=20261010T235721Z">
+</head>
+<body>
+<div id="app">
+<header class="masthead"><div class="brand"><span class="eyebrow">KGG375 · HEARD ISLAND</span><h1>Ice, terrain <span>& change</span></h1></div><div class="header-actions"><span class="date-badge">1947 — 2026</span><button id="island-3d" class="accent">Explore in 3D</button><button id="credits-open">Sources & credits</button><button id="fullscreen" title="Enter or exit full screen" aria-label="Enter or exit full screen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></button></div></header>
+<main class="workspace"><section class="map-shell"><div id="island-map" class="map-canvas" aria-label="Interactive map of Heard Island"></div><div class="map-label"><span class="eyebrow">SOUTHERN INDIAN OCEAN</span><strong>Heard Island</strong><span>Click a glacier to explore its evidence</span></div><div id="island-timeline" class="timeline"></div><div id="map-message" class="map-message" hidden></div></section><aside id="island-sidebar" class="sidebar"><section class="selector-panel"><label for="glacier-select">Find a glacier</label><div class="select-row"><select id="glacier-select"><option value="">Select a glacier…</option></select><button id="glacier-open" class="accent">Open</button></div><div class="focus-row"><button data-glacier="RGI60-19.00023" class="brown">Brown ↗</button><button data-glacier="RGI60-19.00005" class="stephenson">Stephenson ↗</button><button id="island-reset">Reset view</button></div></section><section class="sidebar-heading"><h2>Island layers</h2><button id="island-clear" class="text-button">Clear layers</button></section><div class="basemap-row"><label><input type="checkbox" id="island-imagery" checked> Satellite context</label><span class="muted">Imagery dates vary</span></div><p class="scope-note">2019 & 2026: all available glacier outlines. Recent non-focus outlines are provisional and dotted. 1947 is a nominal date and includes some earlier observations. Field evidence and bed rasters are in glacier dashboards.</p><div id="island-layers"></div><section class="sidebar-foot"><p>Transparent gaps have no supported value. Raster colours can saturate at the ends of their scales.</p><button class="text-button" id="methods-open">Data & display methods ↗</button></section></aside></main>
+</div>
+<dialog id="glacier-dialog" class="large-dialog"><div class="dialog-shell"><header class="dialog-head"><div><span class="eyebrow">GLACIER DASHBOARD</span><h2 id="glacier-title">Glacier</h2></div><div class="dialog-actions"><button id="glacier-3d" class="accent">Explore in 3D</button><button id="glacier-sources">Sources</button><button data-close="glacier-dialog" class="close" aria-label="Close glacier dashboard">×</button></div></header><nav id="glacier-tabs" class="tabs" aria-label="Glacier evidence sections"></nav><div class="dashboard-grid"><div class="map-shell"><div id="glacier-map" class="map-canvas"></div><div id="glacier-timeline" class="timeline"></div></div><aside id="glacier-sidebar" class="sidebar"><div class="sidebar-heading"><span id="active-layer-count"></span><button id="glacier-clear" class="text-button">Clear layers</button></div><div id="glacier-notes"></div><div id="glacier-layers"></div></aside></div></div></dialog>
+<dialog id="terrain-dialog" class="large-dialog terrain-dialog"><div class="dialog-shell"><header class="dialog-head"><div><span class="eyebrow">3D TERRAIN</span><h2 id="terrain-title">Terrain</h2></div><div class="dialog-actions"><button id="terrain-reset">Reset camera</button><button id="terrain-sources">Sources</button><button data-close="terrain-dialog" class="close" aria-label="Close 3D terrain">×</button></div></header><div class="terrain-grid"><div id="terrain-plot" aria-label="Manoeuvrable 3D terrain"></div><aside class="sidebar terrain-controls"><p class="instruction">Drag to orbit · scroll to zoom · right-drag to pan</p><p class="scope-note">Surface terrain · 2002 DEM</p><label for="terrain-colour">Colour the terrain by</label><select id="terrain-colour"><option value="elevation">Elevation</option></select><div id="terrain-legend"></div><label for="terrain-exaggeration">Vertical exaggeration <output id="terrain-exaggeration-label">1×</output></label><input type="range" id="terrain-exaggeration" min="1" max="5" step="0.5" value="1">
+<div id="thickness-controls" hidden>
+  <label for="terrain-thickness">Thickness exaggeration
+    <output id="terrain-thickness-label">1×</output>
+  </label>
+  <input type="range" id="terrain-thickness"
+    min="1" max="10" step="0.5" value="1">
+  <small>Display only: the bed stays fixed. Hover shows modelled values.</small>
+</div>
+<label class="check-row"><input type="checkbox" id="terrain-ice" checked> Show dated ice footprint</label><section id="terrain-timeline" class="terrain-timeline"></section><p id="terrain-date-status" class="scope-note"></p><div class="terrain-note"><strong>What this animation shows</strong><p>Mapped ice footprints on fixed terrain. It does not reconstruct historical surface heights or thickness.</p></div><small id="terrain-grid-note"></small></aside></div></div></dialog>
+<dialog id="credits-dialog" class="credits-dialog">
+  <div class="dialog-shell">
+    <header class="dialog-head">
+      <div>
+        <span class="eyebrow">DATA & METHODS</span>
+        <h2>Sources & references</h2>
+      </div>
+      <button data-close="credits-dialog" class="close"
+        aria-label="Close references">×</button>
+    </header>
+
+    <div class="credits-content">
+      <h3 id="credits-context">Dataset references</h3>
+      <div id="credits-list"></div>
+
+      <details id="methods-details">
+        <summary>Technical references & display methods</summary>
+        <div id="technical-references"></div>
+
+        <p>
+          Display rasters use nearest-neighbour reprojection and preserve
+          source masks. Glacier views include the available dated footprints
+          plus a 600 m buffer. Display geometries are simplified by 4 m
+          after area calculations.
+        </p>
+
+        <p>
+          3D views use EPSG:32743, with horizontal distances in kilometres
+          and elevations in metres. Retreat animations step through mapped
+          dates on fixed terrain; they do not reconstruct historical ice
+          thickness. Equal animation steps represent unequal time intervals.
+        </p>
+
+        <p>
+          Map interface: Leaflet 1.9.4 (BSD-2-Clause).
+          3D interface: Plotly.js 3.1.0 (MIT).
+        </p>
+      </details>
+    </div>
+  </div>
+</dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<script>window.HI = {glaciers: {}, terrain: {}};</script>
+<script src="assets/vendor/leaflet-1.9.4.js"></script>
+<script src="assets/data/overview.js?v=20261010T235721Z"></script>
+<script src="assets/explorer.js?v=20261010T235721Z"></script>
+<noscript>This interactive map requires JavaScript.</noscript>
+</body></html>
+

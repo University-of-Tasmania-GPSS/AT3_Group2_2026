@@ -1,0 +1,62 @@
+{
+  "bounds": [
+    [
+      -53.19949826709183,
+      73.1764816185438
+    ],
+    [
+      -52.897524981671864,
+      73.89229484946539
+    ]
+  ],
+  "display_shape": [
+    673,
+    959
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      653,
+      947
+    ],
+    "pixel_size": [
+      50.0,
+      50.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/terrain/Heard_bed_slope_50m.tif",
+    "stamps": [
+      [
+        "Heard_bed_slope_50m.tif",
+        536637,
+        1791528205534675900
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "modelled_bed_slope",
+      "title": "Modelled bed slope",
+      "group": "Terrain",
+      "limits": [
+        0,
+        60
+      ],
+      "colours": [
+        "#22214D",
+        "#2E94A0",
+        "#F5E68C",
+        "#F17450"
+      ],
+      "note": "Slope angle in degrees. Bed derivatives inherit the bed model's limitations.",
+      "ticks": [
+        "0\u00b0",
+        "30\u00b0",
+        "\u2265 60\u00b0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "bounds": [
+    [
+      -53.07677588841477,
+      73.6609882090901
+    ],
+    [
+      -53.069952424149584,
+      73.67204677896873
+    ]
+  ],
+  "display_shape": [
+    76,
+    74
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      75,
+      73
+    ],
+    "pixel_size": [
+      10.0,
+      10.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/field_surveys/reconstruction/Brown_lagoon_2004_depth.tif",
+    "stamps": [
+      [
+        "Brown_lagoon_2004_depth.tif",
+        12934,
+        1791548920910511700
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "RGI60-19.00023_lagoon_depth",
+      "title": "Brown lagoon \u00b7 Depth below 2004 survey water",
+      "group": "Field evidence",
+      "limits": [
+        0,
+        60
+      ],
+      "colours": [
+        "#DBF1E7",
+        "#4CAAC3",
+        "#21418E"
+      ],
+      "note": "Supported interpolation of 2004 soundings; depth is relative to survey water, not sea level. Gaps are unsurveyed.",
+      "ticks": [
+        "0 m",
+        "30 m",
+        "60 m"
+      ]
+    }
+  }
+}

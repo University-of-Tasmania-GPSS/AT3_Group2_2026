@@ -1,0 +1,63 @@
+{
+  "bounds": [
+    [
+      -53.191195546764085,
+      73.37332624867969
+    ],
+    [
+      -53.014512188529174,
+      73.66761246918446
+    ]
+  ],
+  "display_shape": [
+    164,
+    164
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      161,
+      161
+    ],
+    "pixel_size": [
+      120.0,
+      120.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/velocity/Heard_year_balanced_speed.tif",
+    "stamps": [
+      [
+        "Heard_year_balanced_speed.tif",
+        54937,
+        1791534528367298200
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "island_year_balanced_speed",
+      "title": "Year-balanced surface speed \u00b7 2017\u20132022",
+      "group": "Velocity",
+      "limits": [
+        0,
+        1000
+      ],
+      "colours": [
+        "#36196B",
+        "#315EAD",
+        "#27B7B5",
+        "#F6DF72",
+        "#F27945"
+      ],
+      "note": "Median of available annual pixel medians. 120 m grid; transparent gaps have no accepted velocity value.",
+      "ticks": [
+        "0",
+        "500",
+        "\u2265 1,000 m yr\u207b\u00b9"
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "bounds": [
+    [
+      -53.19922840093027,
+      73.17649687090999
+    ],
+    [
+      -52.897524981671864,
+      73.8924555996522
+    ]
+  ],
+  "display_shape": [
+    842,
+    1200
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      3261,
+      4734
+    ],
+    "pixel_size": [
+      10.000000000274,
+      10.000000000274
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/terrain/slope.tif",
+    "stamps": [
+      [
+        "slope.tif",
+        10652449,
+        1791528192096474900
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "surface_slope",
+      "title": "Surface slope",
+      "group": "Terrain",
+      "limits": [
+        0,
+        60
+      ],
+      "colours": [
+        "#22214D",
+        "#2E94A0",
+        "#F5E68C",
+        "#F17450"
+      ],
+      "note": "Slope derived from the accepted 2002 DEM.",
+      "ticks": [
+        "0\u00b0",
+        "30\u00b0",
+        "\u2265 60\u00b0"
+      ]
+    }
+  }
+}

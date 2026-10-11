@@ -1,0 +1,65 @@
+{
+  "bounds": [
+    [
+      -53.19922840093027,
+      73.17649687090999
+    ],
+    [
+      -52.897524981671864,
+      73.8924555996522
+    ]
+  ],
+  "display_shape": [
+    842,
+    1200
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      3261,
+      4734
+    ],
+    "pixel_size": [
+      10.000000000274,
+      10.000000000274
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/terrain/aspect.tif",
+    "stamps": [
+      [
+        "aspect.tif",
+        11187616,
+        1791528192647176500
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "surface_aspect",
+      "title": "Surface aspect",
+      "group": "Terrain",
+      "limits": [
+        0,
+        360
+      ],
+      "colours": [
+        "#5CC8FF",
+        "#FFD166",
+        "#EF729C",
+        "#A5E075",
+        "#5CC8FF"
+      ],
+      "note": "Downhill direction, clockwise from north; aspect has no meaning on flat cells.",
+      "ticks": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "N"
+      ]
+    }
+  }
+}

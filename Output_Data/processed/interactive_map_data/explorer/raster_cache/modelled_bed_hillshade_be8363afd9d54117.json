@@ -1,0 +1,60 @@
+{
+  "bounds": [
+    [
+      -53.19949826709183,
+      73.1764816185438
+    ],
+    [
+      -52.897524981671864,
+      73.89229484946539
+    ]
+  ],
+  "display_shape": [
+    673,
+    959
+  ],
+  "native_grid": {
+    "crs": "EPSG:32743",
+    "shape": [
+      653,
+      947
+    ],
+    "pixel_size": [
+      50.0,
+      50.0
+    ]
+  },
+  "display_crs": "EPSG:3857",
+  "resampling": "nearest",
+  "signature": {
+    "version": 1,
+    "path": "Output_Data/processed/geomorphology/terrain/Heard_bed_hillshade_50m.tif",
+    "stamps": [
+      [
+        "Heard_bed_hillshade_50m.tif",
+        125330,
+        1791528205594060300
+      ]
+    ],
+    "maximum_side": 1200,
+    "style": {
+      "id": "modelled_bed_hillshade",
+      "title": "Modelled bed hillshade",
+      "group": "Terrain",
+      "limits": [
+        0,
+        255
+      ],
+      "colours": [
+        "#142338",
+        "#F0F4F7"
+      ],
+      "note": "Artificial illumination for terrain shape; not measured solar exposure.",
+      "ticks": [
+        "Dark",
+        "",
+        "Light"
+      ]
+    }
+  }
+}
