@@ -1,239 +1,248 @@
 (methods)=
 # Methods: building a defensible comparison
 
-[Write: Explain the overall approach in one paragraph: measure mapped change, compare spatial context, then test how far independent field evidence supports the interpretation.]
-
-(data-overview)=
-## Data, dates and spatial coverage
-
-[Write: Introduce the datasets with their observation dates, native resolution, analysis support and purpose. Distinguish observation date from publication date.]
-
-| Evidence | What to record here | Purpose in the comparison |
-| --- | --- | --- |
-| Historical glacier outlines | Source, nominal dates, matching decisions and mapping limitations | Area and front change |
-| Sentinel-1 imagery | Acquisition dates, coherence pairs, orbit, polarisation and processing | Recent outline reconstruction |
-| Surface elevation | DEM source, observation period, vertical reference and resolution | Elevation, slope, aspect and terrain context |
-| Modelled ice thickness | Product version, representative period, resolution and error layer | Estimate subglacial terrain |
-| ITS_LIVE velocity | Product version, image-pair dates, filters and retained coverage | Contemporary flow context |
-| Geology | Map source, units, scale and unmapped areas | Exposed geological context |
-| Field archives | Radar and sounding dates, registration and vertical reference | Local comparisons and lagoon reconstruction |
-
-% TODO: Replace the prompts above with verified metadata. Full APA citations belong in references.md; detailed export names and environments belong in the appendix.
-
-### Aligning grids and footprints
-
-[Write: Explain reprojection, resampling and valid-data masks. Distinguish the 50 m terrain grid, 120 m exposure/velocity support and 10 m lagoon output. Explain why the 2019 thickness mask, 2014 velocity footprint and common elevation surface serve different questions.]
-
-**Limitation:** [Write: Dates, grids and masks differ; resampling does not create new information.]  
-**Response:** [Write: Describe the alignment and valid-data rules used for each comparison.]  
-**Implication:** [Write: State which comparisons remain descriptive and which quantities should not be treated as coeval.]
-
+We first measure how the mapped glacier footprints and fronts changed, then compare the spatial settings of Brown and Stephenson. Modelled terrain and archived field observations add evidence about the lower glaciers and lagoon basin. Python and GIS connect these datasets through reproducible preparation, spatial sampling, validation and exports to the interactive map.
 
 (workflow)=
-## Workflow from observations to synthesis
+## From observations to interpretation
 
-:::{admonition} Figure placeholder — analytical workflow
-Create a compact diagram with branches for inventory change, terrain and flow, exposed geology, and field reconstruction, joining at the synthesis. Show the main support checks beside the branches. Avoid an exhaustive notebook-by-notebook flowchart.
+The workflow combines three strands: **mapped change**, **spatial setting** and **archived field evidence**. Each contributes a different part of the comparison. Shared checks preserve observation dates, valid-data coverage and the distinction between measured and modelled quantities.
+
+:::{figure} Figures/Book/02_analysis_workflow.png
+:label: fig-methods-workflow
+:alt: Three evidence strands showing mapped glacier change, spatial setting and archived field reconstruction, joined through shared checks into synthesis and the interactive explorer.
+:width: 100%
+:align: center
+
+Analytical workflow for the Brown–Stephenson comparison. Historical outlines and satellite radar establish mapped change; geological, terrain and velocity layers describe spatial setting; archived radar sections and lagoon soundings provide local field evidence. Date, coverage and sensitivity checks guide their integration. The resulting interpretation distinguishes observations, model-derived estimates and proposed mechanisms.
 :::
 
-[Write: Describe the main Python/GIS tools and the decisions they implement. Link the complete code through the appendix; retain only a few short, explained snippets in this chapter.]
+GeoPandas and Shapely handle vector geometry; GDAL, rasterio and rioxarray prepare rasters; xarray organises the velocity time series; and NumPy, SciPy and scikit-image support numerical analysis and segmentation. Prepared layers and summaries are exported for the book and interactive explorer. Complete code remains in the notebooks, with short excerpts below showing consequential decisions.
+
+(data-overview)=
+### Data, dates and spatial support
+
+All metric analysis uses **WGS 84 / UTM zone 43S (EPSG:32743)**. Layers are aligned for each calculation rather than forced onto one universal grid. Changing a grid's spacing does not increase the information in the source observations.
+
+| Evidence | Observation period and working support | Role |
+| --- | --- | --- |
+| Glacier outlines | 1947, 1988 and 2014 inventories; project-derived 2019 and 2026 outlines | Mapped area and front change |
+| Sentinel-1 radar | April 2019 and April 2026; shared 10 m output grid | Recent boundary delineation |
+| Surface DEM | RADARSAT 2002 product, including 1997 input; native 10 m grid | Surface terrain and common elevation context |
+| Modelled thickness and error | Product representative of approximately 2010–2020; aligned 50 m grid | Estimated bed beneath valid ice pixels |
+| ITS_LIVE velocity | Retained 2016–2022 image pairs; 120 m grid within 2014 glacier footprints | Flow speed, direction and coverage |
+| Geological polygons | Supplied geological map, attributed in the project source register to Fox et al. (2023) | Mapped surface materials and retreat-zone composition |
+| Field archives | Brown radar observations from 2000 and 2004; 2004 lagoon soundings | Local bed comparisons and supported lagoon reconstruction |
+
+The 2019 inventory supplies the reporting footprint for thickness and bed summaries, while velocity uses the 2014 footprint. Terrain comparisons retain the older DEM as a common spatial context. These choices support consistent comparisons within each analysis, but the layers do not represent simultaneous glacier conditions.
+
+% PRESENTATION CUE — Griffin, 0:30–1:10: introduce the three evidence strands and Python/GIS integration; explain why observation dates and sampling footprints differ.
 
 (methods-outlines)=
-## Reconstructing glacier outlines and measuring retreat
+## Reconstructing outlines and measuring retreat
 
-### Historical matching and recent radar evidence
+### Coherence provides the boundary evidence
 
-[Write: Explain historical identity matching and retained unmatched features. Explain coherence, backscatter and the recent outline algorithm using plain language before its parameters.]
+Initial inspection showed that radar brightness alone did not reliably separate ice from surrounding terrain. We therefore used **interferometric coherence**, which measures the similarity of radar signals between acquisitions, as the main segmentation input. Low coherence can accompany changing ice surfaces, but also water and other surface changes; it does not uniquely identify glacier ice.
+
+Matched Sentinel-1A IW HH acquisitions came from ascending relative orbit 100. Backscatter dates were **13 April 2019** and **12 April 2026**; the coherence pairs spanned **1–13 April 2019** and **31 March–12 April 2026**. Copernicus processing supplied coherence, terrain-corrected backscatter and observation masks. The shared output grid had 10 m spacing.
 
 :::{figure} Figures/Inventory_methods_SAR_evidence.png
 :label: fig-methods-sar
-:alt: Four maps comparing Sentinel-1 coherence and backscatter evidence for recent Heard Island glacier mapping.
+:alt: Sentinel-1 coherence in the left column and HH backscatter in the right column, for 2019 above and 2026 below, with 2014 glacier outlines.
 :width: 100%
 :align: center
 
-[Caption placeholder: Identify the panels, acquisition dates and what coherence/backscatter contribute. Explain ambiguous low coherence and masked or unusable observations. Credit Sentinel-1 and processing sources.]
+Radar evidence used during outline development. Rows show 2019 and 2026; columns show 12-day HH coherence and HH backscatter. Cyan boundaries mark the supplied 2014 inventory. Coherence guides segmentation, while backscatter supports visual inspection. Backscatter display ranges are adjusted separately for each year and should not be read as a shared radiometric scale. Source imagery: Copernicus Sentinel-1.
 :::
 
-% FIGURE STATUS: Polish this methods figure later; add title, panel letters, readable keys and focus-glacier annotations. Do not imply that low coherence uniquely identifies ice.
+A normalised Gaussian filter with 30 m standard deviation reduces local coherence variation, and a Sobel gradient highlights changes between neighbouring regions. Marker-controlled watershed then separates regions growing from ice and stable-terrain seeds (scikit-image contributors, n.d.). Ice seeds require smoothed coherence ≤0.22 and locations at least 200 m inside the 2014 footprint; stable-terrain seeds require coherence ≥0.45. These thresholds select starting points rather than directly defining the final boundary.
+
+### Mapping constraints are part of the result
+
+The accepted outlines exclude mapped lagoons and use valid radar observations outside the high-elevation override. The 2019 candidates are restricted to the 2014 footprint, and 2026 is restricted to the accepted 2019 footprint. **Advance beyond an earlier footprint is therefore excluded by construction.** Ice strictly above 1,000 m inherits the 2014 extent because initial segmentation produced implausible internal gaps. That upper-glacier stability is imposed, rather than independently observed.
+
+Final vector outlines were reviewed for Brown and Stephenson and saved separately from intermediate classifications. Recent outlines elsewhere on the island remain provisional. Below the elevation cutoff, gaps caused by missing observations, radar shadow or unresolved classification must not automatically be interpreted as retreat. The 10 m grid is a processing choice, and no independent outline-accuracy estimate has been established.
 
 ### Area loss and front displacement
 
-[Write: Define the polygon area change, percentage denominator and interval annualisation. Explain that the transect measures front displacement along a selected route, while area loss measures change in the whole mapped footprint.]
+Historical geometries are matched to the glacier catalogue, repaired where necessary and measured in the projected CRS. Unmatched historical features remain in the audit rather than being assigned speculatively. Cumulative percentage loss uses 1947 area as its baseline; interval percentage loss uses the area at the start of that interval. Dividing by elapsed years gives an interval-average rate, not separately observed annual changes.
 
-**Selected code snippet placeholder:** Insert a short, actual excerpt for polygon difference or interval-normalised change. Add # comments and explain the inputs, denominator and output. Use a static Python code fence, not an executable cell.
+Front change is measured along fixed routes running from seaward origins towards the surviving inland ice. For each dated outline, the front is the seaward end of the transect segment connected to the inland endpoint; detached ice patches are excluded. This is **transect retreat**, whose value depends on route and glacier geometry (Lea et al., 2014). It is distinct from area loss and from the speed of ice moving through the glacier.
 
-**Limitation:** [Write: Nominal historical dates, uncertain boundaries, radar ambiguity and the imposed inventory rules.]  
-**Response:** [Write: Explain land/lagoon masks, the retained high-elevation 2014 footprint, the no-advance constraint and audit of unmatched features.]  
-**Implication:** [Write: Pixel size is not outline accuracy; changes in constrained areas and provisional non-focus inventories require particular care.]
-
-
-(methods-geology)=
-## Comparing mapped geology with newly exposed terrain
-
-[Write: Introduce island-wide geology preparation before the focus-glacier overlay. Explain geometry repair, reprojection to EPSG:32743, clipping to the coastline, and retention of the source Rock_Type categories.]
-
-(fig-methods-geology-placeholder)=
-:::{admonition} Figure placeholder — mapped geology and unit coverage
-**Source:** `03_Geology_Analysis_working.ipynb`, the cells headed `Interactive geology map (Leaflet) and clipped shapefile export` and `Area covered by each rock type`.
-
-Prepare a static companion to the existing geology map, paired with the unit-area summary. Show mapped units, the coastline and Brown/Stephenson locations. Keep Snow/Ice and unknown units visible. Describe area shares as shares of the clipped mapped geology, with the denominator stated explicitly.
-
-**Planned export:** `Figures/Methods/03_mapped_geology_context.png`.
-
-**Caption placeholder:** Identify source-map coverage, polygon clipping, mapped unit categories, area units and denominator. Credit the geological dataset and distinguish preparation from the later retreat-zone analysis.
-:::
-
-% FIGURE STATUS: Add geology methods figure to the polish queue. The notebook saves geology_map.html and a table, but the supplied snapshot has no static export of this map. Do not use notebook 08's results figure as a substitute for explaining the original geology preparation.
-
-[Write: Explain how retreat zones were intersected with geological polygons. Define the categories, denominators and handling of Snow/Ice and unmapped areas.]
-
-**Selected code snippet placeholder:** Use a short excerpt from geology clipping/area calculation. Explain why area is measured in the projected CRS, and why the Snow/Ice category does not reveal the buried substrate.
-
-**Limitation:** [Write: The map describes exposed units and may leave former ice-covered terrain unresolved.]  
-**Response:** [Write: Keep unknown categories explicit; do not extend adjacent geological units beneath the ice.]  
-**Implication:** [Write: The overlay describes spatial association and exposure, not the erodibility or composition of an observed glacier bed.]
-
-
-(methods-surface-terrain)=
-## Deriving surface slope, aspect and hillshade
-
-[Write: Explain GDAL terrain-derivative workflow. Define slope as steepness, aspect as the downslope compass direction, and hillshade as simulated illumination for viewing terrain. These describe the DEM surface, including the ice surface where present.]
-
-:::{figure} Figures/Methods/04_surface_terrain_derivatives.png
-:label: fig-methods-surface-terrain
-:alt: Three-panel Heard Island surface DEM figure showing hillshade, slope in degrees and aspect clockwise from north, with 2019 glacier outlines.
-:width: 100%
-:align: center
-
-[Caption placeholder: Describe the RADARSAT 2002 DEM and its 1997 input, native 10 m grid, coastline clipping, GDAL derivative calculations and 2019 outline overlay. Define slope/aspect units and flat or missing aspect cells. Hillshade uses simulated illumination, not measured solar exposure. Credit the DEM and inventory sources.]
-:::
-
-% FIGURE STATUS: Extracted unchanged from saved notebook 04 output, cell headed by the style_path assignment after 'Plot all of these derivatives'. Polish later: reduce excess space, add panel letters, label focus glaciers and the 2019 key, and use clear compass ticks for the cyclic aspect scale. Do not confuse this with the separate candidate-bed derivative figure.
-
-**Selected code snippet placeholder:** Include a short GDAL DEMProcessing excerpt from derivative functions. Explain the input, derivative type, units and treatment of flat/missing cells. Choose this OR the geology excerpt for the main chapter if both would overcrowd it; put the second in the appendix.
-
-**Limitation:** [Write: DEM age, mixed source periods, documented artefacts and scale-dependent terrain derivatives.]  
-**Response:** [Write: Use the accepted clipped DEM, preserve missing cells and distinguish surface derivatives from those calculated on the modelled bed.]  
-**Implication:** [Write: These layers describe the recorded surface; they cannot directly reveal buried valley form or establish radiation/melt differences.]
-
+% PRESENTATION CUE — James, 1:10–2:20: explain coherence and seeded segmentation, then the elevation and no-advance constraints; distinguish area loss from transect retreat.
 
 (methods-terrain)=
-## Estimating subglacial terrain
+## Estimating the bed and examining glacier geometry
 
-[Write: Explain modelled bed elevation = surface elevation − modelled ice thickness. Describe grid alignment, the positive-thickness mask, lagoon exclusions and the reported thickness error product.]
+### Aligned subtraction, with missing values preserved
+
+The surface DEM combines 2002 radar-derived elevations with a 1997 stereoscopic DEM (Brolsma & Smith, 2008). Modelled ice thickness and its error layer come from Millan et al. (2021). Surface elevation is averaged onto a common 50 m grid; thickness and error use nearest-neighbour resampling. Estimated bed elevation is then:
+
+$$
+z_{\mathrm{bed}} = z_{\mathrm{surface}} - H.
+$$
+
+The following excerpt from notebook 04 preserves the land and lagoon masks before subtraction:
+
+```python
+# Exclude mapped lagoons; missing thickness remains NaN.
+thickness_land_50m = np.where(
+    land_mask & ~lagoon_mask, thickness_raw_50m, np.nan)
+
+# Missing thickness produces missing bed elevation, not exposed land.
+bed_candidate_50m = surface_50m - thickness_land_50m
+```
+
+Only valid surface elevations and positive modelled thickness contribute bed estimates. Negative bed elevations are retained. Isolated thickness anomalies are flagged and remain visible in the accepted, unsmoothed candidate product. Changing the outline mask does not turn this fixed thickness model into separate thickness observations for 2019 and 2026.
 
 :::{figure} Figures/Brown_Stephenson_thickness_and_bed.png
 :label: fig-methods-terrain
-:alt: Maps of modelled ice thickness and derived bed elevation for Brown and Stephenson glaciers.
+:alt: Brown and Stephenson maps comparing modelled thickness and estimated bed elevation within their 2019 reporting footprints.
 :width: 100%
 :align: center
 
-[Caption placeholder: Identify thickness and bed panels, common scales, footprint dates, model period and valid-data mask. Credit both elevation and thickness sources.]
+Modelled ice thickness and estimated bed elevation for Brown and Stephenson. Rows identify the glaciers; columns show thickness and bed elevation, with shared scales for each quantity. Estimates use the aligned 50 m inputs and the 2019 reporting footprint, excluding mapped lagoons. Grey hillshade provides surface context and does not fill missing bed estimates. Sources: Brolsma and Smith (2008); Millan et al. (2021).
 :::
 
-% FIGURE STATUS: Polish this methods figure later. Clarify dates, common scales, masks and the surface-minus-thickness construction. Coverage does not establish accuracy.
-
-**Selected code snippet placeholder:** Insert the actual masked subtraction used in notebook 04, with # comments explaining valid cells, vertical units and missing data. Explain why missing thickness cannot be assigned zero.
-
-**Limitation:** [Write: Non-coeval elevation and thickness; model error; incomplete coverage; the thickness product's use of velocity.]  
-**Response:** [Write: Retain error and support information and compare only registered field sections where possible.]  
-**Implication:** [Write: This is modelled terrain, and agreement with flow is not fully independent validation.]
-
+The input dates differ, and the supplied thickness errors do not include every source of uncertainty in the derived bed. Their glacier-wide mean is a summary of reported pixel errors, not a confidence interval for mean thickness. The thickness model also uses ice-motion information (Millan et al., 2022), so correspondence between modelled bed and flow is not fully independent validation.
 
 (methods-transects)=
-## Sampling glacier geometry and possible bed controls
+### Sampling profiles and screening possible bed highs
 
 :::{figure} Figures/09_Synthesis/04a_transect_locations.png
 :label: fig-methods-transects
-:alt: Brown and Stephenson maps showing longitudinal transects, cross-sections, inventories and field evidence.
+:alt: Brown and Stephenson glacier outlines, fixed analysis transects with numbered distance stations, and 2004 lagoon sounding locations.
 :width: 100%
 :align: center
 
-[Caption placeholder: Define each route, distance origin, front intersections, cross-section lines and sounding symbols. State that these are selected sampling routes and explain why they were chosen.]
+Selected analysis routes and field coverage. White lines run inland from each route's seaward origin; numbered stations show distance in kilometres. Yellow points locate 2004 lagoon soundings rather than lagoon boundaries. Brown's route links the surveyed lagoon and surviving glacier; Stephenson's curves between its former southern tongue and remaining northern tongue. The panels use different map scales. Coordinates are in EPSG:32743.
 :::
 
-% FIGURE STATUS: Finished notebook 08 figure; reuse unchanged.
+Raster values are sampled every 50 m at five positions across a 200 m corridor. Each native cell is counted once per station, and missing centreline values remain gaps. Modelled bed is restricted to the 2019 footprint and displayed with a three-station rolling median. Perpendicular intersections measure connected **ice-footprint width**, rather than bedrock valley width. Area below 300, 600 and 900 m is counted using the same DEM for every outline; this tracks footprint occupation of low terrain, not historical surface lowering.
 
-### Fronts, corridor width and flow samples
-
-[Write: Explain route construction, connected front selection, distance sampling and mapped corridor width. Explain the velocity and terrain sampling resolutions.]
-
-### Screening modelled bed highs
-
-[Write: Explain smoothing, prominence/separation rules, wider smoothing, lateral offsets and thickness-error perturbations. Define the persistence counts without presenting them as probabilities.]
-
-**Limitation:** [Write: Selected routes, incomplete raster coverage and uncertain modelled bed form.]  
-**Response:** [Write: Inspect cross-sections and sensitivity trials, retaining unsupported trials explicitly.]  
-**Implication:** [Write: A local high is a candidate geometric influence, not proof of a valley-wide barrier or glacier pinning point.]
-
+Potential bed highs require at least 10 m prominence and 300 m separation. Seven checks vary smoothing, shift profiles 100 m to either side, and apply four smooth thickness perturbations using the reported error magnitude. A nearby peak must remain within 150 m; unsupported checks remain unassessed. Persistence counts describe sensitivity to these choices, not the probability of a pinning point. Cross-sections help inspect lateral form but cannot establish a continuous valley-wide barrier where coverage is incomplete.
 
 (methods-field)=
-## Recovering archived radar and lagoon observations
+## Recovering radar sections and lagoon depths
 
-### Radar registration and vertical references
+### Registration and vertical references
 
-[Write: Distinguish raw/workbook return proxies from archived interpreted bed sections. Explain georeferencing, vertical checks, matching to model cells and the exclusion of the problematic BG35 registration from primary metrics.]
+Archived field observations provide local comparisons with the modelled terrain (Allison & Thost, 2010). Workbook radar-return proxies and archived interpreted bed envelopes are retained as distinct products. The envelopes are the original analysts' interpretations, rather than additional independent soundings.
 
-**Limitation:** [Write: Sparse, older observations; uncertain registration and vertical alignment; few independent model cells.]  
-**Response:** [Write: Preserve registration audits and use only eligible interpreted sections for primary comparisons.]  
-**Implication:** [Write: Local agreement or disagreement cannot validate the entire modelled glacier bed.]
+Archived section coordinates are registered to projected survey positions, with scale and residual checks recorded. BG35 requires a substantial scale adjustment and contains placeholder antenna coordinates. It remains visible as provisional evidence and is excluded from primary interpreted-bed metrics. A close registration fit alone does not resolve its geometry problem.
 
-### Lagoon interpolation, support and spatial validation
+The radar elevations already follow the archive's approximate sea-level convention. Nearby ellipsoidal GPS heights differ by approximately 40 m, consistent with the documented conversion; subtracting another 40 m from the radar sections would apply it twice. Lagoon depths have a separate reference: **the 2004 water surface**, whose absolute elevation remains unresolved. The reconstructions are therefore compared with explicit datum labels and illustrative water-level scenarios, rather than merged into a continuous absolute-elevation bed.
 
-[Write: Explain triangulation and linear interpolation, the 150 m maximum triangle-edge rule, 100 m nearest-sounding limit, non-extrapolation and 10 m output grid. Explain the 100 m spatial block holdout.]
+### Interpolation where observations support it
+
+Brown has 211 retained 2004 lagoon soundings; Stephenson has 16. The detailed basin reconstruction is restricted to Brown. Delaunay triangulation connects observations, and linear interpolation estimates depth inside those triangles (SciPy community, n.d.). Triangles are rejected if their longest edge exceeds 150 m or they intersect the retained surveyed-margin barrier. Predictions must also lie within 100 m of a sounding. No extrapolation is made outside the triangulation.
+
+This excerpt from notebook 06 shows the support rules:
+
+```python
+# Reject long triangles and triangles crossing the surveyed margin.
+accepted_triangles = (maximum_edges <= maximum_edge_m) & ~crosses_shore
+
+# Inside evaluate(): retain accepted triangles close to observations.
+usable[inside] = accepted_triangles[simplex[inside]]
+usable &= nearest <= reconstruction_settings["bathy_max_nearest_sounding_m"]
+values[~usable] = np.nan
+```
+
+The 10 m raster samples the interpolated surface; it does not imply a 10 m measurement resolution. The 3D mesh follows accepted support, leaving gaps visible rather than extending across unsurveyed parts of the lagoon.
 
 :::{figure} Figures/06_Brown_lagoon_bathymetry_QA.png
 :label: fig-methods-lagoon-qa
-:alt: Brown Lagoon maps of interpolated depths, distance to soundings and spatial holdout residuals.
+:alt: Brown Lagoon interpolated depths and sounding locations, distance to the nearest sounding, and supported spatial block holdout residuals.
 :width: 100%
 :align: center
 
-[Caption placeholder: Explain all three panels, accepted support, held-out predictions and the residual sign. State that accuracy metrics apply only where a prediction passed the support rules. Credit the survey archive.]
+Brown Lagoon reconstruction and support checks. The left panel shows interpolated depth below the 2004 water surface, soundings and retained December 2003 margin-track segments. The centre panel shows distance to the nearest sounding within accepted support. The right panel shows residuals from 100 m block holdout: positive values indicate predictions deeper than observations. Hollow symbols identify soundings without supported held-out predictions. Source: Allison and Thost (2010).
 :::
 
-% FIGURE STATUS: Polish this methods figure later; clarify unsupported predictions and the key.
+Validation withholds all observations in each 100 m spatial block and rebuilds the interpolator from the remainder. Bias, mean absolute error and RMSE are reported alongside the fraction of held-out points that receive supported predictions. Triangle-edge limits of 100, 150 and 200 m test the coverage choices. Lower error on a much smaller supported subset does not establish a better reconstruction of the whole basin. Supported depths and depth-area totals describe the surveyed portion, without establishing the complete lagoon boundary, basin volume or connecting sill.
 
-**Selected code snippet placeholder:** Insert the actual support-mask logic from notebook 06, with # comments. Explain how withholding nearby observations differs from a random split.
+% PRESENTATION CUE — Griffin, 2:20–4:15: explain surface-minus-thickness and its uncertainty, then radar registration, the two vertical references, lagoon support rules and spatial holdout validation. Keep detailed bed-high checks for questions.
 
-**Limitation:** [Write: Uneven and incomplete survey coverage, sparse Stephenson soundings, and depths relative to the survey's water surface.]  
-**Response:** [Write: Retain the supported basin only, test support sensitivity, and keep the two lagoon evidence bases separate.]  
-**Implication:** [Write: Supported depth-area totals do not describe the entire lagoon or establish a common sea-level datum.]
+(methods-geology)=
+## Preparing geology and comparing retreat zones
 
+James's geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island.
+
+The following excerpt from notebook 03 shows the clipping and area calculation:
+
+```python
+geo = geo.to_crs(TARGET_CRS)
+geo = gpd.clip(geo, coastline)
+geo = geo[~geo.geometry.is_empty].copy()
+geo["Rock_Type"] = geo["Rock_Type"].fillna("Unknown")
+geo["Area_km2"] = (geo.geometry.area / 1e6).round(3)
+```
+
+Clipping restricts the polygons to the study area; measuring them in a CRS with metre units makes the area calculation meaningful (GeoPandas developers, n.d.). This preparation supplies both the geology map and the later retreat-zone comparison.
+
+:::{figure} Figures/Methods/03_mapped_geology_context.png
+:label: fig-methods-geology
+:alt: James's clipped Heard Island geology, with Brown and Stephenson located, beside the mapped area share of each geological category.
+:width: 100%
+:align: center
+
+Mapped geological categories after James's preparation. The map retains source categories and locates the 2014 Brown and Stephenson footprints. Matching bar colours show each category's share of the summed clipped mapped polygon area; this denominator is not necessarily the island's full land area. Snow/Ice and Unknown labels are retained. Source attribution follows the project register: Fox et al. (2023); lecturer-supplied geological layer.
+:::
+
+Consecutive glacier polygons define gross spatial retreat zones. Intersecting these zones with geological polygons describes their mapped composition; the full zone area is the denominator, with uncovered area recorded as Unmapped. The overlay uses one geological map, rather than reconstructing surface materials independently at every inventory date.
+
+**Snow/Ice does not identify the material beneath the glacier.** Likewise, mapped moraine identifies glacial deposits without establishing the substrate beneath former ice or the lagoon floor. We retain these distinctions instead of extending neighbouring units into unknown areas. The overlay supports statements about spatial association and mapped exposure; it cannot by itself demonstrate contrasting bed strength or erodibility.
+
+(methods-surface-terrain)=
+## Deriving surface hillshade, slope and aspect
+
+James uses GDAL to derive three complementary layers from the clipped native 10 m surface DEM: **hillshade** simulates illumination to reveal relief; **slope** measures steepness in degrees; and **aspect** records the downslope direction clockwise from north (GDAL/OGR contributors, n.d.). Flat cells have undefined aspect and remain missing under the selected settings.
+
+:::{figure} Figures/Methods/04_surface_terrain_derivatives.png
+:label: fig-methods-surface-terrain
+:alt: Heard Island surface DEM hillshade, slope in degrees and aspect clockwise from north, with 2019 glacier outlines.
+:width: 100%
+:align: center
+
+Surface terrain derivatives from James's GDAL workflow. Panels show hillshade, slope and aspect calculated from the clipped RADARSAT 2002 DEM, which includes 1997 input. The 2019 outlines provide spatial context and do not date the elevation surface. Aspect is cyclic, with north at both 0° and 360°; flat or missing cells have no defined direction. Hillshade represents simulated illumination. DEM source: Brolsma and Smith (2008).
+:::
+
+These layers describe the recorded surface, including ice where present. They are distinct from derivatives of the modelled bed. DEM age, source artefacts and local missing data propagate into the derivatives, so apparent small features require care. Surface hillshade is a visual aid and does not measure radiation or melt.
+
+% PRESENTATION CUE — James, 4:15–6:15: show the geological preparation and mapped categories, explain the area denominator and unknown substrate, then define hillshade, slope and aspect and distinguish surface terrain from modelled bed.
 
 (methods-velocity)=
-## Summarising contemporary glacier flow
+## Summarising flow with its retained coverage
 
-[Write: Describe the 2016–2022 ITS_LIVE image-pair selection, Sentinel-1 contribution, time separation, vector filtering, minimum pair count and direction consistency. Define the speed statistic and coverage denominator.]
+ITS_LIVE Sentinel-1A image-pair velocities provide the 2016–2022 flow context (Lei et al., 2022). Pairs with separations of 10–180 days are selected from matching datacubes. At each pixel, valid positive vectors pass magnitude and direction filters: speeds must fall between one-third and three times the initial median, and directions must lie within 45° of the median vector. The median vector must exceed 10 m/year. Final pixels require at least five retained pairs and directional coherence ≥0.8.
+
+Pixel speeds are the temporal median of retained magnitudes; glacier summaries use spatial medians of those pixels. The fixed 2014 footprint provides a consistent sampling boundary, including some locations that subsequently lost ice. The lower third refers to each glacier's DEM-derived elevation range, rather than its lower third by length.
 
 :::{figure} Figures/07_velocity_focus_maps.png
 :label: fig-methods-velocity
-:alt: Brown and Stephenson maps showing contemporary velocity estimates and their spatial coverage.
+:alt: Brown and Stephenson filtered median ice-speed maps within their 2014 sampling footprints, with missing estimates visible.
 :width: 100%
 :align: center
 
-[Caption placeholder: Explain the 2014 sampling footprint, 2016–2022 velocity period, common speed scale and missing-data areas. Credit ITS_LIVE and its contributing imagery.]
+Retained 2016–2022 ice-speed estimates for Brown and Stephenson within the 2014 sampling footprints. Both maps use the same speed scale. Gaps indicate missing or rejected estimates and do not establish stationary ice. The 120 m grid does not imply an equivalent effective observation resolution. Source: ITS_LIVE Sentinel-1 image-pair velocities (Lei et al., 2022).
 :::
 
-% FIGURE STATUS: Polish this methods figure later; clarify period, masks, scale and coverage.
-
-**Limitation:** [Write: Uneven retained coverage, especially on Brown's lower glacier; filtering can remove slow or inconsistent flow.]  
-**Response:** [Write: Report lower-third filter audits, threshold sensitivity, pair-error context and temporal sampling alongside speed.]  
-**Implication:** [Write: Gaps are not stationary ice; the observed speed contrast is conditional on retained samples.]
-
+Coverage is reported relative to footprint grid cells, with a separate retention measure relative to cells having raw observations. Lower-third audits, speed-floor and minimum-pair sensitivity tests, supplied pair errors and year-balanced summaries assess selection effects. In particular, the 10 m/year rule removes slow flow by design. Supplied pair errors are not confidence intervals for pooled glacier medians, and unequal coverage limits direct comparisons.
 
 (methods-solar)=
-## Comparing summer surface exposure
+### A geometric summer-exposure index
 
-[Write: Explain how the DEM-derived slope and aspect enter a surface-normal calculation. Describe the November–February dates, hourly solar geometry, declination approximation and normalisation against a horizontal surface.]
+Surface slope and aspect are summarised onto the 120 m grid; aspect is aggregated through sine and cosine because compass directions wrap at north. The index samples hourly solar geometry at 53.1°S on four representative November–February dates. Positive projections onto the surface normal are summed during daylight and divided by the corresponding sum for a horizontal surface. Nearly flat cells are assigned one, while cells with strongly mixed aspects are excluded. The solar approximation follows Cooper (1969), with projection geometry described by Iqbal (1983).
 
-**Limitation:** [Write: The index excludes clouds, albedo, atmospheric effects, terrain shadows and melt physics.]  
-**Response:** [Write: Describe it as a geometric incidence comparison, with explicit data coverage and footprint/elevation masks.]  
-**Implication:** [Write: It is not measured radiation, an energy balance or a calculation of melt.]
+Values above or below one describe greater or smaller geometric exposure than a horizontal surface. The index excludes clouds, albedo, atmospheric attenuation, diffuse radiation and shadows cast by surrounding terrain. Topographic shading can materially alter glacier radiation (Olson & Rupper, 2019), so this restricted index is interpreted as an orientation comparison rather than measured radiation, an energy balance or a melt estimate.
 
+% PRESENTATION CUE — Griffin, 6:15–7:00: summarise velocity filtering and unequal coverage; explain that missing speed is not zero, and that the exposure index measures geometry rather than melt.
 
 (methods-synthesis)=
-## Integrating evidence without overstating causation
+## Bringing the evidence together
 
-[Write: Explain how each dataset answers a different part of the research question. Separate mapped observations, model-derived quantities and proposed process explanations. Explain the lack of an independently estimated climate residual or causal partition.]
+The synthesis distinguishes **mapped observations**, **model-derived quantities** and **proposed mechanisms**. Agreement among layers can strengthen an observational narrative, but shared model inputs, different dates and incomplete coverage limit independence. We do not calculate an independently estimated climate residual or partition the causes of retreat. Instead, the comparison identifies supported spatial contrasts and the targeted observations needed to test possible explanations.
 
-Detailed code, parameter tables and audits are reserved for the [appendix](appendix.md). The main comparisons follow in [Results](results.md).
+Detailed parameter records, code and audits belong in the [appendix](appendix.md). Full source entries are consolidated on the [References](references.md) page. The principal comparisons follow in [Results](results.md).
