@@ -1,10 +1,8 @@
 (references)=
 # References and data credits
-
 % AUTHORING: Fill this page with the sources actually used in the book. Keep APA 7 formatting, stable links/DOIs and full data-product names. Every in-text author–date citation should have an entry here; every entry should have a clear role in the book.
 
 ## Scientific literature
-
 Allison, I. F., & Keage, P. L. (1986). Recent changes in the glaciers of Heard Island. Polar Record, 23(144), 255-272. 
 Fox, J. M., McPhie, J., Carey, R. J., Jourdan, F., & Miggins, D. P. (2021). Construction of an intraplate island volcano: The volcanic history of Heard Island. Bulletin of Volcanology, 83(5), 37. 
 Kiernan, K., & McConnell, A. (2002). Glacier retreat and melt-lake expansion at Stephenson Glacier, Heard Island World Heritage area. Polar Record, 38(207), 297-308. 
@@ -12,12 +10,12 @@ Quilty, P. G., & Wheller, G. E. (2000). Heard Island and the McDonald Islands: a
 Thost, D. E., & Truffer, M. (2008). Glacier recession on Heard Island, southern Indian ocean. Arctic, Antarctic, and Alpine Research, 40(1), 199-214. 
 Tielidze, L. G., Mackintosh, A. N., & Yang, W. (2025). Glacier inventories reveal an acceleration of Heard Island glacier loss over recent decades. The Cryosphere, 19(7), 2677-2694. 
 
-
 ## Data sources
+Esri. (2026.10.11). World imagery [Basemap]. Retrieved October 11, 2026, from https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer
+Gardner, A. S., Fahnestock, M. A., & Scambos, T. A. (2019). MEaSUREs ITS_LIVE Landsat image-pair glacier and ice sheet surface velocities (Version 1) [Data set]. National Snow and Ice Data Center. https://doi.org/10.5067/IMR9D3PEI28U
 Heard Island glacier fluctuations: 2003/04 fieldwork Allison, I., & Thost, D. E. (2010). Heard Island glacier fluctuations and climatic change—2003/04 fieldwork (Version 1) [Data set]. Australian Antarctic Data Centre. https://doi.org/10.4225/15/574BBEA0D74B7
 HIMI coastline polygon: himi_coastline_py.gpkg Australian Antarctic Data Centre. (n.d.). Heard Island and McDonald Islands coastline polygons [Data set]. https://www.antarctica.gov.au/antarctic-operations/stations-and-field-locations/heard-island/mapping/
 Heard Island RADARSAT (2002) DEM Brolsma, H., & Smith, D. T. (2008). Heard Island RADARSAT (2002) digital elevation model (DEM) (Version 1) [Data set]. Australian Antarctic Data Centre. https://data.aad.gov.au/metadata/records/heard_dem_radarsat02
-Esri. (2026.10.11). World imagery [Basemap]. Retrieved October 11, 2026, from https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer
 
 ### Original lagoon mapping and project digitisation
 Heard Island lagoon outlines Donoghue, S., & Harris, U. (2021). Fluctuations of Heard Island glaciers between 1947–2014 [Data set]. Australian Antarctic Data Centre. https://data.aad.gov.au/metadata/Heard_Island_glacier_fluctuations_2012-2014
@@ -52,5 +50,4 @@ Brown lagoon 3D reuses the accepted mesh from notebook 06. Horizontal offsets an
 All photographs from the 2003-2004 Heard Island Expedition from Allison and Thost.
 
 ## Expedition and future-observation sources
-
 Australian Antarctic Program heads to Heard Island – Australian Antarctic Program (News 2025). (2025, August 4). Antarctica.Gov.Au. https://www.antarctica.gov.au/news/2025/australian-antarctic-program-heads-to-heard-island-for-the-first-time-in-decades/
