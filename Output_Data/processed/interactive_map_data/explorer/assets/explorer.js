@@ -719,7 +719,7 @@ function sceneLayout(){
   const zr=Math.max(hi-lo,100),range=[lo-30,hi+30];
   return {paper_bgcolor:'#0b1420',plot_bgcolor:'#0b1420',font:{family:'system-ui,sans-serif',color:'#bccbd7',size:10},
     margin:{l:0,r:0,t:0,b:0},showlegend:false,uirevision:s.id,
-    scene:{uirevision:s.id,bgcolor:'#0b1420',dragmode:'orbit',camera:s.camera||terrainCamera,
+    scene:{uirevision:s.id,bgcolor:'#0b1420',dragmode:'turntable',camera:s.camera||terrainCamera,
       aspectmode:'manual',aspectratio:{x:dx/span,y:dy/span,z:(zr+60)/1000/span*ex},
       xaxis:{title:{text:'Easting offset (km)'},showbackground:false,gridcolor:'#26384b',zeroline:false},
       yaxis:{title:{text:'Northing offset (km)'},showbackground:false,gridcolor:'#26384b',zeroline:false},
@@ -839,7 +839,7 @@ function lagoonLayout(data, state) {
   const factor = Number($('lagoon-exaggeration').value);
   return {paper_bgcolor: '#0b1420', font: {color: '#bccbd7', family: 'system-ui', size: 10},
     margin: {l: 0, r: 0, t: 0, b: 0}, showlegend: false,
-    scene: {uirevision: 'Brown-lagoon', bgcolor: '#0b1420', dragmode: 'orbit',
+    scene: {uirevision: 'Brown-lagoon', bgcolor: '#0b1420', dragmode: 'turntable',
       camera: state.camera || lagoonCamera, aspectmode: 'manual',
       aspectratio: {x: dx / span, y: dy / span, z: (range[1] - range[0]) / span * factor},
       xaxis: {title: {text: 'Local easting (m)'}, range: [Math.min(...allX), Math.max(...allX)],
