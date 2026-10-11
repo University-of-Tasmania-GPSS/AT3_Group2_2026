@@ -41,7 +41,7 @@
 - Plotly.js: camera, axes and 3D scene controls https://plotly.com/javascript/reference/layout/scene/
 - IPython: IFrame notebook display https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.IFrame
 - Plotly. (n.d.). 3D mesh plots in JavaScript [Documentation]. https://plotly.com/javascript/3d-mesh/
-- MDN Web Docs. (n.d.). `<input type="range">` [Documentation]. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range
+- MDN Web Docs. (n.d.). [Documentation]. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range
 - NumPy Developers. (n.d.). numpy.load [Documentation]. https://numpy.org/doc/stable/reference/generated/numpy.load.html
 - Leaflet. (n.d.). Leaflet API reference [Documentation]. https://leafletjs.com/reference.html
 - Franklin, W. R. (n.d.). PNPOLY—Point inclusion in polygon test. https://wrfranklin.org/Research/Short_Notes/pnpoly.html
@@ -54,7 +54,7 @@ Map interface: Leaflet 1.9.4 (BSD-2-Clause). 3D interface: Plotly.js 3.1.0 (MIT)
 
 Brown lagoon 3D reuses the accepted mesh from notebook 06. Horizontal offsets and relative heights are in metres. The 2004 survey water surface is 0 m; its elevation above sea level is unresolved. Water-plane coverage follows interpolation support. Vertical exaggeration changes aspect ratio only.
 
-## Photographs, maps and figure credits
+## Photographs credits
 
 - All photographs from the 2003-2004 Heard Island Expedition from Allison and Thost.
 
