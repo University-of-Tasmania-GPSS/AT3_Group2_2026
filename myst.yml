@@ -19,7 +19,7 @@ project:
         - file: appendix.md
         - file: references.md
   # keywords: []
-  # authors: []
+  # authors: [Griffin and Sampson]
   github: https://github.com/University-of-Tasmania-GPSS/AT3_Group2_2026
 site:
   template: book-theme
