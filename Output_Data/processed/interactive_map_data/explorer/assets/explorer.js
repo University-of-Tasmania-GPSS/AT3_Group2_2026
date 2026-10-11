@@ -1,3 +1,4 @@
+// LAGOON_CREDIT_AND_CAMPAIGN_ALIAS
 
 
 /* Heard Island explorer. Local assets are lazy-loaded; no Python is needed after export. */
@@ -73,6 +74,95 @@ function featureInfo(feature) {
   });
   return html ? '<table>' + html + '</table>' : '';
 }
+
+// GEOLOGY_HOVER_LOOKUP
+function geologyPolygons(geometry) {
+  if (!geometry) return [];
+  if (geometry.type === 'Polygon') return [geometry.coordinates];
+  if (geometry.type === 'MultiPolygon') return geometry.coordinates;
+  if (geometry.type === 'GeometryCollection') return geometry.geometries.flatMap(geologyPolygons);
+  return [];
+}
+
+// Count horizontal ray crossings; holes are tested separately below.
+function geologyRingContains(ring, lon, lat) {
+  let crossings = 0;
+  for (let edge = 0; edge < ring.length - 1; edge++) {
+    const a = ring[edge], b = ring[edge + 1];
+    const crosses = (a[1] <= lat && lat < b[1]) || (b[1] <= lat && lat < a[1]);
+    if (crosses) {
+      const intersection = a[0] + (lat - a[1]) * (b[0] - a[0]) / (b[1] - a[1]);
+      if (lon < intersection) crossings++;
+    }
+  }
+  return crossings % 2 === 1;
+}
+
+function installGeologyHover(view) {
+  const map = view.map, container = map.getContainer();
+  const tip = L.tooltip({className: 'geology-hover', direction: 'auto',
+    offset: [14, 0], opacity: 1, interactive: false});
+  let cachedEntry = null, polygons = [], cursor = null, frame = 0;
+
+  const hide = () => {
+    cancelAnimationFrame(frame); frame = 0; cursor = null; tip.remove();
+  };
+  const update = () => {
+    frame = 0;
+    const entry = view.active.get('geology');
+    if (!entry || !cursor) {hide(); return;}
+    // Cache bounding boxes once per displayed geology layer, reducing hover work.
+    if (entry !== cachedEntry) {
+      cachedEntry = entry; polygons = [];
+      for (const feature of entry.layer.data.features || []) {
+        for (const rings of geologyPolygons(feature.geometry)) {
+          let west = Infinity, east = -Infinity, south = Infinity, north = -Infinity;
+          for (const point of rings[0]) {
+            west = Math.min(west, point[0]); east = Math.max(east, point[0]);
+            south = Math.min(south, point[1]); north = Math.max(north, point[1]);
+          }
+          polygons.push({feature, rings, west, east, south, north});
+        }
+      }
+    }
+    const {lng: lon, lat} = cursor;
+    // Prefer the last-drawn feature if the display polygons overlap.
+    const found = [...polygons].reverse().find(p =>
+      lon >= p.west && lon <= p.east && lat >= p.south && lat <= p.north
+      && geologyRingContains(p.rings[0], lon, lat)
+      && !p.rings.slice(1).some(hole => geologyRingContains(hole, lon, lat)));
+    if (!found) {tip.remove(); return;}
+    const properties = found.feature.properties || {};
+    const extra = featureInfo({properties: {...properties, Rock_Type: null}});
+    tip.setLatLng(cursor).setContent('<strong>'
+      + esc(properties.Rock_Type || 'Unit not recorded')
+      + '</strong><div class="geology-hover-caption">Mapped rock/deposit type</div>' + extra);
+    if (!map.hasLayer(tip)) tip.addTo(map);
+  };
+  const move = event => {
+    if (!view.active.has('geology') || event.buttons
+        || event.target.closest('.leaflet-control,.leaflet-popup')) {hide(); return;}
+    cursor = map.mouseEventToLatLng(event);
+    if (!frame) frame = requestAnimationFrame(update);
+  };
+  // Capture cursor movement before overlays can consume the event; clicks are untouched.
+  container.addEventListener('mousemove', move, {capture: true, passive: true});
+  container.addEventListener('mouseleave', hide);
+  map.on('movestart', hide);
+  map.on('layerremove', event => {
+    if (event.layer === cachedEntry?.object) hide();
+  });
+  // Avoid competing glacier hover cards while geology is enabled; keep name labels.
+  map.on('tooltipopen', event => {
+    if (view.active.has('geology') && event.tooltip !== tip
+        && !event.tooltip.options.permanent) map.closeTooltip(event.tooltip);
+  });
+  map.on('unload', () => {
+    hide(); container.removeEventListener('mousemove', move, true);
+    container.removeEventListener('mouseleave', hide);
+  });
+}
+
 class View {
   constructor(mapId,history,bounds) {
     this.map = L.map(mapId,{zoomControl:true,preferCanvas:true,minZoom:7,maxZoom:18,zoomSnap:.25});
@@ -92,6 +182,7 @@ class View {
     L.control.scale({imperial:false,position:'bottomleft',maxWidth:140}).addTo(this.map);
     this.bounds = bounds; this.map.fitBounds(bounds,{padding:[35,35]}); this.history = history;
     this.active = new Map(); this.definitions = new Map(); this.rowContainers = new Set(); this.timeline = null;
+    installGeologyHover(this);
   }
   layerObject(layer) {
     if (layer.type === 'raster') return L.imageOverlay(layer.image,layer.bounds,{opacity:.78,pane:'rasterData',interactive:false,alt:layer.title});
@@ -309,6 +400,9 @@ async function openGlacier(id) {
     glacierView.add(inventoryLayers(data.history).find(l=>l.year===latest));
     $('glacier-clear').onclick=()=>glacierView.clear();
     $('glacier-3d').onclick=()=>openTerrain(id);
+    $('glacier-lagoon').hidden = id !== 'RGI60-19.00023';
+    $('glacier-lagoon').onclick = () => openLagoon();
+
     $('glacier-3d').textContent = '3D ice body';
     $('glacier-3d').disabled = true;
     $('glacier-3d').title = 'Checking modelled ice geometry…';
@@ -372,7 +466,10 @@ function referenceHTML(reference) {
         target="_blank" rel="noopener">${esc(reference.url)}</a>`
     : '';
 
-  return `<p class="apa-reference">${citation}${link}</p>`;
+  // Show original dataset and digitising credits together.
+  const additional = (reference.additional_references || [])
+    .map(referenceHTML).join('');
+  return `<p class="apa-reference">${citation}${link}</p>${additional}`;
 }
 
 function renderCredits() {
@@ -383,8 +480,11 @@ function renderCredits() {
       : 'Dataset references';
 
   // Preserve the connection between each layer and its source references.
-  const sources = Object.values(D.sources)
+  // Resolve aliases before removing duplicate references.
+  const selected = Object.values(D.sources)
     .filter(source => !creditsFilter || creditsFilter.has(source.id))
+    .map(source => D.sources[source.reference_id] || source);
+  const sources = [...new Map(selected.map(source => [source.id, source])).values()]
     .sort((a, b) => String(a.citation || a.title)
       .localeCompare(String(b.citation || b.title)));
 
@@ -702,6 +802,125 @@ async function openTerrain(id){
     $('terrain-plot').replaceChildren();await drawTerrain();
   }catch(error){if(terrainState===state)$('terrain-plot').innerHTML='<div class="plot-error">'+esc(error.message)+'</div>';}
 }
+
+// BROWN_LAGOON_VIEWER
+let lagoonState = null;
+const lagoonCamera = {eye: {x: 1.4, y: -1.6, z: 1.1}, up: {x: 0, y: 0, z: 1}};
+
+function lagoonTraces(data) {
+  const faces = {x: data.x, y: data.y, i: data.i, j: data.j, k: data.k};
+  const traces = [{...faces, type: 'mesh3d', z: data.z,
+    intensity: data.z.map(z => -z), customdata: data.z.map(z => -z),
+    colorscale: plotlyScale(data.style), cmin: 0, cmax: 60,
+    showscale: false, showlegend: false, name: 'Interpolated bed',
+    lighting: {ambient: .7, diffuse: .7, specular: .12, roughness: .9},
+    hovertemplate: 'Interpolated depth: %{customdata:.1f} m<extra>2004 basin</extra>'}];
+  // The plane reuses accepted faces, so no water is invented across survey gaps.
+  if ($('lagoon-water').checked) traces.push({...faces, type: 'mesh3d',
+    z: data.z.map(() => 0), color: '#69D5FF', opacity: .2,
+    name: 'Survey water plane', hoverinfo: 'skip', showlegend: false});
+  if ($('lagoon-soundings').checked && data.soundings.length) {
+    traces.push({type: 'scatter3d', mode: 'markers', name: '2004 soundings',
+      x: data.soundings.map(p => p[0]), y: data.soundings.map(p => p[1]),
+      z: data.soundings.map(p => p[2]), customdata: data.soundings.map(p => -p[2]),
+      marker: {size: 2.5, color: '#E7EDF2', opacity: .9}, showlegend: false,
+      hovertemplate: 'Measured depth: %{customdata:.1f} m<extra>2004 sounding</extra>'});
+  }
+  return traces;
+}
+
+function lagoonLayout(data, state) {
+  const allX = [...data.x, ...data.soundings.map(p => p[0])];
+  const allY = [...data.y, ...data.soundings.map(p => p[1])];
+  const low = Math.min(...data.z, ...data.soundings.map(p => p[2]));
+  const dx = Math.max(...allX) - Math.min(...allX);
+  const dy = Math.max(...allY) - Math.min(...allY), span = Math.max(dx, dy, 1);
+  const padding = Math.max(2, -low * .05), range = [low - padding, padding];
+  const factor = Number($('lagoon-exaggeration').value);
+  return {paper_bgcolor: '#0b1420', font: {color: '#bccbd7', family: 'system-ui', size: 10},
+    margin: {l: 0, r: 0, t: 0, b: 0}, showlegend: false,
+    scene: {uirevision: 'Brown-lagoon', bgcolor: '#0b1420', dragmode: 'orbit',
+      camera: state.camera || lagoonCamera, aspectmode: 'manual',
+      aspectratio: {x: dx / span, y: dy / span, z: (range[1] - range[0]) / span * factor},
+      xaxis: {title: {text: 'Local easting (m)'}, range: [Math.min(...allX), Math.max(...allX)],
+        showbackground: false, gridcolor: '#26384b'},
+      yaxis: {title: {text: 'Local northing (m)'}, range: [Math.min(...allY), Math.max(...allY)],
+        showbackground: false, gridcolor: '#26384b'},
+      zaxis: {title: {text: 'Height relative to survey water (m)'}, range,
+        showbackground: false, gridcolor: '#26384b'}},
+    annotations: [{text: 'BROWN LAGOON · 2004 · VERTICAL ' + factor + '×',
+      xref: 'paper', yref: 'paper', x: .03, y: .97, xanchor: 'left',
+      showarrow: false, font: {color: '#e8eff5', size: 13}}]};
+}
+
+async function drawLagoon() {
+  const state = lagoonState, plot = $('lagoon-plot');
+  if (!state?.data?.available || !$('lagoon-dialog').open) return;
+  if (state.drawing) {state.pending = true; return;}
+  state.drawing = true;
+  try {
+    if (plot._fullLayout?.scene?.camera)
+      state.camera = JSON.parse(JSON.stringify(plot._fullLayout.scene.camera));
+    await Plotly.react(plot, lagoonTraces(state.data), lagoonLayout(state.data, state),
+      {responsive: true, plotGlPixelRatio: 1, displaylogo: false, scrollZoom: true});
+  } catch (error) {
+    if (lagoonState === state) {
+      Plotly.purge(plot);
+      plot.innerHTML = '<div class="plot-error">Could not render the lagoon: '
+        + esc(error.message) + '</div>';
+    }
+  } finally {
+    state.drawing = false;
+    if (lagoonState === state && state.pending) {state.pending = false; drawLagoon();}
+    else if (!lagoonState) Plotly.purge(plot);
+  }
+}
+
+async function openLagoon() {
+  stopTerrain(); island.timeline.pause(); glacierView?.timeline.pause();
+  const state = {data: null, camera: null, drawing: false}; lagoonState = state;
+  $('lagoon-plot').innerHTML = '<div class="loading">Loading surveyed basin…</div>';
+  if (!$('lagoon-dialog').open) $('lagoon-dialog').showModal();
+  try {
+    await Promise.all([
+      window.Plotly ? Promise.resolve() : loadScript(D.plotly_url),
+      H.lagoons?.Brown ? Promise.resolve() : loadScript('assets/data/Brown_lagoon_3d.js')]);
+    if (lagoonState !== state || !$('lagoon-dialog').open) return;
+    state.data = H.lagoons?.Brown;
+    if (!state.data?.available) throw new Error(state.data?.reason || 'No lagoon mesh was exported.');
+    $('lagoon-exaggeration').value = 3; $('lagoon-exaggeration-label').textContent = '3×';
+    $('lagoon-water').checked = true; $('lagoon-soundings').checked = true;
+    $('lagoon-soundings').parentElement.hidden = !state.data.soundings.length;
+    $('lagoon-legend').innerHTML = legend(state.data.style)
+      + '<p>White points = measured soundings. Untick the water plane to inspect the bed.</p>';
+    $('lagoon-exaggeration').oninput = event => {
+      $('lagoon-exaggeration-label').textContent = event.target.value + '×'; drawLagoon();
+    };
+    $('lagoon-water').onchange = drawLagoon; $('lagoon-soundings').onchange = drawLagoon;
+    $('lagoon-reset').onclick = () => {
+      state.camera = JSON.parse(JSON.stringify(lagoonCamera));
+      Plotly.relayout($('lagoon-plot'), {'scene.camera': state.camera});
+    };
+    $('lagoon-sources').onclick = () => openCredits(state.data.sources);
+    $('lagoon-plot').replaceChildren(); await drawLagoon();
+  } catch (error) {
+    if (lagoonState === state) $('lagoon-plot').innerHTML =
+      '<div class="plot-error">' + esc(error.message) + '</div>';
+  }
+}
+$('lagoon-dialog').addEventListener('close', () => {
+  lagoonState = null;
+  if (window.Plotly) Plotly.purge($('lagoon-plot'));
+  $('lagoon-plot').replaceChildren();
+});
+window.addEventListener('resize', () => {
+  if ($('lagoon-dialog').open && $('lagoon-plot')._fullLayout) Plotly.Plots.resize($('lagoon-plot'));
+});
+$('methods-details').insertAdjacentHTML('beforeend',
+  '<p>Brown lagoon 3D reuses the accepted mesh from notebook 06. Horizontal offsets '
+  + 'and relative heights are in metres. The 2004 survey water surface is 0 m; '
+  + 'its elevation above sea level is unresolved. Water-plane coverage follows '
+  + 'interpolation support. Vertical exaggeration changes aspect ratio only.</p>');
 $('island-3d').onclick=()=>openTerrain('island');
 $('terrain-dialog').addEventListener('close',()=>{stopTerrain();if(window.Plotly)Plotly.purge($('terrain-plot'));terrainState=null;$('terrain-plot').replaceChildren();});
 window.addEventListener('resize',resizeViews);
