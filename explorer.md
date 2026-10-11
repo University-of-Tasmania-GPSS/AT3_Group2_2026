@@ -1,7 +1,7 @@
 (explorer)=
 # Explore Heard Island
 
-Explore the mapped glacier histories, terrain and field evidence in their spatial setting. The island view provides context; the **Brown and Stephenson dashboards** contain the accepted focus-glacier comparisons and their supporting layers. Use the full-window view for the presentation and for detailed inspection of the 3D scenes.
+**We created a simple, intuitive interface to explore Heard Island and investigate its glacial retreat.** The explorer brings our maps, geological and terrain layers, velocity estimates and archived field observations into one place. Start with the island map, then open the **Brown and Stephenson dashboards** to compare their retreat histories, inspect the glaciers in 3D or explore Brown's surveyed lagoon.
 
 [Open the full-window explorer](/explorer/Heard_Island_explorer.html)
 
@@ -14,9 +14,8 @@ Explore the mapped glacier histories, terrain and field evidence in their spatia
 Heard Island: ice, terrain and change. Select a glacier to inspect its available evidence, or use the island layers for spatial context.
 :::
 
-
 (explorer-route)=
-## A short route through the evidence
+:::{dropdown} A short route through the evidence
 
 ### 1. Identify mapped geology
 
@@ -37,10 +36,13 @@ Use **Reset camera** to return to the initial view. Vertical and thickness exagg
 Return to Brown's dashboard and choose **3D lagoon**. The coloured surface shows interpolated depths within the supported reconstruction; white points show measured soundings. Rotate the basin, then toggle **Show survey water plane** to inspect its depth relative to the 2004 water surface.
 
 Here, **0 m is the survey water surface**, rather than sea level. The retained mesh and water plane preserve unsupported gaps. The viewer shows a surveyed portion of the basin, without establishing the complete lagoon boundary or its connection to the inland glacier bed.
-
+:::
 
 (explorer-reading)=
-## Reading the map responsibly
+:::{dropdown} Reading the map responsibly
+
+The layers retain different dates and spatial support. A visually aligned overlay does not make them simultaneous observations or demonstrate a causal relationship. The [Methods](methods.md) explain how the products were prepared, while the [supporting evidence](appendix.md) records coverage, uncertainty and sensitivity checks.
+:::
 
 | Display | How to read it |
 | --- | --- |
@@ -52,13 +54,13 @@ Here, **0 m is the survey water surface**, rather than sea level. The retained m
 | Colour scales and exaggeration | Consult each legend. Saturated colours group values beyond the displayed limits; exaggeration changes appearance rather than measured values. |
 | Recent outlines elsewhere on the island | Provisional spatial context. The accepted recent analysis is restricted to Brown and Stephenson. |
 
-The layers retain different dates and spatial support. A visually aligned overlay does not make them simultaneous observations or demonstrate a causal relationship. The [Methods](methods.md) explain how the products were prepared, while the [supporting evidence](appendix.md) records coverage, uncertainty and sensitivity checks.
 
 (explorer-credits)=
-## Map credits
+:::{dropdown} Map credits
 
 Open **Sources & credits** in the island view, or **Sources** within a dashboard or 3D viewer, to inspect the attribution associated with the displayed evidence. Full bibliographic entries are collected on the [References and data credits](references.md) page.
 
 The original lagoon polygons are credited to **Donoghue and Harris (2021)**, with the project updates digitised by **Griffin (2026)**. Archived soundings, radar sections and campaign observations are credited to **Allison and Thost (2010)**; their shared campaign archive is treated as one source. These credits distinguish the original observations from the preparation and visualisation undertaken here.
 
 Return to [Results](results.md), [Discussion](discussion.md), or [Conclusion](conclusion.md).
+:::
