@@ -1,3 +1,8 @@
+---
+site:
+  hide_outline: true
+---
+
 (explorer)=
 # Explore Heard Island
 
@@ -6,7 +11,9 @@
 [Open the full-window explorer](/explorer/Heard_Island_explorer.html)
 
 (explorer-map)=
-:::{iframe} http://localhost:3000/explorer/Heard_Island_explorer.html
+:::{iframe} /explorer/Heard_Island_explorer.html
+:enumerated: false
+:class: col-page-right heard-explorer
 :title: Interactive Heard Island glacier explorer with island map, glacier dashboards and 3D views
 :width: 100%
 :align: center

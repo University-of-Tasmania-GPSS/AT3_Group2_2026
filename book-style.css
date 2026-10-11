@@ -1,0 +1,235 @@
+/* The shape of retreat — shared book styling. No external fonts or CDNs. */
+:root {
+  --heard-orange: #c65a26;
+  --heard-cyan: #08778d;
+  --myst-color-link: #08778d;
+  --myst-color-link-hover: #07596a;
+  --myst-color-link-underline: #82c8d5;
+  --myst-color-primary: #08778d;
+  --myst-color-primary-hover: #07596a;
+  --myst-color-active: #08778d;
+  --myst-color-active-bg: #dff2f5;
+  --myst-color-active-surface: #edf8fa;
+  --myst-color-focus-ring: #08778d;
+  --myst-color-focus-outline: #82c8d5;
+  --myst-color-accent-text: #07596a;
+  --myst-color-accent-surface: #edf8fa;
+  --myst-color-accent-surface-border: #b6dde4;
+  --myst-color-accent-surface-text: #07596a;
+  --myst-color-bg: #fbfcfd;
+  --myst-color-bg-secondary: #f1f5f8;
+  --myst-color-surface: #edf2f6;
+  --myst-color-surface-hover: #dfe9ef;
+  --myst-color-text: #142b3d;
+  --myst-color-text-secondary: #425d71;
+  --myst-color-prose-body: #263e51;
+  --myst-color-border: #d8e3eb;
+  --myst-color-border-strong: #b8cbd9;
+}
+.dark {
+  --heard-orange: #ffab76;
+  --heard-cyan: #7dd7e7;
+  --myst-color-link: #7dd7e7;
+  --myst-color-link-hover: #b3eff7;
+  --myst-color-link-underline: #398c9e;
+  --myst-color-primary: #7dd7e7;
+  --myst-color-primary-hover: #b3eff7;
+  --myst-color-active: #7dd7e7;
+  --myst-color-active-bg: #163b4d;
+  --myst-color-active-surface: #132d40;
+  --myst-color-focus-ring: #7dd7e7;
+  --myst-color-focus-outline: #7dd7e7;
+  --myst-color-accent-text: #b3eff7;
+  --myst-color-accent-surface: #132d40;
+  --myst-color-accent-surface-border: #2b6475;
+  --myst-color-accent-surface-text: #d5f7fb;
+  --myst-color-bg: #0b1420;
+  --myst-color-bg-secondary: #111f2e;
+  --myst-color-surface: #152638;
+  --myst-color-surface-hover: #1d354b;
+  --myst-color-text: #edf4f9;
+  --myst-color-text-secondary: #bdcdda;
+  --myst-color-text-tertiary: #a7bece;
+  --myst-color-prose-body: #d2dfe8;
+  --myst-color-border: #2a4155;
+  --myst-color-border-strong: #426077;
+}
+
+/* The manually maintained References page is the book's reference list. */
+.myst-bibliography { display: none; }
+
+.article h1, .article h2, .article h3 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.article h2 { margin-top: 2.1em; }
+.article figcaption {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--myst-color-text-secondary);
+}
+.article figure { margin-block: 1.6rem 2rem; }
+.article figure img { border-radius: 0.5rem; }
+
+/* Native headings remain clickable summaries, closed on initial load. */
+.article details {
+  margin-block: 0.8rem;
+  border: 1px solid var(--myst-color-border);
+  border-radius: 0.65rem;
+  background: var(--myst-color-bg-secondary);
+}
+.article details > summary {
+  padding: 0.9rem 1rem;
+  color: var(--myst-color-text);
+  font-weight: 650;
+  cursor: pointer;
+}
+.article details > summary:hover { color: var(--myst-color-link); }
+.article details[open] > summary {
+  border-bottom: 1px solid var(--myst-color-border);
+  margin-bottom: 0;
+}
+.article details > .details-body { padding: 0.2rem 1rem 0.8rem; }
+.article summary:focus-visible, .heard-nav-cards a:focus-visible {
+  outline: 3px solid var(--myst-color-focus-ring);
+  outline-offset: 4px;
+}
+/* The theme's heading renderer does not retain the custom AST class.
+   Scope to the real summary headings so section typography cannot enlarge bars. */
+.article details > summary {
+  min-height: 0 !important;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.article details > summary h1,
+.article details > summary h2,
+.article details > summary h3,
+.article details > summary h4,
+.article details > summary h5,
+.article details > summary h6 {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: normal;
+  max-width: none;
+}
+.article details > summary h1 > a,
+.article details > summary h2 > a,
+.article details > summary h3 > a,
+.article details > summary h4 > a,
+.article details > summary h5 > a,
+.article details > summary h6 > a { display: none; }
+
+/* Cover: keep the complete field photograph and all of the opening copy. */
+.article:has(.heard-cover-photo) h1 {
+  font-size: clamp(2.5rem, 4.5vw, 4.25rem);
+  line-height: 1.04;
+  max-width: 15ch;
+  font-weight: 800;
+}
+.heard-cover-intro h2 {
+  margin-top: 0.7rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  color: var(--myst-color-text-secondary);
+}
+.heard-cover-intro > p:first-of-type {
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--heard-orange);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.heard-cover-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.9rem !important;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 16%);
+}
+
+/* Native MyST cards are real links with keyboard navigation. */
+.heard-nav-cards { gap: 0.9rem; margin-block: 0.5rem 1.8rem; }
+.heard-nav-cards .myst-card {
+  margin-block: 0;
+  border-radius: 0.85rem;
+  border-top: 3px solid var(--heard-cyan);
+  background: var(--myst-color-bg-secondary);
+  box-shadow: none;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.heard-nav-cards .myst-card:last-child { border-top-color: var(--heard-orange); }
+.heard-nav-cards .myst-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--myst-color-link);
+}
+.heard-nav-cards .myst-card-header,
+.heard-nav-cards .myst-card-footer {
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.045em;
+  color: var(--myst-color-text-secondary);
+}
+.heard-nav-cards .myst-card-title { font-size: 1.35rem; }
+.heard-nav-cards .myst-card-body p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-block: 0.65rem;
+}
+
+/* Words carry the meaning; colour is a secondary cue. */
+.evidence-badge {
+  display: inline-block;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid;
+  border-radius: 999px;
+  font: 650 0.7rem/1.45 system-ui, sans-serif;
+  letter-spacing: 0.035em;
+  vertical-align: middle;
+}
+.evidence-observed { color: #086271; background: #e6f5f7; border-color: #99ccd4; }
+.evidence-modelled { color: #86401b; background: #fff0e5; border-color: #e8b894; }
+.evidence-hypothesis { color: #68438c; background: #f3ebfa; border-color: #c7addf; }
+.dark .evidence-observed { color: #91e4ee; background: #11313d; border-color: #316371; }
+.dark .evidence-modelled { color: #ffbf94; background: #39271f; border-color: #805239; }
+.dark .evidence-hypothesis { color: #d8b9f4; background: #2a213c; border-color: #65517d; }
+.evidence-key {
+  padding: 0.75rem 0.9rem;
+  margin-block: 1.5rem;
+  border-left: 3px solid var(--heard-cyan);
+  background: var(--myst-color-bg-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.evidence-key p { margin-block: 0; }
+
+/* The Explorer alone fills the space freed by its hidden right outline. */
+.heard-explorer .relative.inline-block {
+  display: block;
+  width: 100% !important;
+  padding-bottom: 0 !important;
+  height: clamp(540px, 78vh, 960px);
+  border: 1px solid var(--myst-color-border);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.myst-lightbox-link { cursor: zoom-in; }
+.gslide-description { max-height: 23vh; overflow-y: auto; }
+.gslide-description .evidence-badge { color: #142b3d; background: #edf2f6; }
+.gslide-image img[src*=".svg"] { width: 90vw; height: 80vh; object-fit: contain; }
+
+@media (max-width: 767px) {
+  .heard-explorer .relative.inline-block { height: clamp(460px, 75vh, 760px); }
+  .article:has(.heard-cover-photo) h1 { font-size: 2.6rem; }
+  .article details > summary { padding: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heard-nav-cards .myst-card { transition: none; }
+  .heard-nav-cards .myst-card:hover { transform: none; }
+}
+@media print {
+  .heard-nav-cards, .evidence-key { break-inside: avoid; }
+  .heard-nav-cards .myst-card { box-shadow: none; }
+}

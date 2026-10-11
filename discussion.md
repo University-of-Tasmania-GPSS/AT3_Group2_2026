@@ -17,6 +17,8 @@ Other comparisons qualify the explanation. Faster retained flow at Stephenson ad
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
+
 Contrasting retreat histories and terrain settings. **A–B:** mapped loss between successive outlines, the remaining 2026 footprint and dashed 1947 boundary; route numbers indicate kilometres inland from the seaward origin. Circles locate 2004 lagoon soundings and diamonds identify candidate modelled bed highs. Maps use EPSG:32743 and separate scale bars. **C–D:** 2002 surface elevation and smoothed modelled bed within the 2019 outlines; dotted vertical lines mark the 2026 fronts. Brown's inset shows lagoon depth below the 2004 water surface on its own scale. Missing bed samples remain gaps. **E–F:** interval-average percentage area loss relative to interval-start area. **G–H:** interval-average front retreat along the selected routes. Interval durations differ. Recent outlines impose no advance and inherit the 2014 extent strictly above 1,000 m. Sources: Donoghue and Harris (2021), this project's recent outlines, Brolsma and Smith (2008), Millan et al. (2022), and Allison and Thost (2010).
 :::
 
@@ -37,6 +39,8 @@ The former low-elevation footprint in [](#fig-results-low-elevation) also matter
 :alt: Helicopter photograph of Stephenson Glacier.
 :width: 85%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 Stephenson Glacier photographed from a helicopter.
 :::
@@ -84,6 +88,8 @@ There is a relevant local alternative to simple basin excavation. Kiernan and Mc
 The screened bed highs in [](#fig-appendix-bed-highs) narrow the locations worth investigating, particularly Brown's B2. Their lateral support is examined in [](#fig-appendix-cross-sections). Their sensitivity to route offsets and smoothing, and incomplete lateral support, prevent confirmation of continuous barriers. Persistence counts measure repeatability under selected tests; they are not probabilities that pinning points exist.
 
 The bed estimate combines non-contemporaneous surface and thickness inputs and ends at the valid 2019 ice mask. It therefore omits much of the former coastal tongue where earlier retreat occurred. Archived radar comparisons are local and show uneven model agreement. These checks improve the interpretation of the model, without validating complete valley geometry. The [terrain appendix](appendix.md#appendix-terrain) retains the uncertainty, screening and cross-section evidence.
+
+<span class="evidence-badge evidence-hypothesis">Hypothesis</span>
 
 Brown's modelled bed highs may also act as **potential pinning points**. If contact with a high locally reduces ice flow, neighbouring velocity estimates could fall below the **10 m/year median-vector threshold**, contributing to the central gap in Brown's displayed velocity raster ([](#fig-methods-velocity)). This is a proposed explanation to test: the analysis has not established that the gap overlaps either high or that bed geometry caused the rejected estimates.
 
@@ -140,6 +146,8 @@ Continue to the [Conclusion](conclusion.md) for the final research answer and ta
 :alt: Field photograph accompanying the proposed survey priorities.
 :width: 70%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 *SurveyDude.* Field photograph of things being surveyed, possibly measured.
 :::

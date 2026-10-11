@@ -1,29 +1,38 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
   id: 60729e2c-7514-4425-a9aa-f189f8f98bc3
   title: The shape of retreat
   subtitle: Brown and Stephenson glaciers, Heard Island
-  description: A geospatial comparison of glacier retreat, geometry, geological setting and archived field evidence.
+  description: A geospatial comparison of glacier retreat, geometry, geological setting
+    and archived field evidence.
   static_files:
-    - Output_Data/processed/interactive_map_data/explorer
+  - Output_Data/processed/interactive_map_data/explorer
+  - design-assets
   toc:
-    - file: index.md
-    - title: The analysis
-      children:
-        - file: methods.md
-        - file: results.md
-        - file: discussion.md
-        - file: conclusion.md
-    - title: Explore and verify
-      children:
-        - file: explorer.md
-        - file: appendix.md
-        - file: references.md
-  # keywords: []
+  - file: index.md
+  - title: The analysis
+    children:
+    - file: methods.md
+    - file: results.md
+    - file: discussion.md
+    - file: conclusion.md
+  - title: Explore and verify
+    children:
+    - file: explorer.md
+    - file: appendix.md
+    - file: references.md
   authors: Griffin and Sampson
   github: https://github.com/University-of-Tasmania-GPSS/AT3_Group2_2026
+  plugins:
+  - ./plugins/figure-zoom.mjs
+  - ./plugins/contents-headings.mjs
 site:
   template: book-theme
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    style: ./book-style.css
+    logo: ./brand/heard-mark.svg
+    logo_dark: ./brand/heard-mark.svg
+    logo_text: The shape of retreat
+    logo_alt: Mountain and glacier emblem for The shape of retreat
+    favicon: ./brand/heard-mark.svg
+    outline_maxdepth: 3

@@ -6,11 +6,21 @@
 ## Scientific literature
 
 - Allison, I. F., & Keage, P. L. (1986). Recent changes in the glaciers of Heard Island. Polar Record, 23(144), 255-272.
+- Boulton, G. S., & Hindmarsh, R. C. A. (1987). Sediment deformation beneath glaciers: Rheology and geological consequences. *Journal of Geophysical Research: Solid Earth, 92*(B9), 9059–9082. https://doi.org/10.1029/JB092iB09p09059
+- Catania, G. A., Stearns, L. A., Sutherland, D. A., Fried, M. J., Bartholomaus, T. C., Morlighem, M., Shroyer, E., & Nash, J. (2018). Geometric controls on tidewater glacier retreat in central western Greenland. *Journal of Geophysical Research: Earth Surface, 123*(8), 2024–2038. https://doi.org/10.1029/2017JF004499
+- Cook, S. J., & Swift, D. A. (2012). Subglacial basins: Their origin and importance in glacial systems and landscapes. *Earth-Science Reviews, 115*(4), 332–372. https://doi.org/10.1016/j.earscirev.2012.09.009
+- Cooper, P. I. (1969). The absorption of radiation in solar stills. *Solar Energy, 12*(3), 333–346. https://doi.org/10.1016/0038-092X(69)90047-4
 - Fox, J. M., McPhie, J., Carey, R. J., Jourdan, F., & Miggins, D. P. (2021). Construction of an intraplate island volcano: The volcanic history of Heard Island. Bulletin of Volcanology, 83(5), 37.
+- Iqbal, M. (1983). *An introduction to solar radiation*. Academic Press. https://doi.org/10.1016/B978-0-12-373750-2.X5001-0
 - Kiernan, K., & McConnell, A. (2002). Glacier retreat and melt-lake expansion at Stephenson Glacier, Heard Island World Heritage area. Polar Record, 38(207), 297-308.
+- Lea, J. M., Mair, D. W. F., & Rea, B. R. (2014). Evaluation of existing and new methods of tracking glacier terminus change. *Journal of Glaciology, 60*(220), 323–332. https://doi.org/10.3189/2014JoG13J061
+- McGrath, D., Sass, L., O’Neel, S., Arendt, A. A., & Kienholz, C. (2017). Hypsometric control on glacier mass balance sensitivity in Alaska and northwest Canada. *Earth’s Future, 5*(3), 324–336. https://doi.org/10.1002/2016EF000479
+- Millan, R., Mouginot, J., Rabatel, A., & Morlighem, M. (2022). Ice velocity and thickness of the world’s glaciers. *Nature Geoscience, 15*, 124–129. https://doi.org/10.1038/s41561-021-00885-z
+- Olson, M., & Rupper, S. (2019). Impacts of topographic shading on direct solar radiation for valley glaciers in complex topography. *The Cryosphere, 13*, 29–40. https://doi.org/10.5194/tc-13-29-2019
 - Quilty, P. G., & Wheller, G. E. (2000). Heard Island and the McDonald Islands: a window into the Kerguelen Plateau.
 - Thost, D. E., & Truffer, M. (2008). Glacier recession on Heard Island, southern Indian ocean. Arctic, Antarctic, and Alpine Research, 40(1), 199-214.
 - Tielidze, L. G., Mackintosh, A. N., & Yang, W. (2025). Glacier inventories reveal an acceleration of Heard Island glacier loss over recent decades. The Cryosphere, 19(7), 2677-2694.
+- Truffer, M., & Motyka, R. J. (2016). Where glaciers meet water: Subaqueous melt and its relevance to glaciers in various settings. *Reviews of Geophysics, 54*(1), 220–239. https://doi.org/10.1002/2015RG000494
 
 ## Data sources
 
@@ -32,6 +42,7 @@
 
 ## Technical documentation
 
+- SciPy community. (n.d.). *LinearNDInterpolator*. SciPy documentation. https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.LinearNDInterpolator.html
 - Rasterio: virtual warping and bounded raster reads https://rasterio.readthedocs.io/en/stable/topics/virtual-warping.html
 - Rasterio: validity masks and NoData https://rasterio.readthedocs.io/en/stable/topics/masks.html
 - Rasterio: rasterisation and polygon masks https://rasterio.readthedocs.io/en/stable/topics/features.html

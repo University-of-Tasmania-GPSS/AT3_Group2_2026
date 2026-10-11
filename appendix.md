@@ -235,6 +235,8 @@ None persists through every assessable check. Ice motion contributes to the thic
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-modelled">Modelled</span>
+
 Screened highs along the selected routes. Coloured lines show the three-station median bed profile; markers locate selected peaks. Labels count assessable checks retaining a peak within 150 m. S1 has six assessable checks because one displaced profile lacks support. Distances use each route's seaward origin, and panels have different elevation scales. These are candidate model features, with persistence counts rather than probabilities of real pinning points. Inputs: Brolsma and Smith (2008); Millan et al. (2021).
 :::
 
@@ -251,6 +253,8 @@ Mapped corridor width elsewhere in the analysis comes from connected ice-polygon
 :alt: Six perpendicular sections comparing the 2002 surface and supported modelled bed near recent fronts, Brown B2, and Stephenson S1 and S2, with missing bed segments left blank.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-modelled">Modelled</span>
 
 Perpendicular sections through surface and modelled bed. Columns identify glaciers; rows show sections 250 m inland of the 2026 front, selected candidate highs, and additional comparison positions. Titles give inland route distance. Horizontal axes measure metres from the main route, marked at zero; vertical axes show elevation in metres and differ between panels. White lines show the 2002 surface and dashed coloured lines the supported modelled bed. Blank segments retain missing coverage, and the figure has no uncertainty band. Inputs: Brolsma and Smith (2008); Millan et al. (2021).
 :::

@@ -52,6 +52,8 @@ Matched Sentinel-1A IW HH acquisitions came from ascending relative orbit 100. B
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Radar evidence used during outline development. Rows show 2019 and 2026; columns show 12-day HH coherence and HH backscatter. Cyan boundaries mark the supplied 2014 inventory. Coherence guides segmentation, while backscatter supports visual inspection. Backscatter display ranges are adjusted separately for each year and should not be read as a shared radiometric scale. Source imagery: Copernicus Sentinel-1.
 :::
 
@@ -79,6 +81,8 @@ Front change is measured along fixed routes running from seaward origins towards
 :alt: Archived field photograph titled Crevasse.
 :width: 70%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 *Crevasse.* Field photograph from the 2003–2004 Heard Island campaign archive (Allison & Thost, 2010).
 :::
@@ -112,6 +116,8 @@ Only valid surface elevations and positive modelled thickness contribute bed est
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-modelled">Modelled</span>
+
 Modelled ice thickness and estimated bed elevation for Brown and Stephenson. Rows identify the glaciers; columns show thickness and bed elevation, with shared scales for each quantity. Estimates use the aligned 50 m inputs and the 2019 reporting footprint, excluding mapped lagoons. Grey hillshade provides surface context and does not fill missing bed estimates. Sources: Brolsma and Smith (2008); Millan et al. (2021).
 :::
 
@@ -130,6 +136,8 @@ Potential bed highs require at least 10 m prominence and 300 m separation. Seven
 :alt: Brown and Stephenson glacier outlines, fixed analysis transects with numbered distance stations, and 2004 lagoon sounding locations.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 Selected analysis routes and field coverage. White lines run inland from each route's seaward origin; numbered stations show distance in kilometres. Yellow points locate 2004 lagoon soundings rather than lagoon boundaries. Brown's route links the surveyed lagoon and surviving glacier; Stephenson's curves between its former southern tongue and remaining northern tongue. The panels use different map scales. Coordinates are in EPSG:32743.
 :::
@@ -175,6 +183,8 @@ Validation withholds all observations in each 100 m spatial block and rebuilds t
 :width: 70%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 *Elevated Science.* Field photograph from the 2003–2004 Heard Island campaign archive (Allison & Thost, 2010).
 :::
 
@@ -183,6 +193,8 @@ Validation withholds all observations in each 100 m spatial block and rebuilds t
 :alt: Brown Lagoon interpolated depths and sounding locations, distance to the nearest sounding, and supported spatial block holdout residuals.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
 
 Brown Lagoon reconstruction and support checks. The left panel shows interpolated depth below the 2004 water surface, soundings and retained December 2003 margin-track segments. The centre panel shows distance to the nearest sounding within accepted support. The right panel shows residuals from 100 m block holdout: positive values indicate predictions deeper than observations. Hollow symbols identify soundings without supported held-out predictions. Source: Allison and Thost (2010).
 :::
@@ -215,6 +227,8 @@ Consecutive glacier polygons define gross spatial retreat zones. Intersecting th
 :width: 70%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Field photograph of **a really good rock**.
 :::
 
@@ -223,6 +237,8 @@ Field photograph of **a really good rock**.
 :alt: James's clipped Heard Island geology, with Brown and Stephenson located, beside the mapped area share of each geological category.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 Mapped geological categories after James's preparation. The map retains source categories and locates the 2014 Brown and Stephenson footprints. Matching bar colours show each category's share of the summed clipped mapped polygon area; this denominator is not necessarily the island's full land area. Snow/Ice and Unknown labels are retained. Source attribution follows the project register: Fox et al. (2023); lecturer-supplied geological layer.
 :::
@@ -240,6 +256,8 @@ These layers describe the recorded surface, including ice where present. They ar
 :alt: Heard Island surface DEM hillshade, slope in degrees and aspect clockwise from north, with 2019 glacier outlines.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-modelled">Modelled</span>
 
 Surface terrain derivatives from James's GDAL workflow. Panels show hillshade, slope and aspect calculated from the clipped RADARSAT 2002 DEM, which includes 1997 input. The 2019 outlines provide spatial context and do not date the elevation surface. Aspect is cyclic, with north at both 0° and 360°; flat or missing cells have no defined direction. Hillshade represents simulated illumination. DEM source: Brolsma and Smith (2008).
 :::
@@ -259,6 +277,8 @@ Coverage is reported relative to footprint grid cells, with a separate retention
 :alt: Brown and Stephenson filtered median ice-speed maps within their 2014 sampling footprints, with missing estimates visible.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 Retained 2016–2022 ice-speed estimates for Brown and Stephenson within the 2014 sampling footprints. Both maps use the same speed scale. Gaps indicate missing or rejected estimates and do not establish stationary ice. The 120 m grid does not imply an equivalent effective observation resolution. Source: ITS_LIVE Sentinel-1 image-pair velocities (Lei et al., 2022).
 :::

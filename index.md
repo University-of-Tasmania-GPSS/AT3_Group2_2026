@@ -1,6 +1,9 @@
 (introduction)=
 # The shape of retreat
 
+::::{div}
+:class: heard-cover-intro
+
 ## Brown and Stephenson glaciers, Heard Island
 
 **KGG375 — Assessment Task 3**  
@@ -9,15 +12,47 @@
 **Two neighbouring glaciers. Two different retreat histories.**
 
 Brown and Stephenson glaciers have both retreated, but their fronts have moved inland at very different rates (Tielidze et al., 2025). This project brings together historical mapping, satellite observations, terrain models and archived field surveys to examine that contrast. The 2003–2004 campaign archive also provides the field photograph shown in [](#fig-opening-photo).
+::::
 
 :::{figure} Figures/Book/calved.jpg
 :label: fig-opening-photo
+:class: heard-cover-photo
 :alt: Field photograph from the 2003–2004 Heard Island campaign archive.
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Photograph from the 2003–2004 Heard Island campaign archive. Source: (Allison & Thost, 2010).
 :::
+
+::::{grid} 1 1 3 3
+:class: heard-nav-cards
+
+:::{card} Methods
+:link: methods.md
+:header: 01 · BUILD THE EVIDENCE
+:footer: Follow the workflow →
+
+From glacier outlines to terrain models and archived field surveys.
+:::
+
+:::{card} Results
+:link: results.md
+:header: 02 · COMPARE THE GLACIERS
+:footer: See what changed →
+
+Retreat histories, lower-glacier geometry and lagoon evidence.
+:::
+
+:::{card} Explorer
+:link: explorer.md
+:header: 03 · EXPLORE HEARD ISLAND
+:footer: Open the interactive map →
+
+One interface for the island map, glacier comparisons and 3D views.
+:::
+::::
 
 (study-area)=
 ## Two glaciers on a changing island
@@ -29,6 +64,8 @@ Heard Island is a remote volcanic island in the southern Indian Ocean, near 53°
 :alt: Map locating Brown and Stephenson glaciers on Heard Island, with a regional inset showing the island between Africa, Australia and Antarctica.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span>
 
 Brown and Stephenson glaciers on Heard Island. Glacier footprints represent the supplied 2014 inventory; Brown is highlighted in orange and Stephenson in blue. Lagoon outlines incorporate project digitisation updates by Griffin to the original mapping of Donoghue and Harris (2021). The coastline comes from the supplied HIMI features dataset. The main panel uses WGS 84 / UTM zone 43S; regional land polygons are from Natural Earth.
 :::
@@ -50,6 +87,12 @@ A glacier can lose area, retreat inland and become thinner at different rates. *
 2. **Compare spatial setting:** examine lower-glacier geometry, surface terrain, mapped geological categories, ice velocity and a geometric surface-exposure index.
 3. **Evaluate field evidence:** compare archived Brown Glacier radar sections with modelled bed estimates and reconstruct lagoon depths within the area supported by soundings.
 4. **Integrate and communicate:** bring the evidence into a comparative interpretation and interactive map, while identifying unresolved mechanisms and the observations needed to test them.
+
+:::{div}
+:class: evidence-key
+
+<span class="evidence-badge evidence-observed">Observed</span> Mapped or surveyed evidence. <span class="evidence-badge evidence-modelled">Modelled</span> Calculated or reconstructed estimates. <span class="evidence-badge evidence-hypothesis">Hypothesis</span> An explanation to test. Mixed figures carry more than one label.
+:::
 
 :::{dropdown} Scope of the evidence
 

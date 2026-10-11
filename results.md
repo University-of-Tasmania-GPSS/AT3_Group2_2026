@@ -12,6 +12,8 @@
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Mapped area change, 1947–2026. **A:** percentage of each glacier's 1947 area remaining. **B:** interval-average area loss in km²/year. **C:** interval-average percentage loss relative to the area at the start of each interval. Points represent mapped dates or averages between dates; connecting lines guide the eye and do not represent separately observed annual changes. This figure shows area change; front-displacement rates are reported in the table below. Historical outlines: Donoghue and Harris (2021); recent outlines: this project's radar-based mapping.
 :::
 
@@ -54,6 +56,8 @@ These results document the removal of Stephenson's extensive lower tongue, consi
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
+
 Mapped footprint area below **A: 300 m**, **B: 600 m** and **C: 900 m**, using the same 2002 DEM for all outlines. Only cells with valid elevation are counted. Thresholds are nested: the area below 600 m includes the area below 300 m. Panels share an area scale. Changes describe the positions of mapped footprints over that common terrain dataset, rather than reconstructed surface heights at each date. Outlines: Donoghue and Harris (2021) and this project; DEM: Brolsma and Smith (2008).
 :::
 
@@ -75,6 +79,8 @@ Moraine records glacial deposition; its presence does not establish the material
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Mapped surface categories within the analysed glacier footprints. **A–B:** source-map classes and selected glacier outlines. **C–D:** category proportions within successive retreat zones and the 2026 remaining footprint. Percentages use the full zone area, including Snow/Ice and unmapped locations. Areas beside the bars are gross spatial loss for an interval, or remaining area for 2026. Map panels have different scales. Categories describe the geological source map, rather than reconstructed materials at each historical date. Geological source attribution: Fox et al. (2023); outlines: Donoghue and Harris (2021) and this project.
 :::
 
@@ -86,6 +92,8 @@ Mapped surface categories within the analysed glacier footprints. **A–B:** sou
 :alt: Brown and Stephenson profiles of surface and modelled bed elevation, bed gradient, filtered ice speed and mapped glacier width, with dated front positions.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
 
 Longitudinal comparisons for Brown (left) and Stephenson (right), with distance measured inland from each route's seaward origin. **Row 1:** 2002 surface and modelled bed, smoothed with a three-station median; vertical markers locate dated fronts. Shading shows ± the reported thickness-error magnitude, not a confidence interval, and excludes DEM error and differences between input dates. **Row 2:** modelled bed gradient, positive where the bed rises inland. **Row 3:** filtered 2016–2022 ice speed. **Row 4:** connected mapped glacier width in 1947, 2014 and 2026. Gradient, speed and width have shared vertical scales; elevation scales and route lengths differ. Missing values remain gaps. Sources: Brolsma and Smith (2008), Millan et al. (2022), ITS_LIVE (Lei et al., 2022), and the glacier outlines described above.
 :::
@@ -133,6 +141,8 @@ Brown thus has the slightly higher orientation index, while Stephenson has the g
 :width: 100%
 :align: center
 
+<span class="evidence-badge evidence-modelled">Modelled</span>
+
 Summer incidence index derived from surface slope, aspect and hourly solar geometry on four representative November–February dates at 53.1°S. The 2014 footprints are sampled on a 120 m grid. **1.00** is the corresponding horizontal-surface value; purple indicates lower geometric exposure and gold higher exposure. White lines mark glacier outlines; pink contours mark 600 m, with labels identifying the lower side. Dark gaps have no valid index. Maps share a colour scale but use different zoom levels; end colours group values outside 0.90–1.10. This is geometric exposure, not measured radiation or melt. Terrain source: Brolsma and Smith (2008).
 :::
 
@@ -151,6 +161,8 @@ These are measurements of the supported survey footprint, rather than the entire
 :alt: Brown Lagoon supported bathymetry, three cross-basin depth profiles and an along-route depth profile, with portions of historical glacier outlines.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
 
 Brown Lagoon geometry reconstructed from the 2004 soundings. **A:** retained interpolated depths, the main analysis route, cross-sections L1–L3 and portions of the 1947 and 1988 outlines; blank areas lack supported depth estimates. **B:** cross-basin profiles, with zero offset at the main route. **C:** depth along that route, measured inland from its seaward origin. Depth increases downward in both profile panels and is relative to the 2004 survey water surface. Profile endpoints and raster edges do not establish shorelines. Field archive: Allison and Thost (2010); historical outlines: Donoghue and Harris (2021).
 :::
@@ -175,6 +187,8 @@ The evidence establishes a deep surveyed depression formerly occupied by mapped 
 :width: 85%
 :align: center
 
+<span class="evidence-badge evidence-observed">Observed</span>
+
 Aerial view of Brown Lagoon.
 :::
 
@@ -183,6 +197,8 @@ Aerial view of Brown Lagoon.
 :alt: Brown Lagoon bed elevations under three assumed water levels, compared with inland surface and modelled bed profiles, nearby interpreted radar sections and historical front markers.
 :width: 100%
 :align: center
+
+<span class="evidence-badge evidence-observed">Observed</span> <span class="evidence-badge evidence-modelled">Modelled</span>
 
 Brown Lagoon and inland glacier terrain along the analysis route. **A:** 2002 surface elevation, smoothed modelled bed within the 2019 outline, and lagoon-bed elevations under assumed water levels of **0, 2 and 5 m** above approximate sea-level zero. Vertical lines mark dated fronts. Crosses are samples from interpreted 2000 radar-bed sections within 100 m of the route, projected onto it; they are not independent point soundings or exact on-route observations. **B:** enlarged lagoon profiles showing the scenario offsets. The zero line is an approximate elevation reference. Gaps remain between datasets, so the figure does not reconstruct a continuous connecting bed. Sources: Allison and Thost (2010), Brolsma and Smith (2008), Millan et al. (2022), and the glacier outlines described above.
 :::
