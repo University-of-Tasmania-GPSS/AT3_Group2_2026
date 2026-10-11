@@ -1,40 +1,64 @@
 (explorer)=
 # Explore Heard Island
 
-[Write: Introduce the explorer in two or three sentences. Explain that the island view supplies spatial context and Brown/Stephenson are the accepted analytical focus.]
+Explore the mapped glacier histories, terrain and field evidence in their spatial setting. The island view provides context; the **Brown and Stephenson dashboards** contain the accepted focus-glacier comparisons and their supporting layers. Use the full-window view for the presentation and for detailed inspection of the 3D scenes.
 
-(explorer-placeholder)=
-:::{admonition} Interactive map placeholder
-Notebook `09_Interactive_Map.ipynb` exports `Output_Data/processed/interactive_map_data/explorer/Heard_Island_explorer.html` and its neighbouring `assets` directory. The current snapshot does not include this exported application.
+[Open the full-window explorer](/explorer/Heard_Island_explorer.html)
 
-Insert an iframe only after confirming how the map and its complete asset directory are served in the published book. Add an ordinary link that opens the same map in its own tab. Test both locally and on the published site, including the individual-glacier 3D and Brown lagoon views.
+(explorer-map)=
+:::{iframe} http://localhost:3000/explorer/Heard_Island_explorer.html
+:title: Interactive Heard Island glacier explorer with island map, glacier dashboards and 3D views
+:width: 100%
+:align: center
 
-Until then, retain this visible placeholder rather than embedding a missing local file.
+Heard Island: ice, terrain and change. Select a glacier to inspect its available evidence, or use the island layers for spatial context.
 :::
 
-% AUTHORING: This page is a wrapper for the existing notebook 09 application. Copy the entire exported map folder when staging it; the HTML requires its assets. Do not rebuild or redesign the map while assembling the book.
 
+(explorer-route)=
 ## A short route through the evidence
 
-1. **Compare the focus glaciers:** [Write: Explain how to select Brown and Stephenson and inspect their retreat summaries.]
-2. **Inspect mapped geology:** [Write: Explain the layer toggle and hover identification in the island and glacier views.]
-3. **Inspect terrain and flow:** [Write: Identify the relevant layers and the meaning of missing cells.]
-4. **Open Brown's surveyed lagoon:** [Write: Explain the supported basin, measured soundings and survey-water plane.]
+### 1. Identify mapped geology
 
+Enable **Mapped geology** in the island view and move the pointer over a mapped unit. The hover card identifies the rock or deposit category. Start with an exposed foreland unit: the map describes surface materials, and a Snow/Ice category leaves the buried substrate unresolved.
+
+### 2. Open Brown's dashboard
+
+Select **Brown** to open its glacier dashboard. Use **Retreat** to inspect dated outlines and the available summaries, then compare layers through **Geology**, **Geomorphology** and **Velocity**. The historical outlines show where mapped ice occurred; an interval's area loss and front movement describe different aspects of change. Stephenson's dashboard provides the corresponding comparison.
+
+### 3. Explore the glacier in 3D
+
+From the glacier dashboard, choose **Explore in 3D**. Rotate the scene to inspect the lower glacier and its terrain, then move between inventory dates. The glacier body uses fixed modelled thickness and derived bed geometry; the animation clips it to dated footprints. Earlier ice outside model coverage appears as an outline, rather than a reconstructed historical ice body.
+
+Use **Reset camera** to return to the initial view. Vertical and thickness exaggeration help inspect shape; their effects are visual and do not change the underlying values reported on hover.
+
+### 4. Inspect Brown's surveyed lagoon
+
+Return to Brown's dashboard and choose **3D lagoon**. The coloured surface shows interpolated depths within the supported reconstruction; white points show measured soundings. Rotate the basin, then toggle **Show survey water plane** to inspect its depth relative to the 2004 water surface.
+
+Here, **0 m is the survey water surface**, rather than sea level. The retained mesh and water plane preserve unsupported gaps. The viewer shows a surveyed portion of the basin, without establishing the complete lagoon boundary or its connection to the inland glacier bed.
+
+
+(explorer-reading)=
 ## Reading the map responsibly
 
-**Observation dates:** [Write: Explain that inventory, elevation, thickness, velocity and survey layers represent different times.]
+| Display | How to read it |
+| --- | --- |
+| Dated outlines and retreat animation | Mapped footprints at selected dates, displayed on fixed terrain. They do not reconstruct past surface heights or thickness. |
+| Surface terrain | The accepted 2002 DEM supplies the terrain context. Its elevations do not describe the current surface everywhere. |
+| Modelled thickness and bed | Estimates combining different observation periods. Bed gaps remain unresolved; local highs are candidates for investigation. |
+| Velocity | Filtered 2016–2022 observations within the working footprints. Missing cells do not indicate stationary ice. |
+| Lagoon depth and water plane | Brown's supported 2004 reconstruction, referenced to the survey water surface. Blank areas and mesh edges do not establish shorelines. |
+| Colour scales and exaggeration | Consult each legend. Saturated colours group values beyond the displayed limits; exaggeration changes appearance rather than measured values. |
+| Recent outlines elsewhere on the island | Provisional spatial context. The accepted recent analysis is restricted to Brown and Stephenson. |
 
-**Modelled geometry:** [Write: Explain that thickness and bed layers are estimates; vertical and thickness exaggeration change the display only.]
+The layers retain different dates and spatial support. A visually aligned overlay does not make them simultaneous observations or demonstrate a causal relationship. The [Methods](methods.md) explain how the products were prepared, while the [supporting evidence](appendix.md) records coverage, uncertainty and sensitivity checks.
 
-**Survey reference:** [Write: State that Brown's 2004 lagoon viewer uses the survey water surface as zero, with unsurveyed gaps retained.]
-
-**Provisional context:** [Write: Explain the scope of recent outlines outside the focus glaciers.]
-
-% PRESENTATION: Rehearse one specific action and limit the live demonstration to about 30 seconds. Return to the static figure if loading or interaction interrupts the narrative. The argument must remain intelligible from the main pages alone.
-
+(explorer-credits)=
 ## Map credits
 
-[Write: Link to the map's source register and the book's consolidated references. Credit Donoghue and Harris for the original 2014 lagoons, Griffin for the digitised updates, and Allison and Thost for the field evidence. Avoid duplicating the campaign archive as a second independent dataset.]
+Open **Sources & credits** in the island view, or **Sources** within a dashboard or 3D viewer, to inspect the attribution associated with the displayed evidence. Full bibliographic entries are collected on the [References and data credits](references.md) page.
+
+The original lagoon polygons are credited to **Donoghue and Harris (2021)**, with the project updates digitised by **Griffin (2026)**. Archived soundings, radar sections and campaign observations are credited to **Allison and Thost (2010)**; their shared campaign archive is treated as one source. These credits distinguish the original observations from the preparation and visualisation undertaken here.
 
 Return to [Results](results.md), [Discussion](discussion.md), or [Conclusion](conclusion.md).

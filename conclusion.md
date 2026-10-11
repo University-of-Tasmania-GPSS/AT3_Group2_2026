@@ -1,29 +1,47 @@
 (conclusion)=
-# Conclusion: what the available evidence can establish
+# Conclusion: the shape of retreat
 
-[Write: Answer the agreed research question directly in one paragraph. Distinguish the supported geomorphological interpretation from a demonstrated causal explanation. Avoid claiming that careful processing removes limitations in the source data.]
+The mapped histories of Brown and Stephenson differ in both the magnitude and progression of retreat. **Changing glacier geometry and terminus setting provide a plausible interpretation of that contrast.** Stephenson lost much of its extensive lower tongue, while Brown's surveyed lagoon preserves evidence of retreat through a water-filled part of its former footprint. Geological mapping, contemporary flow and modelled terrain add context, but the available evidence cannot quantify the causal contributions of buried substrate, individual bed features or glacier–water processes. Climate forcing has not been separated from these influences.
 
 (take-home-points)=
 ## Three findings to take home
 
-1. **Contrasting retreat:** [Write: State the principal mapped difference between Brown and Stephenson, with the relevant period.]
-2. **Geometry and terminus setting:** [Write: State how changes in the lower footprint and the supported lagoon reconstruction help interpret the difference.]
-3. **What remains open:** [Write: Identify the bed, substrate or process information that prevents stronger attribution.]
+:::{figure} Figures/Book/Dougie Snow Shoeing.jpg
+:label: fig-field-dougie-snowshoeing
+:alt: Field photograph of Dougie snowshoeing.
+:width: 85%
+:align: center
 
-% PRESENTATION: End here after the short next-observations section below. Keep this to a clear, memorable close; the detailed evidence has already been presented.
+Dougie snowshoeing.
+:::
 
-## What the workflow contributed
+1. **Stephenson lost more area, but the recent pattern is more complicated.** Between 1947 and 2026, Stephenson lost **68.49%** of its mapped area, compared with **40.44% at Brown**. More recently, Stephenson's front moved back faster while its annual percentage area loss fell. Brown's front retreat slowed while its annual percentage area loss increased. Area and front position reveal different aspects of how a glacier is changing.
+2. **Glacier shape and the setting of the front help explain the contrast.** Stephenson lost most of its broad, low-elevation tongue. Brown's soundings reveal a deep lagoon basin in terrain that mapped ice occupied in 1947 and had left by 1988. These changes help explain how retreat progressed through different landscapes, while leaving the processes and rates of ice loss unresolved.
+3. **Buried geology and bed highs give us explanations to test.** The geological map shows exposed deposits, but cannot tell us what lies beneath the remaining ice. Modelled bed highs are **potential pinning points**, where raised terrain might slow ice flow or restrict retreat. Their shape and continuity need checking. Gaps in velocity coverage and between the surveyed lagoon and glacier bed prevent firm conclusions about these controls.
 
-[Write: Explain the technical contribution: automated spatial comparisons, explicit data-support masks, archived field reconstruction, transparent sensitivity tests and a reproducible route from notebooks to figures. Connect these contributions to the objectives in the Introduction.]
+(conclusion-workflow)=
+:::{dropdown} What the workflow contributed
 
+The project connects historical inventories and recent radar mapping with geological preparation, surface terrain, modelled bed geometry, filtered velocity and archived field reconstruction. Python and GIS automate spatial comparisons while retaining observation dates, sampling footprints and valid-data coverage. The campaign photograph in [](#fig-field-dougie-snowshoeing) provides field context for the archived observations.
+
+**A major achievement was bringing these separate datasets into one easy-to-use [interactive explorer](explorer.md).** Readers can move from the island map to individual glacier dashboards, compare geology, terrain and velocity layers, inspect the glaciers in 3D and explore Brown's surveyed lagoon. This puts the evidence in one place and makes the relationships between datasets easier to explore.
+
+Supported interpolation, local radar comparisons and sensitivity tests make the evidence and its limits traceable. The project contributes both a reproducible comparison of two glacier histories and an accessible interface for exploring the evidence, with specific hypotheses and locations identified for further investigation.
+:::
+
+(conclusion-next)=
 ## The next observations that matter
 
-[Write: Select two or three measurements from Discussion that would discriminate between the proposed explanations. State what each would test rather than asking generically for more data.]
+- **Map the connection between the lagoon and glacier bed.** Survey the lagoon depths and outlet, then use radar across the glacier to map the bed beneath the ice. Putting these surveys on the same height reference would show whether raised parts of the bed form continuous barriers that could restrict retreat.
+- **Measure what happens where ice meets water.** Track changes in the glacier front alongside water level, temperature and salinity. These observations would help assess the conditions for calving and melting below the water surface.
+-**Find out what lies beneath the ice and deposits.** Combine geological sampling with geophysical surveys to distinguish sediment, bedrock and buried ice. This would help test how the surrounding materials and the ground beneath the glacier could influence retreat.
 
-[Write: Connect to verified activities from the 2025–2026 Heard Island expedition. Cite the relevant official report beside the statement. Do not assume glacier-specific coverage, a product release date or that new observations have already resolved the questions raised here.]
+Recent 2025/26 Heard Island campaigns conducted GNSS control work, radar corner reflectors and drone lidar and bathymetric lidar at Atlas Cove (Williams and Fedrigo, 2026). These activities provide opportunities to assess improved spatial control and survey methods.
 
-## Closing the loop
+(conclusion-close)=
+:::{dropdown} Closing the loop
 
-[Write: Return to the opening contrast between neighbouring glaciers. State the project contribution confidently while keeping causal mechanisms conditional on further observations.]
+We brought mapped retreat, glacier geometry and archived field observations together in one interactive interface to explore these neighbours' different histories. The retreat contrast and Brown's surveyed basin are established; buried geology and specific bed controls remain hypotheses. Connected bed surveys and observations of glacier–water interaction would let us test those explanations.
 
 Inspect the [interactive explorer](explorer.md), consult the [supporting evidence](appendix.md), or see the [references and data credits](references.md).
+:::

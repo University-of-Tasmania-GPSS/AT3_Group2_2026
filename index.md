@@ -8,7 +8,7 @@
 
 **Two neighbouring glaciers. Two different retreat histories.**
 
-Brown and Stephenson glaciers have both retreated, but their fronts have moved inland at very different rates (Tielidze et al., 2025). This project brings together historical mapping, satellite observations, terrain models and archived field surveys to examine that contrast.
+Brown and Stephenson glaciers have both retreated, but their fronts have moved inland at very different rates (Tielidze et al., 2025). This project brings together historical mapping, satellite observations, terrain models and archived field surveys to examine that contrast. The 2003–2004 campaign archive also provides the field photograph shown in [](#fig-opening-photo).
 
 :::{figure} Figures/Book/calved.jpg
 :label: fig-opening-photo
@@ -22,7 +22,7 @@ Photograph from the 2003–2004 Heard Island campaign archive. Source: (Allison 
 (study-area)=
 ## Two glaciers on a changing island
 
-Heard Island is a remote volcanic island in the southern Indian Ocean, near 53°S, 73.5°E. Brown and Stephenson lie on the eastern side of the island, where published inventories record particularly substantial glacier retreat (Tielidze et al., 2025). Their proximity makes them a useful comparison, while their different shapes and terminus histories provide distinct settings to investigate.
+Heard Island is a remote volcanic island in the southern Indian Ocean, near 53°S, 73.5°E. Brown and Stephenson lie on the eastern side of the island ([](#fig-study-area)), where published inventories record particularly substantial glacier retreat (Tielidze et al., 2025). Their proximity makes them a useful comparison, while their different shapes and terminus histories provide distinct settings to investigate.
 
 :::{figure} Figures/Book/01_study_area_locator.png
 :label: fig-study-area
@@ -51,14 +51,14 @@ A glacier can lose area, retreat inland and become thinner at different rates. *
 3. **Evaluate field evidence:** compare archived Brown Glacier radar sections with modelled bed estimates and reconstruct lagoon depths within the area supported by soundings.
 4. **Integrate and communicate:** bring the evidence into a comparative interpretation and interactive map, while identifying unresolved mechanisms and the observations needed to test them.
 
-### Scope of the evidence
+:::{dropdown} Scope of the evidence
 
 The comparison uses glacier outlines for **1947, 1988, 2014, 2019 and 2026**. The supporting evidence spans different periods: the RADARSAT 2002 surface DEM includes 1997 input, the ice-thickness model represents approximately 2010–2020, retained velocity observations cover 2016–2022, and the archived radar and lagoon surveys date from 2000 and 2004. These layers describe different parts of the glaciers' histories and are not a simultaneous survey.
 
 Brown and Stephenson are the analytical focus. Other glacier outlines provide island-wide context, with recent non-focus outlines treated as provisional. Interpretation also follows the limits of each dataset: mapped Snow/Ice does not identify buried substrate, modelled bed elevations remain estimates, and lagoon depths are reconstructed only within supported survey coverage. The [Methods](methods.md) explain how these limits shape the analysis.
+:::
 
-## Read or explore
+:::{dropdown} Read or explore
 
 Follow [Methods](methods.md), [Results](results.md), [Discussion](discussion.md) and [Conclusion](conclusion.md) for the main argument. The [interactive explorer](explorer.md) brings the maps, glacier comparisons and field reconstructions together. Supporting tables and validation are in the [appendix](appendix.md), with full citations and data credits on the [References](references.md) page.
-
-% PRESENTATION CUE — James, 0:00–0:30: use the locator to introduce Heard Island and the two glaciers; state their contrasting retreat histories and the research question, then hand over to Griffin for the workflow.
+:::

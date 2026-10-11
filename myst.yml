@@ -5,6 +5,8 @@ project:
   title: The shape of retreat
   subtitle: Brown and Stephenson glaciers, Heard Island
   description: A geospatial comparison of glacier retreat, geometry, geological setting and archived field evidence.
+  static_files:
+    - Output_Data/processed/interactive_map_data/explorer
   toc:
     - file: index.md
     - title: The analysis
