@@ -84,7 +84,7 @@ These route-dependent front rates describe a different quantity from area loss o
 
 :::{dropdown} Repair, clipping and category areas
 
-James's geology workflow reads the supplied polygons, repairs unclosed rings where possible and removes unavailable geometries before clipping. The saved read audit reports **two source geometries that could not be repaired**. Remaining geology is projected to EPSG:32743 and clipped to the coastline. The shapefile export retains polygon components; the recorded export contains 1,507 polygons.
+Geology workflow reads the supplied polygons, repairs unclosed rings where possible and removes unavailable geometries before clipping. The saved read audit reports **two source geometries that could not be repaired**. Remaining geology is projected to EPSG:32743 and clipped to the coastline. The shapefile export retains polygon components; the recorded export contains 1,507 polygons.
 
 The following table preserves the original `Rock_Type` labels. The denominator is the **sum of clipped mapped polygon areas**, calculated before display rounding. It is not an independently measured island land area or a guarantee of complete, non-overlapping coverage.
 
@@ -129,7 +129,7 @@ The full category-by-zone records are exported as `geology_by_retreat_zone.csv`,
 
 :::{dropdown} Grids and derivative settings
 
-The RADARSAT 2002 DEM includes a 1997 stereoscopic contribution (Brolsma & Smith, 2008). James's surface derivatives use its clipped native 10 m grid. The modelled-bed calculation instead uses an aligned 50 m grid, with surface elevation averaged to that grid and thickness and error resampled by nearest neighbour. Velocity and exposure calculations use a separate 120 m grid.
+The RADARSAT 2002 DEM includes a 1997 stereoscopic contribution (Brolsma & Smith, 2008). Surface derivatives use its clipped native 10 m grid. The modelled-bed calculation instead uses an aligned 50 m grid, with surface elevation averaged to that grid and thickness and error resampled by nearest neighbour. Velocity and exposure calculations use a separate 120 m grid.
 
 
 The derivative algorithm is left at GDAL's default in the saved functions. Hillshade depicts simulated illumination, while slope and aspect describe the selected elevation surface. Bed derivatives inherit the uncertainty of the subtraction; they are not additional bed observations.
@@ -472,8 +472,8 @@ Reproduction follows dependencies rather than relying on filename order alone:
 | --- | --- |
 | [Data preparation](01_Data_Preparation.ipynb) | SAR evidence, segmentation, mapping constraints and accepted recent outlines |
 | [Glacier retreat](02_Glacier_Retreat.ipynb) | Glacier identities, historical matching, area histories and animation preparation |
-| [Geology analysis](03_Geology_Analysis_working.ipynb) | James's geological repair, clipping, category areas and mapped context |
-| [Geomorphology](04_Geomorphology.ipynb) | Surface DEM preparation, James's surface derivatives, aligned thickness and estimated bed |
+| [Geology analysis](03_Geology_Analysis_working.ipynb) | Geological repair, clipping, category areas and mapped context |
+| [Geomorphology](04_Geomorphology.ipynb) | Surface DEM preparation, surface derivatives, aligned thickness and estimated bed |
 | [Sub-ice analysis](05_Subice_Analysis.ipynb) | Glacier-specific terrain segmentation and preparation for the map |
 | [Field reconstruction](06_Field_Reconstruction.ipynb) | Radar registration, lagoon support, validation and field-layer exports |
 | [Velocity analysis](07_Velocity.ipynb) | Selected image pairs, filters, coverage, errors and terrain alignment |

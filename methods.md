@@ -202,7 +202,7 @@ Brown Lagoon reconstruction and support checks. The left panel shows interpolate
 (methods-geology)=
 :::{dropdown} Preparing geology and comparing retreat zones
 
-James's geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island. The mapped categories are shown in [](#fig-methods-geology), with a field photograph providing additional context ([](#fig-field-moss-rock)).
+Geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island. The mapped categories are shown in [](#fig-methods-geology), with a field photograph providing additional context ([](#fig-field-moss-rock)).
 
 The following excerpt from the geological analysis shows the clipping and area calculation:
 
@@ -234,19 +234,19 @@ Field photograph of **a really good rock**.
 
 :::{figure} Figures/Methods/03_mapped_geology_context.png
 :label: fig-methods-geology
-:alt: James's clipped Heard Island geology, with Brown and Stephenson located, beside the mapped area share of each geological category.
+:alt: clipped Heard Island geology, with Brown and Stephenson located, beside the mapped area share of each geological category.
 :width: 100%
 :align: center
 
 <span class="evidence-badge evidence-observed">Observed</span>
 
-Mapped geological categories after James's preparation. The map retains source categories and locates the 2014 Brown and Stephenson footprints. Matching bar colours show each category's share of the summed clipped mapped polygon area; this denominator is not necessarily the island's full land area. Snow/Ice and Unknown labels are retained. Source attribution follows the project register: Fox et al. (2023); lecturer-supplied geological layer.
+Mapped geological categories after preparation. The map retains source categories and locates the 2014 Brown and Stephenson footprints. Matching bar colours show each category's share of the summed clipped mapped polygon area; this denominator is not necessarily the island's full land area. Snow/Ice and Unknown labels are retained. Source attribution follows the project register: Fox et al. (2023); lecturer-supplied geological layer.
 :::
 
 (methods-surface-terrain)=
 :::{dropdown} Deriving surface hillshade, slope and aspect
 
-James uses GDAL to derive three complementary layers from the clipped native 10 m surface DEM: **hillshade** simulates illumination to reveal relief; **slope** measures steepness in degrees; and **aspect** records the downslope direction clockwise from north (GDAL/OGR contributors, n.d.). Flat cells have undefined aspect and remain missing under the selected settings. The three surface derivatives are shown in [](#fig-methods-surface-terrain).
+We use GDAL to derive three complementary layers from the clipped native 10 m surface DEM: **hillshade** simulates illumination to reveal relief; **slope** measures steepness in degrees; and **aspect** records the downslope direction clockwise from north (GDAL/OGR contributors, n.d.). Flat cells have undefined aspect and remain missing under the selected settings. The three surface derivatives are shown in [](#fig-methods-surface-terrain).
 
 These layers describe the recorded surface, including ice where present. They are distinct from derivatives of the modelled bed. DEM age, source artefacts and local missing data propagate into the derivatives, so apparent small features require care. Surface hillshade is a visual aid and does not measure radiation or melt.
 :::
@@ -259,7 +259,7 @@ These layers describe the recorded surface, including ice where present. They ar
 
 <span class="evidence-badge evidence-modelled">Modelled</span>
 
-Surface terrain derivatives from James's GDAL workflow. Panels show hillshade, slope and aspect calculated from the clipped RADARSAT 2002 DEM, which includes 1997 input. The 2019 outlines provide spatial context and do not date the elevation surface. Aspect is cyclic, with north at both 0° and 360°; flat or missing cells have no defined direction. Hillshade represents simulated illumination. DEM source: Brolsma and Smith (2008).
+Surface terrain derivatives from the GDAL workflow. Panels show hillshade, slope and aspect calculated from the clipped RADARSAT 2002 DEM, which includes 1997 input. The 2019 outlines provide spatial context and do not date the elevation surface. Aspect is cyclic, with north at both 0° and 360°; flat or missing cells have no defined direction. Hillshade represents simulated illumination. DEM source: Brolsma and Smith (2008).
 :::
 
 (methods-velocity)=

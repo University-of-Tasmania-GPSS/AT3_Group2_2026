@@ -180,6 +180,28 @@ class View {
       opacity:mapId==='glacier-map'?.48:1}).addTo(this.map);
     this.map.attributionControl.setPrefix('<a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>');
     L.control.scale({imperial:false,position:'bottomleft',maxWidth:140}).addTo(this.map);
+    // Heard Island north arrow: north-up 2D maps.
+    const northArrow = L.control({position: 'topright'});
+    northArrow.onAdd = () => {
+      const arrow = L.DomUtil.create('div', 'hi-north-arrow');
+      arrow.setAttribute('role', 'img');
+      arrow.setAttribute('aria-label', 'North');
+      arrow.title = 'North';
+      arrow.style.cssText = 'width:44px;height:70px;padding:4px;box-sizing:border-box;' +
+        'background:rgba(11,20,32,.88);border:1px solid #40576a;border-radius:7px;' +
+        'box-shadow:0 2px 8px #0005;pointer-events:none;';
+      arrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 60" ' +
+        'width="100%" height="100%" aria-hidden="true" focusable="false">' +
+        '<text x="20" y="14" text-anchor="middle" fill="#e8eff5" ' +
+        'font-family="system-ui,sans-serif" font-size="14" font-weight="750">N</text>' +
+        '<path d="M20 20 L34 54 L20 45 L6 54 Z" fill="#e8eff5" ' +
+        'stroke="#e8eff5" stroke-width="1.2" stroke-linejoin="round"/>' +
+        '<path d="M20 20 L20 45 L6 54 Z" fill="#69d5ff"/>' +
+        '<path d="M20 20 L20 45" fill="none" stroke="#0b1420" stroke-width="1"/>' +
+        '</svg>';
+      return arrow;
+    };
+    northArrow.addTo(this.map);
     this.bounds = bounds; this.map.fitBounds(bounds,{padding:[35,35]}); this.history = history;
     this.active = new Map(); this.definitions = new Map(); this.rowContainers = new Set(); this.timeline = null;
     installGeologyHover(this);
