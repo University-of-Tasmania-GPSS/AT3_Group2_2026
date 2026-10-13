@@ -1,7 +1,7 @@
 (conclusion)=
 # Conclusion: the shape of retreat
 
-The mapped histories of Brown and Stephenson differ in both the magnitude and progression of retreat. **Changing glacier geometry and terminus setting provide a plausible interpretation of that contrast.** Stephenson lost much of its extensive lower tongue, while Brown's surveyed lagoon preserves evidence of retreat through a water-filled part of its former footprint. Geological mapping, modern flow and modelled terrain add context, but the available evidence cannot quantify the causal contributions of buried substrate, individual bed features or glacier–water processes. Climate impacts have not been separated from these influences.
+The mapped histories of Brown and Stephenson differ in both magnitude **and** the progression of retreat. **Changing glacier geometry and terminus setting provide a plausible interpretation of that contrast.** Stephenson lost much of its extensive lower tongue, while Brown's surveyed lagoon preserves evidence of retreat through a water-filled part of its former footprint. Geological mapping, modern flow and modelled terrain add context, but the available evidence cannot quantify the contributions of individual bed features or glacier–water processes. Climate impacts have not been separated from these influences.
 
 (take-home-points)=
 ## Three findings to take home
