@@ -6,7 +6,7 @@ site:
 (explorer)=
 # Explore Heard Island
 
-**We created a simple, intuitive interface to explore Heard Island and investigate its glacial retreat.** The explorer brings our maps, geological and terrain layers, velocity estimates and archived field observations into one place. Start with the island map, then open the **Brown and Stephenson dashboards** to compare their retreat histories, inspect the glaciers in 3D or explore Brown's surveyed lagoon.
+**We created a simple, intuitive interface to explore Heard Island and investigate its glacial retreat.** The explorer brings our maps, geological and terrain layers, velocity estimates and archived field observations into one place. Start with the island map, then open the **Brown and Stephenson dashboards** to compare their retreat histories, inspect the glaciers in 3D or explore each glacier in greater detail.
 
 [Open the full-window explorer](/explorer/Heard_Island_explorer.html)
 
@@ -26,7 +26,7 @@ Heard Island: ice, terrain and change. Select a glacier to inspect its available
 
 ### 1. Identify mapped geology
 
-Enable **Mapped geology** in the island view and move the pointer over a mapped unit. The hover card identifies the rock or deposit category. Start with an exposed foreland unit: the map describes surface materials, and a Snow/Ice category leaves the buried substrate unresolved.
+Enable **Mapped geology** in the island view and move the pointer over a mapped unit. The hover card identifies the lithology category. 
 
 ### 2. Open Brown's dashboard
 
