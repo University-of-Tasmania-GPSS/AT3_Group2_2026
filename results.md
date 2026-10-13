@@ -1,7 +1,7 @@
 (results)=
 # Results: contrasting paths of retreat
 
-**Stephenson lost substantially more of its mapped area than Brown between 1947 and 2026.** The recent intervals show a more complicated contrast: Stephenson's front retreat accelerated while its proportional area loss slowed; Brown's front retreat slowed while its proportional area loss increased. The following comparisons establish that pattern and describe the geometry, mapped materials, flow and field evidence available to interpret it.
+**Stephenson lost substantially more of its mapped area than Brown between 1947 and 2026.** The recent intervals however, show a more complicated contrast: Stephenson's front retreat accelerated while its proportional area loss slowed; Brown's front retreat slowed while its proportional area loss increased. The following comparisons establish that pattern and describe the geometry, mapped materials, flow and field evidence available to interpret it.
 
 (results-retreat)=
 ## Area loss and front retreat tell different parts of the story
@@ -19,7 +19,7 @@ Mapped area change, 1947–2026. **A:** percentage of each glacier's 1947 area r
 
 ### The overall contrast and the recent reversal
 
-Brown lost **40.44%** of its mapped 1947 area by 2026, compared with **68.49%** at Stephenson ([](#fig-results-retreat)). Both lost approximately 20% of their original area during 1947–1988; their histories diverged more strongly after 1988. Both had their highest interval-average absolute area-loss rate during **1988–2014**: approximately **0.034 km²/year at Brown** and **0.434 km²/year at Stephenson**.
+Brown lost **40.44%** of its mapped 1947 area by 2026, compared with **68.49%** at Stephenson ([](#fig-results-retreat)). Both lost approximately 20% of their original area during 1947–1988; their histories diverged more after 1988. Both had their highest interval-average absolute area-loss rate during **1988–2014**: approximately **0.034 km²/year at Brown** and **0.434 km²/year at Stephenson**.
 
 | Measure | Brown | Stephenson |
 | --- | ---: | ---: |
@@ -70,7 +70,7 @@ For **1988–2014**, moraine occupies **70.8% of Brown's retreat zone**, compare
 
 More than **99.9% of both 2019–2026 retreat zones** is classified as **Snow/Ice** in the geological source map. That classification leaves the newly exposed substrate unresolved. Unmapped areas likewise cannot be assigned to a particular sediment or rock type.
 
-Moraine records glacial deposition; its presence does not establish the material beneath the former glacier or lagoon floor. The overlay therefore demonstrates differences in mapped foreland materials and coverage, while **buried substrate, sediment strength and relative erodibility remain unknown**. Further category and preparation details are in the [geology appendix](appendix.md#appendix-geology).
+Moraine records glacial deposition; its presence does not establish the material beneath the former glacier or lagoon floor. The overlay therefore demonstrates differences in mapped foreland materials and coverage, while **buried units and relative erodibility remain unknown**. Further category and preparation details are in the [geology appendix](appendix.md#appendix-geology).
 :::
 
 :::{figure} Figures/09_Synthesis/02_geology_by_retreat_zone.png
@@ -132,7 +132,8 @@ The model does not cover the entire formerly occupied coastal tongue. It combine
 
 Brown's whole-footprint median index in [](#fig-results-exposure) is **1.028**, compared with **0.983 at Stephenson**: approximately 2.8% above and 1.7% below the horizontal-surface value. Below 600 m, the medians are **1.024** and **0.968**, respectively. Valid coverage exceeds **96%** in all four comparisons.
 
-Brown thus has the slightly higher orientation index, while Stephenson has the greater cumulative area loss. The index does not reproduce the retreat ranking. It also omits cloud, atmospheric attenuation, diffuse radiation, albedo and shadows cast by surrounding terrain; such shadows can materially affect glacier radiation (Olson and Rupper, 2019). These values cannot establish which glacier received more energy or experienced more melt. Further calculation details are in the [exposure appendix](appendix.md#appendix-exposure).
+Brown therefore, has the slightly higher orientation index, while Stephenson has the greater cumulative area loss. The index does not reproduce the retreat ranking.
+This also omits cloud, atmospheric attenuation, diffuse radiation, albedo and shadows cast by surrounding terrain; such shadows can materially affect glacier radiation (Olson and Rupper, 2019). These values cannot establish which glacier received more energy or experienced more melt. Further calculation details are in the [exposure appendix](appendix.md#appendix-exposure).
 :::
 
 :::{figure} Figures/09_Synthesis/04e_surface_exposure.png
@@ -206,8 +207,8 @@ Brown Lagoon and inland glacier terrain along the analysis route. **A:** 2002 su
 (results-summary)=
 :::{dropdown} Evidence to carry into the discussion
 
-1. **The retreat contrast depends on the measure and interval.** Stephenson lost more area overall, yet its recent front acceleration accompanied slower proportional area loss. Brown shows the opposite recent combination.
-2. **The glaciers now occupy different geometries.** Stephenson lost most of its extensive low-elevation tongue and retains a narrower mapped tongue. Filtered flow is faster at Stephenson, while candidate bed controls remain model-dependent and incompletely supported.
+1. **The retreat contrast depends on the measure and interval.** Stephenson lost more area overall, yet its recent front acceleration was joined by slower proportional area loss. Brown shows the opposite combination.
+2. **The glaciers now occupy different geometries.** Stephenson lost most of its extensive low-elevation tongue, retaining a narrower mapped tongue. Filtered flow is faster at Stephenson, while ice free suface controls remain model-dependent and incompletely supported.
 3. **The strongest field evidence is local.** Brown's soundings establish a deep basin within its former ice footprint. Geological mapping and the missing basin-to-glacier connection leave the buried substrate and proposed mechanisms unresolved; the orientation index alone does not explain the retreat ranking.
 
 The [evidence appendix](appendix.md#appendix-evidence) records supporting comparisons and limitations. Continue to [Discussion](discussion.md), where these observations are combined with the literature to assess possible explanations.

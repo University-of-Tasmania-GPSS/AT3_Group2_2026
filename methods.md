@@ -1,12 +1,12 @@
 (methods)=
 # Methods: building a defensible comparison
 
-We first measure how the mapped glacier footprints and fronts changed, then compare the spatial settings of Brown and Stephenson. Modelled terrain and archived field observations add evidence about the lower glaciers and lagoon basin. Python and GIS connect these datasets through reproducible preparation, spatial sampling, validation and exports to the interactive map.
+We started by measuring how the mapped glacier footprints and fronts changed, before comparing the spatial settings of Brown and Stephenson. Modelled terrain and archived field observations add evidence about the lower glaciers and lagoon basin. Python and GIS connect these datasets through reproducible preparation, spatial sampling, validation and exports to the interactive map.
 
 (workflow)=
 ## From observations to interpretation
 
-The workflow in [](#fig-methods-workflow) combines three strands: **mapped change**, **spatial setting** and **archived field evidence**. Each contributes a different part of the comparison. Shared checks preserve observation dates, valid-data coverage and the distinction between measured and modelled quantities.
+The workflow in [](#fig-methods-workflow) combines three main steps: **mapped change**, **spatial setting** and **archived field evidence**. Each contributes a different part of the comparison. Shared checks preserve observation dates, valid-data coverage and the distinction between measured and modelled quantities.
 
 :::{figure} Figures/Book/02_analysis_workflow.png
 :label: fig-methods-workflow
@@ -14,15 +14,15 @@ The workflow in [](#fig-methods-workflow) combines three strands: **mapped chang
 :width: 100%
 :align: center
 
-Analytical workflow for the Brown–Stephenson comparison. Historical outlines and satellite radar establish mapped change; geological, terrain and velocity layers describe spatial setting; archived radar sections and lagoon soundings provide local field evidence. Date, coverage and sensitivity checks guide their integration. The resulting interpretation distinguishes observations, model-derived estimates and proposed mechanisms.
+Analytical workflow for the Brown–Stephenson comparison. Historical outlines and satellite radar establish mapped change; geological, terrain derivatives and velocity layers describe spatial setting; archived radar sections and lagoon soundings provide local field evidence. Date, coverage and sensitivity checks guide their integration. The resulting interpretation distinguishes observations, model-derived estimates and proposed mechanisms.
 :::
 
-GeoPandas and Shapely handle vector geometry; GDAL, rasterio and rioxarray prepare rasters; xarray organises the velocity time series; and NumPy, SciPy and scikit-image support numerical analysis and segmentation. Prepared layers and summaries are exported for the book and interactive explorer. Complete code remains in the notebooks used to produce this report, with short excerpts below showing consequential decisions.
+GeoPandas and Shapely handle vector geometry; GDAL, rasterio and rioxarray prepare rasters; xarray organises the velocity time series; and NumPy, SciPy and scikit-image support numerical analysis and segmentation. Prepared layers and summaries are exported for the book and interactive explorer. Complete code remains in the notebooks used to produce this report, with short excerpts below showing consequential decisions. Importantly, this can all be re-used with little effort by incorperating updated data in the future. 
 
 (data-overview)=
 ### Data, dates and spatial support
 
-All metric analysis uses **WGS 84 / UTM zone 43S (EPSG:32743)**. Layers are aligned for each calculation rather than forced onto one universal grid. Changing a grid's spacing does not increase the information in the source observations.
+All metric analysis uses **WGS 84 / UTM zone 43S (EPSG:32743)**. Layers were aligned for each calculation rather than forced onto one universal grid. Changing a grid's spacing does not increase the information in the source observations.
 
 | Evidence | Observation period and working support | Role |
 | --- | --- | --- |
@@ -42,9 +42,9 @@ The 2019 inventory supplies the reporting footprint for thickness and bed summar
 
 ### Coherence provides the boundary evidence
 
-Initial inspection showed that radar brightness alone did not reliably separate ice from surrounding terrain. We therefore used **interferometric coherence**, which measures the similarity of radar signals between acquisitions, as the main segmentation input. Low coherence can accompany changing ice surfaces, but also water and other surface changes; it does not uniquely identify glacier ice. The radar comparison is shown in [](#fig-methods-sar).
+Synthetic Apeture Radar (SAR) data was used for this project, due to it's unique ability to be used in these regions of the earth where very little cloud free days occur. Initial inspection showed that radar brightness alone did not reliably separate ice from surrounding terrain. We therefore used **interferometric coherence**, which measures the similarity of radar signals between acquisitions, as the main segmentation input. Low coherence can accompany changing ice surfaces, but also water and other surface changes; it does not uniquely identify glacier ice. The radar comparison is shown in [](#fig-methods-sar).
 
-Matched Sentinel-1A IW HH acquisitions came from ascending relative orbit 100. Backscatter dates were **13 April 2019** and **12 April 2026**; the coherence pairs spanned **1–13 April 2019** and **31 March–12 April 2026**. Copernicus processing supplied coherence, terrain-corrected backscatter and observation masks. The shared output grid had 10 m spacing.
+Matched Sentinel-1A IW HH acquisitions came from ascending relative orbit 100. Backscatter dates were **13 April 2019** and **12 April 2026**; the coherence pairs spanned **1–13 April 2019** and **31 March–12 April 2026**. Copernicus supplied coherence products, terrain-corrected backscatter and observation masks. The shared output grid had 10 m spacing.
 
 :::{figure} Figures/Inventory_methods_SAR_evidence.png
 :label: fig-methods-sar
@@ -54,14 +54,14 @@ Matched Sentinel-1A IW HH acquisitions came from ascending relative orbit 100. B
 
 <span class="evidence-badge evidence-observed">Observed</span>
 
-Radar evidence used during outline development. Rows show 2019 and 2026; columns show 12-day HH coherence and HH backscatter. Cyan boundaries mark the supplied 2014 inventory. Coherence guides segmentation, while backscatter supports visual inspection. Backscatter display ranges are adjusted separately for each year and should not be read as a shared radiometric scale. Source imagery: Copernicus Sentinel-1.
+Radar evidence used during the development of glacial outlines. Rows show 2019 and 2026; columns show 12-day HH coherence and HH backscatter. Cyan boundaries mark the supplied 2014 inventory. Coherence guides segmentation, while backscatter supports visual inspection. Backscatter display ranges are adjusted separately for each year and should not be read as a shared radiometric scale. Source imagery: Copernicus Sentinel-1.
 :::
 
 A normalised Gaussian filter with 30 m standard deviation reduces local coherence variation, and a Sobel gradient highlights changes between neighbouring regions. Marker-controlled watershed then separates regions growing from ice and stable-terrain seeds (scikit-image contributors, n.d.). Ice seeds require smoothed coherence ≤0.22 and locations at least 200 m inside the 2014 footprint; stable-terrain seeds require coherence ≥0.45. These thresholds select starting points rather than directly defining the final boundary.
 
 :::{dropdown} Mapping constraints are part of the result
 
-The accepted outlines exclude mapped lagoons and use valid radar observations outside the high-elevation override. The 2019 candidates are restricted to the 2014 footprint, and 2026 is restricted to the accepted 2019 footprint. **Advance beyond an earlier footprint is therefore excluded.** Ice strictly above 1,000 m inherits the 2014 extent because initial segmentation produced implausible internal gaps. That upper-glacier stability is imposed, rather than independently observed.
+The accepted outlines excluded mapped lagoons and use valid radar observations outside the high-elevation override. The 2019 candidates are restricted to the 2014 footprint, and 2026 is restricted to the accepted 2019 footprint. **Advance beyond an earlier footprint is therefore excluded.** Ice strictly above 1,000 m inherits the 2014 extent because initial segmentation produced implausible internal gaps. That upper-glacier stability is imposed, rather than independently observed.
 
 Final vector outlines were reviewed for Brown and Stephenson and saved separately from intermediate classifications. Recent outlines elsewhere on the island remain provisional. Below the elevation cutoff, gaps caused by missing observations, radar shadow or unresolved classification must not automatically be interpreted as retreat. The 10 m grid is a processing choice, and no independent outline-accuracy estimate has been established.
 :::
@@ -70,7 +70,7 @@ Final vector outlines were reviewed for Brown and Stephenson and saved separatel
 
 Historical geometries are matched to the glacier catalogue, repaired where necessary and measured in the projected CRS. Unmatched historical features remain in the audit rather than being assigned speculatively. Cumulative percentage loss uses 1947 area as its baseline; interval percentage loss uses the area at the start of that interval. Dividing by elapsed years gives an interval-average rate, not separately observed annual changes.
 
-Front change is measured along fixed routes running from seaward origins towards the surviving inland ice. For each dated outline, the front is the seaward end of the transect segment connected to the inland endpoint; detached ice patches are excluded. This is **transect retreat**, whose value depends on route and glacier geometry (Lea et al., 2014). It is distinct from area loss and from the speed of ice moving through the glacier.
+Front change is measured along fixed routes running from seaward origins towards the surviving inland ice. For each dated outline, the front is the seaward end of the transect segment connected to the inland endpoint; detached ice patches are excluded. This is defined as **transect retreat**, whose value depends on route and glacier geometry (Lea et al., 2014). It is distinct from area loss and from the speed of ice moving through the glacier.
 :::
 
 (methods-terrain)=
@@ -91,7 +91,7 @@ Front change is measured along fixed routes running from seaward origins towards
 
 The archived *Crevasse* photograph is shown in [](#fig-field-crevasse).
 
-The surface DEM combines 2002 radar-derived elevations with a 1997 stereoscopic DEM (Brolsma & Smith, 2008). Modelled ice thickness and its error layer come from Millan et al. (2021). Surface elevation is averaged onto a common 50 m grid; thickness and error use nearest-neighbour resampling. Estimated bed elevation is then:
+The surface DEM combines 2002 radar-derived elevations with a 1997 stereoscopic DEM (Brolsma & Smith, 2008). Modelled ice thickness and its error layer come from Millan et al. (2021). Surface elevation is averaged onto a common 50 m grid; thickness and error use nearest-neighbour resampling. Estimated bed elevation is then calcluated using:
 
 $$
 z_{\mathrm{bed}} = z_{\mathrm{surface}} - H.
@@ -118,7 +118,7 @@ Only valid surface elevations and positive modelled thickness contribute bed est
 
 <span class="evidence-badge evidence-modelled">Modelled</span>
 
-Modelled ice thickness and estimated bed elevation for Brown and Stephenson. Rows identify the glaciers; columns show thickness and bed elevation, with shared scales for each quantity. Estimates use the aligned 50 m inputs and the 2019 reporting footprint, excluding mapped lagoons. Grey hillshade provides surface context and does not fill missing bed estimates. Sources: Brolsma and Smith (2008); Millan et al. (2021).
+Modelled ice thickness and estimated bed elevation for Brown and Stephenson. Rows identify the glaciers; columns show thickness and bed elevation, with shared scales for each quantity. Estimates use the aligned 50 m inputs and the 2019 reporting footprint, excluding mapped lagoons. Grey hillshade provides surface context but does not fill in missing bed estimates. Sources: Brolsma and Smith (2008); Millan et al. (2021).
 :::
 
 The input dates differ, and the supplied thickness errors do not include every source of uncertainty in the derived bed. Their glacier-wide mean is a summary of reported pixel errors, not a confidence interval for mean thickness. The thickness model also uses ice-motion information (Millan et al., 2022), so correspondence between modelled bed and flow is not fully independent validation.
@@ -126,9 +126,9 @@ The input dates differ, and the supplied thickness errors do not include every s
 (methods-transects)=
 :::{dropdown} Sampling profiles and screening possible bed highs
 
-Along the routes shown in [](#fig-methods-transects), raster values are sampled every 50 m at five positions across a 200 m corridor. Each native cell is counted once per station, and missing centreline values remain gaps. Modelled bed is restricted to the 2019 footprint and displayed with a three-station rolling median. Perpendicular intersections measure connected **ice-footprint width**, rather than bedrock valley width. Area below 300, 600 and 900 m is counted using the same DEM for every outline; this tracks footprint occupation of low terrain, not historical surface lowering.
+Along the routes shown in [](#fig-methods-transects), raster values are sampled every 50 m at five positions across a 200 m corridor. Each native cell is counted once per station, and missing values remain as gaps. Modelled bed is restricted to the 2019 footprint and displayed with a three-station rolling median. Perpendicular intersections measure connected **ice-footprint width**, rather than bedrock valley width. Area below 300, 600 and 900 m is counted using the same DEM for every outline; this tracks footprint occupation of low terrain, not historical surface lowering.
 
-Potential bed highs require at least 10 m prominence and 300 m separation. Seven checks vary smoothing, shift profiles 100 m to either side, and apply four smooth thickness perturbations using the reported error magnitude. A nearby peak must remain within 150 m; unsupported checks remain unassessed. Persistence counts describe sensitivity to these choices, not the probability of a pinning point. Cross-sections help inspect lateral form but cannot establish a continuous valley-wide barrier where coverage is incomplete.
+Potential bed highs require at least 10 m prominence and 300 m separation. Seven checks vary smoothing, shift profiles 100 m to either side, and apply four smooth thickness variations using the reported error magnitude. A nearby peak must remain within 150 m; unsupported checks remain unassessed. Persistence counts describe sensitivity to these choices, not the probability of a pinning point. Cross-sections help inspect lateral form but cannot establish a continuous valley-wide barrier where coverage is incomplete.
 :::
 
 :::{figure} Figures/09_Synthesis/04a_transect_locations.png
@@ -147,7 +147,7 @@ Selected analysis routes and field coverage. White lines run inland from each ro
 
 :::{dropdown} Registration and vertical references
 
-Archived field observations provide local comparisons with the modelled terrain (Allison & Thost, 2010). Workbook radar-return proxies and archived interpreted bed envelopes are retained as distinct products. The envelopes are the original analysts' interpretations, rather than additional independent soundings.
+Archived field observations provide local comparisons with the modelled terrain taken from (Allison & Thost, 2010). Workbook radar-return proxies and archived interpreted bed envelopes are retained as distinct products. The envelopes are the original analysts' interpretations, rather than additional independent soundings.
 
 Archived section coordinates are registered to projected survey positions, with scale and residual checks recorded. BG35 requires a substantial scale adjustment and contains placeholder antenna coordinates. It remains visible as provisional evidence and is excluded from primary interpreted-bed metrics. A close registration fit alone does not resolve its geometry problem.
 
@@ -158,7 +158,7 @@ The radar elevations already follow the archive's approximate sea-level conventi
 
 The campaign photograph *Elevated Science* is shown in [](#fig-field-elevated-science).
 
-Brown has 211 retained 2004 lagoon soundings; Stephenson has 16. The detailed basin reconstruction is restricted to Brown. Delaunay triangulation connects observations, and linear interpolation estimates depth inside those triangles (SciPy community, n.d.). Triangles are rejected if their longest edge exceeds 150 m or they intersect the retained surveyed-margin barrier. Predictions must also lie within 100 m of a sounding. No extrapolation is made outside the triangulation.
+Brown has 211 retained 2004 lagoon soundings; Stephenson has 16. The detailed basin reconstruction is restricted to Brown. Delaunay triangulation (splitting a set of points in the plane into triangles so no point lies inside the circumcircle of any triangle) connects observations, and linear interpolation estimates depth inside those triangles (SciPy community). Triangles are rejected if their longest edge exceeds 150 m or they intersect the retained surveyed-margin barrier. Predictions must also lie within 100 m of a sounding. No extrapolation is made outside the triangulation.
 
 This excerpt from the field data reconstruction workflow shows the support rules:
 
@@ -202,7 +202,7 @@ Brown Lagoon reconstruction and support checks. The left panel shows interpolate
 (methods-geology)=
 :::{dropdown} Preparing geology and comparing retreat zones
 
-Geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island. The mapped categories are shown in [](#fig-methods-geology), with a field photograph providing additional context ([](#fig-field-moss-rock)).
+The geology workflow repairs source geometries, reprojects them to EPSG:32743 and clips them to the coastline. Original `Rock_Type` categories are retained, with missing labels recorded as Unknown. Projected polygon areas produce a unit-area summary. The percentages describe shares of the **summed clipped mapped polygon area**, rather than assuming complete geological coverage of the island. The mapped categories are shown in [](#fig-methods-geology), with a field photograph providing additional context ([](#fig-field-moss-rock)).
 
 The following excerpt from the geological analysis shows the clipping and area calculation:
 
@@ -214,9 +214,9 @@ geo["Rock_Type"] = geo["Rock_Type"].fillna("Unknown")
 geo["Area_km2"] = (geo.geometry.area / 1e6).round(3)
 ```
 
-Clipping restricts the polygons to the study area; measuring them in a CRS with metre units makes the area calculation meaningful (GeoPandas developers, n.d.). This preparation supplies both the geology map and the later retreat-zone comparison.
+Clipping restricts the polygons to the study area; measuring them in a CRS with metre units makes the area calculation meaningful (GeoPandas developers). This preparation supplies both the geology map and the later retreat-zone comparison.
 
-Consecutive glacier polygons define gross spatial retreat zones. Intersecting these zones with geological polygons describes their mapped composition; the full zone area is the denominator, with uncovered area recorded as Unmapped. The overlay uses one geological map, rather than reconstructing surface materials independently at every inventory date.
+Consecutive glacier polygons define gross spatial retreat zones. Intersecting these zones with geological polygons describes their mapped units; the full zone area is the denominator, with uncovered area recorded as unmapped. The overlay uses one geological map, rather than reconstructing surface materials independently at every inventory date.
 
 **Snow/Ice does not identify the material beneath the glacier.** Likewise, mapped moraine identifies glacial deposits without establishing the substrate beneath former ice or the lagoon floor. We retain these distinctions instead of extending neighbouring units into unknown areas. The overlay supports statements about spatial association and mapped exposure; it cannot by itself demonstrate contrasting bed strength or erodibility.
 :::
@@ -229,7 +229,7 @@ Consecutive glacier polygons define gross spatial retreat zones. Intersecting th
 
 <span class="evidence-badge evidence-observed">Observed</span>
 
-Field photograph of **a really good rock**.
+Field photograph of what appeast to be a large glacial erratic.
 :::
 
 :::{figure} Figures/Methods/03_mapped_geology_context.png
@@ -246,9 +246,9 @@ Mapped geological categories after preparation. The map retains source categorie
 (methods-surface-terrain)=
 :::{dropdown} Deriving surface hillshade, slope and aspect
 
-We use GDAL to derive three complementary layers from the clipped native 10 m surface DEM: **hillshade** simulates illumination to reveal relief; **slope** measures steepness in degrees; and **aspect** records the downslope direction clockwise from north (GDAL/OGR contributors, n.d.). Flat cells have undefined aspect and remain missing under the selected settings. The three surface derivatives are shown in [](#fig-methods-surface-terrain).
+We used GDAL to derive three complementary layers from the clipped native 10 m surface DEM: **hillshade** simulates illumination to reveal relief; **slope** measures steepness in degrees; and **aspect** records the downslope direction clockwise from north (GDAL/OGR contributors.). Flat cells have undefined aspect and remain missing under the selected settings. The three surface derivatives are shown in [](#fig-methods-surface-terrain).
 
-These layers describe the recorded surface, including ice where present. They are distinct from derivatives of the modelled bed. DEM age, source artefacts and local missing data propagate into the derivatives, so apparent small features require care. Surface hillshade is a visual aid and does not measure radiation or melt.
+These layers describe the recorded surface, including ice where present. They are distinct from derivatives of the modelled bed. DEM age, source artefacts, local missing data and general lack of resolution propagate into the derivatives, so apparent small features require care. Surface hillshade is a visual aid and does not measure radiation or melt.
 :::
 
 :::{figure} Figures/Methods/04_surface_terrain_derivatives.png
@@ -267,7 +267,7 @@ Surface terrain derivatives from the GDAL workflow. Panels show hillshade, slope
 
 ITS_LIVE Sentinel-1A image-pair velocities provide the 2016–2022 flow context (Lei et al., 2022). Pairs with separations of 10–180 days are selected from matching datacubes. At each pixel, valid positive vectors pass magnitude and direction filters: speeds must fall between one-third and three times the initial median, and directions must lie within 45° of the median vector. The median vector must exceed 10 m/year. Final pixels require at least five retained pairs and directional coherence ≥0.8. The retained speed estimates are shown in [](#fig-methods-velocity).
 
-Pixel speeds are the temporal median of retained magnitudes; glacier summaries use spatial medians of those pixels. The fixed 2014 footprint provides a consistent sampling boundary, including some locations that subsequently lost ice. The lower third refers to each glacier's DEM-derived elevation range, rather than its lower third by length.
+Pixel speeds are the temporal median of retained magnitudes; with glacier summaries using spatial medians of those pixels. The fixed 2014 footprint provides a consistent sampling boundary, including some locations that subsequently lost ice. The lower third refers to each glacier's DEM-derived elevation range, rather than its lower third by length.
 
 Coverage is reported relative to footprint grid cells, with a separate retention measure relative to cells having raw observations. Lower-third audits, speed-floor and minimum-pair sensitivity tests, supplied pair errors and year-balanced summaries assess selection effects. In particular, the 10 m/year rule removes slow flow by design. Supplied pair errors are not confidence intervals for pooled glacier medians, and unequal coverage limits direct comparisons.
 :::
@@ -294,7 +294,7 @@ Values above or below one describe greater or smaller geometric exposure than a 
 (methods-synthesis)=
 :::{dropdown} Bringing the evidence together
 
-The synthesis distinguishes **mapped observations**, **model-derived quantities** and **proposed mechanisms**. Agreement among layers can strengthen an observational narrative, but shared model inputs, different dates and incomplete coverage limit independence. We do not calculate an independently estimated climate residual or partition the causes of retreat. Instead, the comparison identifies supported spatial contrasts and the targeted observations needed to test possible explanations.
+The synthesis distinguishes **mapped observations**, **model-derived quantities** and **proposed mechanisms**. Agreement among layers can strengthen an observational narrative, but shared model inputs, different dates and incomplete coverage limit independence. We did not calculate an independently estimated climate residual or partition the causes of retreat. Instead, the comparison identifies supported spatial contrasts and the targeted observations needed to test possible explanations.
 
-Detailed parameter records, code and audits belong in the [appendix](appendix.md). Full source entries are consolidated on the [References](references.md) page. The principal comparisons follow in [Results](results.md).
+Detailed parameter records and code belong in the [appendix](appendix.md). Full source entries are consolidated on the [References](references.md) page. The principal comparisons follow in [Results](results.md).
 :::
