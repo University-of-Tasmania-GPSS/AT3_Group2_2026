@@ -1,7 +1,7 @@
 (appendix)=
 # Supporting evidence and reproducibility
 
-This appendix records the definitions, processing settings and checks behind the Brown–Stephenson comparison. The tables retain sampling boundaries, units and error conventions so that the principal results can be traced without treating every mapped layer as a simultaneous observation. The [Methods](methods.md) explain the analytical choices; the [Results](results.md) and [Discussion](discussion.md) develop their interpretation.
+This appendix records the **definitions, processing settings and checks** behind the Brown–Stephenson comparison. The tables retain sampling boundaries, units and error conventions so that the principal results can be traced without treating every mapped layer as a simultaneous observation. The [Methods](methods.md) explain the analytical choices; the [Results](results.md) and [Discussion](discussion.md) develop their interpretation.
 
 Values are rounded for display. Rates and percentages were calculated from the original numerical outputs, rather than from the rounded areas shown here. Missing estimates remain unavailable; they are not assigned zero.
 
@@ -117,7 +117,7 @@ Small values can round to 0.00 without being absent. The source spellings “Unc
 
 :::{dropdown} Composition of the retreat zones
 
-The synthesis intersects each glacier's gross retreat zones and remaining 2026 footprint with these polygons. Category share is calculated against the **entire zone area**, including any uncovered area recorded as Unmapped. A union-area check tests for overlapping geology within each zone and stops the calculation if excess overlap exceeds 0.000001 km².
+The synthesis intersects each glacier's gross retreat zones and remaining 2026 footprint with these polygons. Category percentage is calculated against the **entire zone area**, including any uncovered area recorded as Unmapped. A union-area check tests for overlapping geology within each zone and stops the calculation if excess overlap exceeds 0.000001 km².
 
 This differs from the island category table above: the zone analysis explicitly accounts for unmapped area and checks local overlaps. In the recent retreat zones, the source map's Snow/Ice class occupies more than 99.9%. That category leaves buried substrate unresolved. Likewise, Moraine identifies a mapped deposit without measuring the material, strength or erodibility beneath former ice or the lagoon floor.
 
@@ -129,10 +129,10 @@ The full category-by-zone records are exported as `geology_by_retreat_zone.csv`,
 
 :::{dropdown} Grids and derivative settings
 
-The RADARSAT 2002 DEM includes a 1997 stereoscopic contribution (Brolsma & Smith, 2008). Surface derivatives use its clipped native 10 m grid. The modelled-bed calculation instead uses an aligned 50 m grid, with surface elevation averaged to that grid and thickness and error resampled by nearest neighbour. Velocity and exposure calculations use a separate 120 m grid.
+The RADARSAT 2002 DEM includes a 1997 stereoscopic contribution (capturing the same location from multiple angles, allowing for true 3D elevation extraction) (Brolsma & Smith, 2008). Surface derivatives use its clipped native 10 m grid. The modelled-bed calculation instead uses an aligned 50 m grid, with surface elevation averaged to that grid and thickness and error resampled by nearest neighbour. Velocity and exposure calculations use a separate 120 m grid.
 
 
-The derivative algorithm is left at GDAL's default in the saved functions. Hillshade depicts simulated illumination, while slope and aspect describe the selected elevation surface. Bed derivatives inherit the uncertainty of the subtraction; they are not additional bed observations.
+The derivative algorithm uses GDAL's default in the saved functions. Hillshade depicts simulated illumination, while slope and aspect describe the selected elevation surface. Bed derivatives inherit the uncertainty of the subtraction and DEM resolution; they are not additional bed observations.
 
 This shortened excerpt retains the consequential settings from the geomorphology workflow:
 
@@ -179,7 +179,7 @@ Across the island, four isolated thickness jumps were flagged for review. None f
 
 :::{dropdown} Radar registration and local bed comparisons
 
-The field reconstruction workflow retains workbook return proxies separately from the original analysts' interpreted 2000 bed envelopes (Allison & Thost, 2010). The latter are registered from archive chainage to survey coordinates. Scale and horizontal residuals test coordinate consistency.
+The field reconstruction workflow retains workbook return proxies separately from the original analysts' interpreted 2000 bed calculations (Allison & Thost, 2010). Scale and horizontal residuals test coordinate consistency.
 
 
 BG35's archive includes two placeholder antenna coordinates. Reproducing the saved processing geometry gives a map/archive scale approximately 13.8% above unity. Its small registration residual does not resolve that problem, so its envelope remains provisional. Near-zero residuals for the other sections also do not establish bed accuracy, particularly where controls are few.
@@ -189,7 +189,7 @@ Interpreted sections are sampled at approximately 25 m spacing, then grouped by 
 
 Difference is **modelled bed minus interpreted field bed**: negative bias places the modelled bed lower. The eligible sections sample only two or three model cells each and show different biases, providing local consistency checks rather than glacier-wide validation or a common correction to the bed raster.
 
-The separate workbook-return comparison retains the source-labelled W and E returns. Its model-minus-field thickness biases range from approximately +63 to +95 m, while surface-elevation biases are smaller, approximately +3 to +10 m. These proxies, the recovered envelopes and model estimates differ in date and interpretation; they must not be pooled as interchangeable measurements.
+The separate workbook-return comparison retains the source-labelled W and E returns. Its model-minus-field thickness biases range from approximately +63 to +95 m, while surface-elevation biases are smaller, approximately +3 to +10 m. These proxies, the recovered envelopes and model estimates differ in date and interpretation; they must not be seen as interchangeable measurements.
 :::
 
 | Section | Registration controls | Map/archive length scale | Registration RMSE (m) | Primary interpreted-bed metrics? |
@@ -213,7 +213,7 @@ The separate workbook-return comparison retains the source-labelled W and E retu
 
 The screened bed highs are shown in [](#fig-appendix-bed-highs). Profiles are sampled every 50 m at lateral offsets of −100, −50, 0, +50 and +100 m. Native model cells are counted once per station, and a missing centreline sample remains a gap. A three-station rolling median requires a complete window, so it cannot bridge missing stations. Peaks require at least 10 m prominence and 300 m separation within continuous support.
 
-Seven deterministic checks use a five-station median, profiles displaced 100 m to either side, and four smooth thickness perturbations with 1 km wavelength and different phases. Their amplitudes use the supplied thickness-error magnitude. A check retains a feature when a selected peak lies within 150 m of its original position; checks lacking local support remain unassessed.
+Seven deterministic checks use a five-station median, profiles displaced 100 m to either side, and four smooth thickness checks with 1 km wavelength and different phases were used. Their amplitudes use the supplied thickness-error magnitude. A check retains a feature when a selected peak lies within 150 m of its original position; checks lacking local support remain unassessed.
 
 
 
@@ -266,7 +266,7 @@ Perpendicular sections through surface and modelled bed. Columns identify glacie
 
 The 2004 archive provides **211 usable Brown soundings**, with a deepest measured depth of **56 m**, and **16 Stephenson soundings**, with a deepest measured depth of **107 m** (Allison & Thost, 2010). These are sampled depths, not established maximum depths of either complete lagoon. Brown's 20 soundings from 2000 remain a separate historical layer and are not mixed into the 2004 surface.
 
-The Brown reconstruction uses linear interpolation within a Delaunay triangulation. Its primary support rules retain triangles with maximum edge length 150 m, reject triangles crossing retained December 2003 margin-track segments, and mask predictions more than 100 m from a sounding. The output grid is 10 m. The surveyed margin is an open track, split at steps exceeding 25 m; it is not closed into a lagoon boundary or assigned artificial zero depths.
+The Brown reconstruction uses linear interpolation within a Delaunay triangulation (splitting a set of points in the plane into triangles so that no point lies inside the circumcircle of any triangle). Its primary support rules retain triangles with maximum edge length 150 m, reject triangles crossing retained December 2003 margin-track segments, and mask predictions more than 100 m from a sounding. The output grid is 10 m. The surveyed margin is an open track, split at steps exceeding 25 m; it is not closed into a lagoon boundary or assigned artificial zero depths.
 
 The raster, contours, 3D mesh and water-plane display preserve support gaps. An interpolation edge indicates the extent of accepted numerical support, not an observed shoreline.
 :::
@@ -308,7 +308,7 @@ Depth thresholds are nested and use the supported raster area as their denominat
 The archive's approximate ellipsoid-minus-40 m convention is applied to shoreline GPS heights. Interpreted radar elevations already follow that convention and receive **no additional 40 m subtraction**.
 
 
-The track provides shoreline and walking-route context, not a confirmed water-surface record. Its height distribution is consistent with a coastal setting but does not determine the lagoon level. This approximate conversion is not a site-specific geoid transformation or an error estimate.
+The track provides shoreline context, not a confirmed water-surface record. Its height distribution is consistent with a coastal setting but does not determine the lagoon level. This approximate conversion is not a site-specific geoid transformation or an error estimate.
 
 Measured depth remains positive downward from the **2004 survey water surface**. For the illustrative absolute-elevation comparison:
 
@@ -332,7 +332,7 @@ Assumed levels of 0, 2 and 5 m shift the lagoon-bed profile vertically without c
 
 :::{dropdown} Population represented by the speed summaries
 
-ITS_LIVE provides 199 selected Sentinel-1A image pairs, with acquisition dates from 2 August 2016 to 29 December 2022, on a 120 m grid (Lei et al., 2022). Pair separations are restricted to 10–180 days. Each pixel's speed is the temporal median of retained magnitudes; glacier summaries are spatial medians of those pixel values.
+ITS_LIVE provides 199 selected Sentinel-1A image pairs, with acquisition dates from 2 August 2016 to 29 December 2022, on a 120 m grid (Lei et al., 2022). Pair separations are restricted to 10–180 days. Each pixel's speed is the temporal median of retained magnitudes with glacier summaries treated as spatial medians of those pixel values.
 
 The primary filters require finite positive vectors, magnitude between one-third and three times the initial pixel median, direction within 45° of the median vector, median-vector speed above 10 m/year, at least five retained pairs and vector coherence of at least 0.8. The lower third is the lowest third of each glacier's **DEM-derived elevation range**, not one-third of its area or length.
 
@@ -436,7 +436,7 @@ The index omits terrain-horizon shadows, clouds, atmospheric attenuation, diffus
 
 :::{dropdown} Evidence audit and interpretation
 
-The strongest outcome is a spatially explicit observational narrative: the glaciers have different mapped histories and changing lower-tongue geometries, while Brown's field archive records a deep surveyed basin within former glacier occupation. Buried geology, continuous bed barriers and water-contact processes remain testable explanations. The current comparison does not assign their causal contributions or remove climate forcing from the retreat signal.
+The strongest outcome is the spatial perspective: the glaciers have different mapped histories and changing lower-tongue geometries, while Brown's field archive records a deep surveyed basin within former glacier occupation. Buried geology, continuous bed barriers and water-contact processes remain testable explanations. The current comparison does not assign their causal contributions or remove climate forcing from the retreat signal.
 :::
 
 | Evidence stream | Supported contribution | Main remaining limitation | Targeted observation or improvement |
@@ -461,7 +461,7 @@ The linked source files preserve the complete processing code, decisions and exp
 
 Reproduction follows dependencies rather than relying on filename order alone:
 
-1. Obtain the supplied inventories, coastline, geology, DEM, thickness tiles, field archives and SAR products, retaining original metadata and source versions. Prepare the clipped DEM before the elevation-constrained outline step.
+1. Obtain the supplied inventories, coastline, geology, DEM, ice thickness, field archives and SAR products, retaining original metadata and source versions. Prepare the clipped DEM before the elevation-constrained outline step.
 2. Prepare and review the recent outlines, then create the named-glacier histories and fixed sampling footprints. Retain manual edits and the accepted outputs used for the final comparison.
 3. Complete geological preparation and terrain/thickness exports. Field reconstruction and velocity analysis consume their respective inputs and common spatial context; complete the glacier-specific layer catalogues needed by the explorer.
 4. Run integration and synthesis after its required tables, rasters and field metadata exist. This regenerates the combined comparisons and supplementary figures.
