@@ -1,7 +1,7 @@
 # The shape of retreat. 
 KGG375 AT3 Group 2 University of Tasmania 2026 <br>
 Brown and Stephenson glaciers, Heard Island.<br>
-Two neighbouring glaciers.Two different retreat histories. 
+Two neighbouring glaciers.Two different retreat histories. <br>
 Griffin and Sampson 2026
 <!-- PROJECT LOGO -->
 <br />
